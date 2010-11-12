@@ -232,7 +232,7 @@ sub {
 
 /* Main */
 
-#content {
+.content {
 	width: 723px;
 	margin: 0 auto;
 	background:#fff;
@@ -240,32 +240,32 @@ sub {
 	background:url(/images/bg.png) repeat-y center;
 }
 
-#content h2 {
+.content h2 {
 	padding: 4px;
 	font-size: 2em;		
 	line-height:1.2em;
 	font-weight: bold;
 }
 
-#content h1 {
+.content h1 {
 	padding: 4px;
 	font-size: 2em;		
 	line-height:1.2em;
 	font-weight: bold;
 }
 
-#content .post-title {
+.content .post-title {
 	font-size: 1.5em;
 	font-weight: normal;
 }
 
-#content h3 {
+.content h3 {
 	padding: 4px;
 	font-size: 1.4em;		
 	line-height:1.2em;
 	font-weight: bold;
 }
-#content h2 a 
+.content h2 a 
 {
 	border:0;
 	font-family:Georgia,serif;
@@ -274,7 +274,7 @@ sub {
 	color:#999;
 }
 
-#content h1 a 
+.content h1 a 
 {
 	border:0;
 	font-family:Georgia,serif;
@@ -283,12 +283,12 @@ sub {
 	color:#999;
 }
 
-#content ul {
+.content ul {
 	margin: 0.5em 0;
 	padding: 0 0 0 2em;
 	list-style-type:none;
 }
-#content ul li 
+.content ul li 
 {
 	margin:0.75em 0;
 	padding:0;
@@ -400,7 +400,7 @@ ul.authorposts li em
 }
 /* Content */
 
-#content {
+.content {
 	float: left;
 	width: 480px;
 	padding:30px;
