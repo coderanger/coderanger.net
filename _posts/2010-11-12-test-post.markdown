@@ -20,3 +20,11 @@ An h2
 Foo bar baz.
 
 Para.
+
+A code sample
+-------------
+
+{% highlight python %}
+def fn(x, y):
+    return x + y
+{% endhighlight python %}
