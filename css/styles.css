@@ -232,7 +232,7 @@ sub {
 
 /* Main */
 
-#main {
+#content {
 	width: 723px;
 	margin: 0 auto;
 	background:#fff;
@@ -240,32 +240,32 @@ sub {
 	background:url(/images/bg.png) repeat-y center;
 }
 
-#main h2 {
+#content h2 {
 	padding: 4px;
 	font-size: 2em;		
 	line-height:1.2em;
 	font-weight: bold;
 }
 
-#main h1 {
+#content h1 {
 	padding: 4px;
 	font-size: 2em;		
 	line-height:1.2em;
 	font-weight: bold;
 }
 
-#main .post-title {
+#content .post-title {
 	font-size: 1.5em;
 	font-weight: normal;
 }
 
-#main h3 {
+#content h3 {
 	padding: 4px;
 	font-size: 1.4em;		
 	line-height:1.2em;
 	font-weight: bold;
 }
-#main h2 a 
+#content h2 a 
 {
 	border:0;
 	font-family:Georgia,serif;
@@ -274,7 +274,7 @@ sub {
 	color:#999;
 }
 
-#main h1 a 
+#content h1 a 
 {
 	border:0;
 	font-family:Georgia,serif;
