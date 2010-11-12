@@ -170,6 +170,11 @@ sub {
   padding: 0px 0 0 100px;
 }
 
+.menu h1 {
+  font-family: Georgia, serif;
+  font-size: 4em;
+}
+
 .menu ul {
   margin:0;
   list-style: none;
