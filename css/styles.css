@@ -15,7 +15,7 @@ a, a:hover, a:visited {
 }
 
 #header, #menu, #main, #footer {
-  width: 723px; 
+  width: 923px; 
   margin: 0 auto;
 }
 
@@ -78,7 +78,7 @@ a, a:hover, a:visited {
 /* Content */
 
 .content {
-  width: 480px;
+  width: 680px;
   padding:30px;
   padding-top:10px;
   padding-left: 110px;
