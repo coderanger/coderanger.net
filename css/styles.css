@@ -163,6 +163,7 @@ sub {
 	line-height:20px;
 	background:url(/images/bg.png) repeat-y center;	
 	overflow:auto;
+	color:#999;
 }
 
 .menu h1 {
@@ -180,26 +181,7 @@ sub {
 }
 
 .menu li {
-	display: inline;
-}
-
-.menu a 
-{
-	padding:3px 0px 3px 10px ;
-	text-decoration: none;
-	font-size: 1em;
-	border: 0;
-	color:#999;
-}
-.menu a:hover, 
-.menu a:active,
-.menu li.current_page_item a:link,
-.menu li.current_page_item a:visited,
-.menu li.current_page_item a:hover,
-.menu li.current_page_item a:active
-{
-	color:#999;
-	border:0;
+  display: inline;
 }
 
 .menu .header-strip {
