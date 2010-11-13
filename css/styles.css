@@ -24,8 +24,7 @@ a, a:hover, a:visited {
 /* Menu */
 .menu {
   width: 723px;
-  margin: 0 auto;
-  padding-top:40px;
+  margin: -10px auto 0 auto;
   background:url(/images/bg.png) repeat-y center;	
 }
 
