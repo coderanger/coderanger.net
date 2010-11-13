@@ -163,22 +163,20 @@ sub {
 	line-height:20px;
 	background:url(/images/bg.png) repeat-y center;	
 	overflow:auto;
-
-}
-
-.menu h1, .menu ul {
-  padding: 0px 0 0 100px;
 }
 
 .menu h1 {
+  padding: 0 0 0 100px;
   font-family: Georgia, serif;
   font-size: 4em;
 }
 
 .menu ul {
+  padding: 0 0 0 105px;
   margin:0;
   list-style: none;
   font-variant:small-caps;
+  font-size: 1.2em;
 }
 
 .menu li {
@@ -190,11 +188,8 @@ sub {
 	padding:3px 0px 3px 10px ;
 	text-decoration: none;
 	font-size: 1em;
-	border:0;
+	border: 0;
 	color:#999;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
 }
 .menu a:hover, 
 .menu a:active,
