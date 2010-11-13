@@ -123,6 +123,28 @@ a, a:hover, a:visited {
   font-family: 'Crimson Text', Georgia, Tahoma, Verdana, serif;
   font-size: 1.2em;
   color: #999;
+  margin-bottom: 4px;
+}
+
+#post h1, #post h2, #post h3
+#post h4, #post h5, #post h6 {
+  
+}
+
+#post h1 {
+  font-size: 200%;
+}
+
+#post h2 {
+  font-size: 150%;
+}
+
+#post p, #post ul {
+  margin-bottom: 4px;
+}
+
+#post li {
+  list-style: disc inside none;
 }
 
 /* Footer */
