@@ -112,6 +112,10 @@ a, a:hover, a:visited {
   text-decoration: none;
 }
 
+#index a:hover {
+  text-decoration: underline;
+}
+
 #error {
   font-family: 'Crimson Text', serif;
   font-size: 5em;
