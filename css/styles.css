@@ -22,19 +22,20 @@ a, a:hover, a:visited {
 }
 
 /* Menu */
-.menu {
+#menu {
   width: 723px;
-  margin: -10px auto 0 auto;
+  margin: 0 auto;
+  padding-top: 10px;
   background:url(/images/bg.png) repeat-y center;	
 }
 
-.menu h1 {
+#menu h1 {
   padding: 0 0 0 100px;
   font-family: Georgia, serif;
   font-size: 4em;
 }
 
-.menu ul {
+#menu ul {
   padding: 4px 0 0 110px;
   margin:0;
   list-style: none;
@@ -42,19 +43,19 @@ a, a:hover, a:visited {
   font-size: 1.2em;
 }
 
-.menu li {
+#menu li {
   display: inline;
 }
 
-.menu a {
+#menu a {
   text-decoration: none;
 }
 
-.menu ul a:hover {
+#menu ul a:hover {
   text-decoration: underline;
 }
 
-.menu .header-strip {
+#menu .header-strip {
 	background-color:#f5f5f5;
 	height:5px;
 	margin:10px 110px;
@@ -64,9 +65,9 @@ a, a:hover, a:visited {
 
 /* Main */
 
-.main {
+#main {
 	width: 723px;
-	margin: 0 auto;
+	margin: -10px auto 0 auto;
 	background:#fff;
 	border:#eee 0px solid;
 	background:url(/images/bg.png) repeat-y center;
