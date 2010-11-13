@@ -112,23 +112,28 @@ a, a:hover, a:visited {
   text-decoration: none;
 }
 
+#post {
+  font-family: Georgia, serif;
+  font-size: 16px;
+}
+
 #post .title a {
   text-decoration: none;
   font-family: 'Crimson Text', Georgia, Tahoma, Verdana, serif;
-  font-size: 3em;
+  font-size: 36px;
   color: #999;
 }
 
 #post .authoring {
   font-family: 'Crimson Text', Georgia, Tahoma, Verdana, serif;
-  font-size: 1.2em;
+  font-size: 15px;
   color: #999;
-  margin-bottom: 4px;
+  margin-bottom: 16px;
 }
 
 #post h1, #post h2, #post h3
 #post h4, #post h5, #post h6 {
-  
+  padding: 4px;
 }
 
 #post h1 {
@@ -140,7 +145,7 @@ a, a:hover, a:visited {
 }
 
 #post p, #post ul {
-  margin-bottom: 4px;
+  margin-bottom: 0.9em;
 }
 
 #post li {
