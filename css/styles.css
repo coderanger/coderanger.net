@@ -117,6 +117,23 @@ a, a:hover, a:visited {
   font-size: 5em;
 }
 
+#contact {
+  font-family: 'Crimson Text', serif;
+  font-size: 2em;
+}
+
+#contact .label, #contact .value {
+  display: block;
+  float: left;
+}
+
+#contact .label {
+  width: 100px;
+  text-align: right;
+  margin-right: 5px;
+  color: #999;
+}
+
 #post {
   font-family: Georgia, serif;
   font-size: 16px;
