@@ -14,6 +14,7 @@ a, a:hover, a:visited {
 
 #header, #menu, #main, #footer {
   width: 723px; 
+  margin: 0 auto;
 }
 
 #menu, #main {
@@ -24,13 +25,12 @@ a, a:hover, a:visited {
 
 #header {
   height: 50px;
-  margin: 30px auto 0 auto;
+  margin-top: 30px;
   background:url(/images/bg_header.png) no-repeat top center;
 }
 
 /* Menu */
 #menu {
-  margin: 0 auto;
   padding-top: 10px;
 }
 
@@ -69,7 +69,8 @@ a, a:hover, a:visited {
 /* Main */
 
 #main {
-  margin: -10px auto -12px auto;
+  margin-top: -10px;
+  margin-bottom: -12px;
 }
 
 .content h2 {
@@ -97,8 +98,8 @@ a, a:hover, a:visited {
   line-height:1.2em;
   font-weight: bold;
 }
-.content h2 a 
-{
+
+.content h2 a {
   border:0;
   font-family:Georgia,serif;
   font-size:1.1em;
@@ -106,8 +107,7 @@ a, a:hover, a:visited {
   color:#999;
 }
 
-.content h1 a 
-{
+.content h1 a {
   border:0;
   font-family:Georgia,serif;
   font-size:1.1em;
@@ -121,8 +121,7 @@ a, a:hover, a:visited {
   list-style-type:none;
 }
 
-.content ul li 
-{
+.content ul li {
   margin:0.75em 0;
   padding:0;
   list-style-image:url(img/bullets.gif);
@@ -130,8 +129,7 @@ a, a:hover, a:visited {
   font-size:16px; 
 }
 
-#main ol 
-{
+#main ol {
   margin:0;
   padding:0 0 0 3px;
 }
@@ -246,29 +244,7 @@ ul.authorposts li em {
 /* Footer */
 
 #footer {
-  margin: 0 auto 30px auto;
+  margin-bottom:30px;
   height: 80px;
   background:url(/images/bg_footer.png) no-repeat bottom center;
-}
-
-#footer p {
-  margin:0;
-  padding: 20px 100px 0 95px;
-  font-size: 0.9em;
-  color: #999;  
-}
-
-#footer p span {
-  float:right;
-}
-
-#footer a:link, #footer a:visited {
-  color: #999;
-  border:0;
-}
-
-#footer a:hover, #footer a:active,#footer p strong {
-  color: #999;
-  text-decoration:none;
-  border:0;
 }
