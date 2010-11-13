@@ -85,6 +85,33 @@ a, a:hover, a:visited {
   padding-bottom:0;
 }
 
+#index ul {
+  margin: 0;
+  padding: 0;
+}
+
+#index li {
+  list-style: none;
+  padding: 5px 10px;
+  margin: 0;
+  border-bottom: 1px solid #eee;
+}
+
+#index li span {
+  float: right;
+}
+
+#index span {
+  font-family: 'Crimson Text', Georgia, Tahoma, Verdana, serif;
+  font-size: 1.5em;
+}
+
+#index a {
+  font-family: 'Crimson Text', Georgia, Tahoma, Verdana, serif;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
 #post .title a {
   text-decoration: none;
   font-family: 'Crimson Text', Georgia, Tahoma, Verdana, serif;
