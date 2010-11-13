@@ -112,6 +112,11 @@ a, a:hover, a:visited {
   text-decoration: none;
 }
 
+#error {
+  font-family: 'Crimson Text', serif;
+  font-size: 5em;
+}
+
 #post {
   font-family: Georgia, serif;
   font-size: 16px;
