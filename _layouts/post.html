@@ -3,6 +3,11 @@ layout: layout
 ---
 
 <div id="post" class="content">
-  {% include post_header.html %}
+  <div class="title">
+    <a href="{{ page.url }}">{{ page.title }}</a>
+  </div>
+  <div class="authoring">
+    {{ page.date | date: "%B %e, %Y" }}
+  </div>
   {{ content }}
 </div>
