@@ -23,14 +23,10 @@ a, a:hover, a:visited {
 
 /* Menu */
 .menu {
-	width: 723px;
-	margin:0 auto;
-	padding-top:40px;
-	min-height:75px;
-	line-height:20px;
-	background:url(/images/bg.png) repeat-y center;	
-	overflow:auto;
-	color:#999;
+  width: 723px;
+  margin: 0 auto;
+  padding-top:40px;
+  background:url(/images/bg.png) repeat-y center;	
 }
 
 .menu h1 {
@@ -40,7 +36,7 @@ a, a:hover, a:visited {
 }
 
 .menu ul {
-  padding: 0 0 0 105px;
+  padding: 4px 0 0 110px;
   margin:0;
   list-style: none;
   font-variant:small-caps;
@@ -53,6 +49,10 @@ a, a:hover, a:visited {
 
 .menu a {
   text-decoration: none;
+}
+
+.menu ul a:hover {
+  text-decoration: underline;
 }
 
 .menu .header-strip {
