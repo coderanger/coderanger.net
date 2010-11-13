@@ -1,3 +1,17 @@
+body {
+  font-family: Verdana, Tahoma, Arial, serif;
+  font-size: 0.76em;
+  color: #999;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, Tahoma, Verdana, serif;
+}
+
+a, a:hover, a:visited {
+  color: #999;
+}
+
 /* Header */
 
 #header {
@@ -35,6 +49,10 @@
 
 .menu li {
   display: inline;
+}
+
+.menu a {
+  text-decoration: none;
 }
 
 .menu .header-strip {
