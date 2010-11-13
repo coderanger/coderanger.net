@@ -1,11 +1,12 @@
 body {
-  font-family: Verdana, Tahoma, Arial, serif;
+  /*font-family: 'Crimson Text', Arial, serif;*/
+  font-family: Verdana,Tahoma, Arial, serif;
   font-size: 0.76em;
   color: #999;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Georgia, Tahoma, Verdana, serif;
+  font-family: 'Crimson Text', Georgia, Tahoma, Verdana, serif;
 }
 
 a, a:hover, a:visited {
@@ -36,7 +37,6 @@ a, a:hover, a:visited {
 
 #menu h1 {
   padding-left: 100px;
-  font-family: Georgia, serif;
   font-size: 4em;
 }
 
@@ -44,7 +44,6 @@ a, a:hover, a:visited {
   padding: 4px 0 0 110px;
   margin:0;
   list-style: none;
-  font-variant:small-caps;
   font-size: 1.2em;
 }
 
@@ -124,7 +123,7 @@ a, a:hover, a:visited {
 .content ul li {
   margin:0.75em 0;
   padding:0;
-  list-style-image:url(img/bullets.gif);
+  /*list-style-image:url(img/bullets.gif);*/
   line-height:130%;
   font-size:16px; 
 }
@@ -150,11 +149,9 @@ a, a:hover, a:visited {
   clear:both;
   padding: 10px 5px;
   padding-bottom: 30px;
-  font-family: Georgia, Serif;
 }
 
-#main .entry p{
-  font-family: Georgia, Serif;
+#main .entry p {
   font-size:16px;
   line-height:140%;
 }
