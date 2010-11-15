@@ -117,12 +117,12 @@ a, a:hover, a:visited {
 }
 
 #error {
-  font-family: serif;
+  font-family: 'Palatino Linotype', 'Crimson Text', Palatino, serif;
   font-size: 5em;
 }
 
 #contact {
-  font-family: serif;
+  font-family: 'Palatino Linotype', Palatino, serif;
   font-size: 2em;
 }
 
@@ -134,8 +134,16 @@ a, a:hover, a:visited {
 #contact .label {
   width: 100px;
   text-align: right;
-  margin-right: 5px;
+  margin-right: 8px;
   color: #999;
+}
+
+#contact a {
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
 }
 
 #post {
