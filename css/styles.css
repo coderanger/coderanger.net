@@ -186,6 +186,10 @@ a, a:hover, a:visited {
   list-style: disc inside none;
 }
 
+#post .embed {
+  text-align: center;
+}
+
 /* Footer */
 
 #footer {
