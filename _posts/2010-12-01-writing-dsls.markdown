@@ -96,6 +96,10 @@ returned parser to use:
 var s = expression(0);
 {% endhighlight %}
 
+This provided a solid base to build the DSL on, with Javascript literals (
+numbers, strings, objects, and arrays), basic math operators, attribute access,
+and simple variables.
+
 Interpreter
 -----------
 
