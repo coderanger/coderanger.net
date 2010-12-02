@@ -3,8 +3,8 @@ layout: post
 title: "Writing DSLs in Javascript"
 ---
 
-The beginnings
---------------
+Beginnings
+----------
 
 Recently at work I have been building a testing console for our web APIs. It
 began very simply, largely influenced by the excellent [Twitter API console](
@@ -16,8 +16,8 @@ terminal-like, based on the [WTerm](http://plugins.jquery.com/project/wterm)
 jQuery plugin. This mapped better to a procedural API, but it still felt
 very limited. Specifically it needed variables.
 
-The red herring
----------------
+eval()^^w
+---------
 
 Given that this was a web site I already had the not insubstantial power of
 Javascript at my disposal. My first thought was that I could dynamically
@@ -31,8 +31,8 @@ second I tried various attempts at code generation from the input strings, but
 again I left empty handed. All in all, while Javascript is a very powerful
 language for scripting pages, it isn't the right tool for embedded DSLs.
 
-The first parser
-----------------
+Parser 1.0
+----------
 
 Once I had decided down the path of writing a custom DSL, my first thought
 turned to parsers. WTerm is already a DSL of sorts, but its parser can be
@@ -70,8 +70,8 @@ while(raw_buffer.length > 0) {
 }
 {% endhighlight %}
 
-The real parser
----------------
+Parser 2.0
+----------
 
 Some further Google-fu turned up a very detailed article by Douglas Crockford
 on [Top Down Operator Precedence](http://javascript.crockford.com/tdop/tdop.html)
@@ -96,8 +96,8 @@ returned parser to use:
 var s = expression(0);
 {% endhighlight %}
 
-An interpreter
---------------
+Interpreter
+-----------
 
 Crockford's code only provides a parser, the other half is to have something
 to execute that parse tree. Below is a snippet of my callback-based function:
