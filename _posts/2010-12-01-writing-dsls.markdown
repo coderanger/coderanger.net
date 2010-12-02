@@ -9,12 +9,12 @@ Beginnings
 Recently at work I have been building a testing console for our web APIs. It
 began very simply, largely influenced by the excellent [Twitter API console](
 http://dev.twitter.com/console). This design rapidly descended into a sea of
-hacks. The [Hurl](http://hurl.it/) style works well for RESTful, or
-nearly RESTful as in Twitter's case, APIs it was not as effective for our
+hacks. The [Hurl](http://hurl.it/) style works well for RESTful, or nearly
+RESTful as in Twitter's case, APIs however it was not as effective for our
 primarily JSON-RPC based system. My next approach was to make something more
 terminal-like, based on the [WTerm](http://plugins.jquery.com/project/wterm)
-jQuery plugin. This mapped better to a procedural API, but it still felt
-very limited. Specifically it needed variables.
+jQuery plugin. This mapped better to a procedural API, but it still felt very
+limited. Specifically it needed variables.
 
 eval()^^w
 ---------
