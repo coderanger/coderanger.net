@@ -106,9 +106,12 @@ to execute that parse tree. Below is a snippet of my callback-based function:
 switch(node.arity) {
 case "literal": cont(node.value); return;
 case "name":
-  if(!(node.value in variables)) { err("Variable \""+node.value+"\" not defined"); return; }
-  cont(variables[node.value]);
-  return;
+    if(!(node.value in variables)) {
+        err("Variable \""+node.value+"\" not defined");
+        return;
+    }
+    cont(variables[node.value]);
+    return;
 case "binary":
     switch(node.value) {
     case "=":
