@@ -72,7 +72,7 @@ Where things start to break down is when you need to update a row using more
 complex code. One option is to use stored procedures, but this is effectively
 impossible to do while keeping mutli-database compatibility. The other option
 is to do the computation in Python code. Without `FOR UPDATE` this puts us
-back into race-condition territory in the same way as `Mode.save()`. What
+back into race-condition territory in the same way as `Model.save()`. What
 `FOR UPDATE` does is to set the same dirty flags that `UPDATE` and `DELETE`
 use before returning the rows. This means that no other transaction can
 alter it.
