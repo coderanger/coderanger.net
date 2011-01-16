@@ -14,6 +14,10 @@ a, a:hover, a:visited {
   color: #000;
 }
 
+em {
+  font-style: italic;
+}
+
 #header, #menu, #main, #footer {
   width: 923px; 
   margin: 0 auto;
