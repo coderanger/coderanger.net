@@ -194,6 +194,12 @@ em {
   text-align: center;
 }
 
+#post .highlight {
+  padding: 0;
+  margin-top: -0.6em;
+  margin-bottom: 0.9em;
+}
+
 /* Footer */
 
 #footer {
