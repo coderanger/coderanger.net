@@ -77,7 +77,7 @@ back into race-condition territory in the same way as `Mode.save()`. What
 use before returning the rows. This means that no other transaction can
 alter it.
 
-Unfortunately the Django ORM doesn't currently expose `FOR UPDATE` as part of
+Unfortunately the Django ORM doesn't [currently](http://code.djangoproject.com/ticket/2705) expose `FOR UPDATE` as part of
 the query system, but with some creativity we can add it in. Much of the
 credit for this goes to [Alexander Artemenko](http://dev.svetlyak.ru/select-update-django-en/)
 who wrote the initial version of the helper.
