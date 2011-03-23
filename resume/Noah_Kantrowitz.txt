@@ -1,0 +1,59 @@
+===============
+Noah Kantrowitz
+===============
+3685 S Bascom Ave
+Apt #25
+Campbell, CA 95008
+518-479-9339
+noah@coderanger.net
+https://coderanger.net/
+
+Profile
+=======
+Passionate programmer perpetually pursuing pragmatic perfection.
+
+Experience
+==========
+Operations Programmer, Cryptic Studios; Los Gatos, CA — 2008-Present
+---------------------------------------------------------------------
+Maintained game patching systems and internal version control tools. Built a
+game launcher and integrated installer system. Ported legacy game
+infrastructure to standards-compliant web services using Django. Built Chef
+configurations for Python and PHP applications.
+
+Security Engineer, One Laptop Per Child; Cambridge, MA - 2007-2008
+---------------------------------------------------------------------
+Implemented the Bitfrost security platform for the XO laptops. Other duties
+include maintaining the bug tracking system and working on the game
+development tools.
+
+Programmer and Administrator, VoiceFlight Systems LLC.; Troy, NY - 2006-2007
+----------------------------------------------------------------------------
+Writing support tools for voice recognition, as well as building and
+maintaining the server infrastructure.
+
+Open Source Developer; The Internet - 2006-Present
+--------------------------------------------------------
+Created a wide variety of plugins and other enhancements for the Trac project
+management system. Active in the Django community and the greater Python web
+ecosystem.
+
+Education
+=========
+Rensselaer Polytechnic Institute - Troy, NY
+BS of Computer Science, May 2008
+
+Expertise
+=========
+Apache, Bash, C, Chef, Django, Git, JavaScript, Linux, Postgres, Python, Subversion
+
+Skills
+======
+Well versed in many programming languages. A passionate advocate of software
+engineering practices, and very familiar with many common tools and
+environments. Experienced with all major operating systems and numerous
+software stacks, from kernel hacking to web APIs.
+
+Referrals
+=========
+Available on request.

@@ -36,6 +36,7 @@ em {
 }
 
 /* Menu */
+
 #menu {
   padding-top: 10px;
   color: #999;
@@ -125,6 +126,8 @@ em {
   font-size: 5em;
 }
 
+/* Contact page */
+
 #contact {
   font-family: 'Palatino Linotype', Palatino, serif;
   font-size: 2em;
@@ -149,6 +152,8 @@ em {
 #contact a:hover {
   text-decoration: underline;
 }
+
+/* Posts */
 
 #post {
   font-family: Georgia, serif;
@@ -198,6 +203,45 @@ em {
   padding: 0;
   margin-top: -0.6em;
   margin-bottom: 0.9em;
+}
+
+/* Resume page */
+
+#resume #summary {
+  font-size: 1.5em;
+  font-style: italic;
+  background: url(../images/quote.png) no-repeat top left;
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-bottom: 1px;
+  color: #666;
+}
+
+#resume h2 {
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 1em;
+}
+
+#resume .experience {
+  margin-top: 0.5em;
+}
+
+#resume .experience.first {
+  margin-top: 0;
+}
+
+#resume .experience .details, #resume .education .location {
+  font-weight: bold;
+}
+
+#resume #expertise a {
+  text-decoration: none;
+}
+
+#resume #formats a {
+  font-size: 1.2em;
 }
 
 /* Footer */
