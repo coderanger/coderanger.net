@@ -48,5 +48,13 @@
   </div>
   
   <div id="footer"></div>
+  <script type="text/javascript">
+    $("a[rel*='external']").click(function(){
+      _gaq.push(['_trackPageview', '/outgoing/'+ $(this).attr('href')]);
+    });
+    $("a[rel*='download']").click(function(){
+      _gaq.push(['_trackPageview', $(this).attr('href')]);
+    });
+  </script>
 </body>
 </html>
