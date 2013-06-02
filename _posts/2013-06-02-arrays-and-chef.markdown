@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Arrays and Chef Attributes
-published: false
 ---
 
 A conversation with a friend today reminded me how easy it is to find unexpected behavior with Chef attributes when using array values. Arrays are good for many things, and are often a seemingly natural fit to describe server values. The example my friend was having issues with was:
