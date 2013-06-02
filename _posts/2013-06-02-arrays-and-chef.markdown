@@ -13,7 +13,35 @@ node['chruby']['rubies'].each do |ruby|
 end
 {% endhighlight %}
 
-This is simple, consise, and relatively unambiguous to the reader; all hallmarks of good code. There is a sinister side though, how do you cope with merges on an array? Chef attributes exist in a [nested structure](http://docs.opscode.com/essentials_cookbook_attribute_files.html#attribute-precedence), where different sources and precedence levels are [merged together](https://github.com/opscode/chef/blob/master/lib/chef/mixin/deep_merge.rb) to form the final attributes that your recipes run against. With hashes, this merge is relatively straight forward, if both the original and override values are hashes they are recursively merged together all the way down. This logic is less clear on arrays though. I will skip the history lesson and just say the current behavior is that with different precedence levels, array values are simply overridden, but on the same level they set-unioned together. This behavior is often unexpected and can lead to subtle errors.
+This is simple, consise, and relatively unambiguous to the reader; all hallmarks of good code. There is a sinister side though, how do you cope with merges on an array? Chef attributes exist in a [nested structure](http://docs.opscode.com/essentials_cookbook_attribute_files.html#attribute-precedence), where different sources and precedence levels are [merged together](https://github.com/opscode/chef/blob/master/lib/chef/mixin/deep_merge.rb) to form the final attributes that your recipes run against. With hashes, this merge is relatively straight forward, if both the original and override values are hashes they are recursively merged together all the way down. This logic is less clear on arrays though. In Chef 11, the behavior is that on different precedence levels, the higher value overrides as with strings and other simple types:
+
+{% highlight ruby %}
+default['chruby']['rubies'] = ['jruby', '1.9.3', '2.0.0']
+...
+override_attributes({
+  'chruby' => {
+    'rubies' => ['1.8.7', '2.0.0'],
+  }
+})
+...
+node['chruby']['rubies'] == ['1.8.7', '2.0.0']
+{% endhighlight %}
+
+Hoever things are not as simple when the two values are at the same level. The two arrays are set-unioned together, with the resulting order being deterministic but difficult to predict to the casual reader:
+
+{% highlight ruby %}
+default['chruby']['rubies'] = ['jruby', '1.9.3', '2.0.0']
+...
+default_attributes({
+  'chruby' => {
+    'rubies' => ['1.8.7', '2.0.0'],
+  }
+})
+...
+node['chruby']['rubies'] == ['jruby', '1.9.3', '2.0.0', '1.8.7']
+{% endhighlight %}
+
+Needless to say this can result in much confusion.
 
 ## A better way
 
