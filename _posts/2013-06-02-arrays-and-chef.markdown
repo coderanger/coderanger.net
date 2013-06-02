@@ -55,7 +55,8 @@ So one crucial difference between using an array and a hash of boolean flags is 
 {% highlight ruby %}
 default['chruby']['rubies'] = {'jruby' => 100, '1.9.3' => 50, '2.0.0' => 50}
 ...
-node['chruby']['rubies'].inject([]) {|memo, (key, value)| memo << key if value; memo}.sort_by {|key| node['chruby']['rubies'][key]}.each do |ruby|
+node['chruby']['rubies'].inject([]) {|memo, (key, value)| memo << key if value; memo} \
+.sort_by {|key| node['chruby']['rubies'][key]}.each do |ruby|
   ...
 end
 {% endhighlight %}
