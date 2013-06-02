@@ -27,7 +27,7 @@ override_attributes({
 node['chruby']['rubies'] == ['1.8.7', '2.0.0']
 {% endhighlight %}
 
-Hoever things are not as simple when the two values are at the same level. The two arrays are set-unioned together, with the resulting order being deterministic but difficult to predict to the casual reader:
+However things are not as simple when the two values are at the same level. The two arrays are set-unioned together, with the resulting order being deterministic but difficult to predict to the casual reader:
 
 {% highlight ruby %}
 default['chruby']['rubies'] = ['jruby', '1.9.3', '2.0.0']
