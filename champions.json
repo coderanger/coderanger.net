@@ -1,0 +1,1932 @@
+{
+    "Aatrox": {
+        "attack": 80,
+        "attributes": [
+            "fighter",
+            "fighter",
+            "melee",
+            "melee"
+        ],
+        "date": "2013-06-13",
+        "difficulty": 60,
+        "gender": "male",
+        "health": 40,
+        "ip": 6300,
+        "name": "Aatrox",
+        "rp": 975,
+        "spells": 30,
+        "type": "Fighter"
+    },
+    "Ahri": {
+        "attack": 30,
+        "attributes": [
+            "assassin",
+            "mage",
+            "ranged"
+        ],
+        "date": "2011-12-14",
+        "difficulty": 80,
+        "gender": "female",
+        "health": 40,
+        "ip": 6300,
+        "name": "Ahri",
+        "rp": 975,
+        "spells": 80,
+        "type": "Mage"
+    },
+    "Akali": {
+        "attack": 50,
+        "attributes": [
+            "assassin",
+            "melee",
+            "stealth"
+        ],
+        "date": "2010-05-11",
+        "difficulty": 60,
+        "gender": "female",
+        "health": 30,
+        "ip": 3150,
+        "name": "Akali",
+        "rp": 790,
+        "spells": 80,
+        "type": "Assassin"
+    },
+    "Alistar": {
+        "attack": 60,
+        "attributes": [
+            "melee",
+            "pusher",
+            "tank"
+        ],
+        "date": "2009-02-21",
+        "difficulty": 80,
+        "gender": "male",
+        "health": 90,
+        "ip": 1350,
+        "name": "Alistar",
+        "rp": 585,
+        "spells": 50,
+        "type": "Tank"
+    },
+    "Amumu": {
+        "attack": 20,
+        "attributes": [
+            "melee",
+            "pusher",
+            "tank"
+        ],
+        "date": "2009-06-26",
+        "difficulty": 40,
+        "gender": "male",
+        "health": 60,
+        "ip": 1350,
+        "name": "Amumu",
+        "rp": 585,
+        "spells": 80,
+        "type": "Tank"
+    },
+    "Anivia": {
+        "attack": 10,
+        "attributes": [
+            "mage",
+            "ranged"
+        ],
+        "date": "2009-07-10",
+        "difficulty": 70,
+        "gender": "female",
+        "health": 50,
+        "ip": 3150,
+        "name": "Anivia",
+        "rp": 790,
+        "spells": 100,
+        "type": "Mage"
+    },
+    "Annie": {
+        "attack": 20,
+        "attributes": [
+            "mage",
+            "pusher",
+            "ranged",
+            "recommended"
+        ],
+        "date": "2009-02-21",
+        "difficulty": 40,
+        "gender": "female",
+        "health": 30,
+        "ip": 450,
+        "name": "Annie",
+        "rp": 260,
+        "spells": 100,
+        "type": "Mage"
+    },
+    "Ashe": {
+        "attack": 70,
+        "attributes": [
+            "carry",
+            "ranged",
+            "recommended"
+        ],
+        "date": "2009-02-21",
+        "difficulty": 40,
+        "gender": "female",
+        "health": 30,
+        "ip": 450,
+        "name": "Ashe",
+        "rp": 260,
+        "spells": 20,
+        "type": "RangedAD"
+    },
+    "Blitzcrank": {
+        "attack": 40,
+        "attributes": [
+            "fighter",
+            "melee"
+        ],
+        "date": "2009-09-02",
+        "difficulty": 60,
+        "gender": "male",
+        "health": 80,
+        "ip": 3150,
+        "name": "Blitzcrank",
+        "rp": 790,
+        "spells": 50,
+        "type": "Fighter"
+    },
+    "Brand": {
+        "attack": 20,
+        "attributes": [
+            "mage",
+            "ranged"
+        ],
+        "date": "2011-04-12",
+        "difficulty": 60,
+        "gender": "male",
+        "health": 20,
+        "ip": 4800,
+        "name": "Brand",
+        "rp": 880,
+        "spells": 90,
+        "type": "Mage"
+    },
+    "Caitlyn": {
+        "attack": 80,
+        "attributes": [
+            "carry",
+            "ranged"
+        ],
+        "date": "2011-01-04",
+        "difficulty": 40,
+        "gender": "female",
+        "health": 40,
+        "ip": 4800,
+        "name": "Caitlyn",
+        "rp": 880,
+        "spells": 40,
+        "type": "RangedAD"
+    },
+    "Cassiopeia": {
+        "attack": 20,
+        "attributes": [
+            "mage",
+            "ranged"
+        ],
+        "date": "2010-12-14",
+        "difficulty": 100,
+        "gender": "female",
+        "health": 30,
+        "ip": 4800,
+        "name": "Cassiopeia",
+        "rp": 880,
+        "spells": 90,
+        "type": "Mage"
+    },
+    "Cho'Gath": {
+        "attack": 30,
+        "attributes": [
+            "fighter",
+            "fighter",
+            "jungler",
+            "mage",
+            "mage",
+            "melee",
+            "melee",
+            "pusher"
+        ],
+        "date": "2009-06-26",
+        "difficulty": 70,
+        "gender": "male",
+        "health": 40,
+        "ip": 1350,
+        "name": "Cho'Gath",
+        "rp": 585,
+        "spells": 80,
+        "type": "Tank"
+    },
+    "Corki": {
+        "attack": 80,
+        "attributes": [
+            "carry",
+            "ranged"
+        ],
+        "date": "2009-09-19",
+        "difficulty": 70,
+        "gender": "male",
+        "health": 30,
+        "ip": 3150,
+        "name": "Corki",
+        "rp": 790,
+        "spells": 60,
+        "type": "RangedAD"
+    },
+    "Darius": {
+        "attack": 90,
+        "attributes": [
+            "fighter",
+            "melee"
+        ],
+        "date": "2012-05-23",
+        "difficulty": 30,
+        "gender": "male",
+        "health": 50,
+        "ip": 6300,
+        "name": "Darius",
+        "rp": 975,
+        "spells": 20,
+        "type": "Fighter"
+    },
+    "Diana": {
+        "attack": 70,
+        "attributes": [
+            "fighter",
+            "jungler",
+            "mage",
+            "melee"
+        ],
+        "date": "2012-08-07",
+        "difficulty": 40,
+        "gender": "female",
+        "health": 60,
+        "ip": 6300,
+        "name": "Diana",
+        "rp": 975,
+        "spells": 80,
+        "type": "Assassin"
+    },
+    "Dr. Mundo": {
+        "attack": 60,
+        "attributes": [
+            "fighter",
+            "melee"
+        ],
+        "date": "2009-09-02",
+        "difficulty": 50,
+        "gender": "male",
+        "health": 80,
+        "ip": 1350,
+        "name": "Dr. Mundo",
+        "rp": 585,
+        "spells": 70,
+        "type": "Fighter"
+    },
+    "Draven": {
+        "attack": 90,
+        "attributes": [
+            "carry",
+            "ranged"
+        ],
+        "date": "2012-06-06",
+        "difficulty": 60,
+        "gender": "male",
+        "health": 40,
+        "ip": 6300,
+        "name": "Draven",
+        "rp": 975,
+        "spells": 20,
+        "type": "RangedAD"
+    },
+    "Elise": {
+        "attack": 60,
+        "attributes": [
+            "jungler",
+            "mage",
+            "melee",
+            "ranged"
+        ],
+        "date": "2012-10-26",
+        "difficulty": 80,
+        "gender": "female",
+        "health": 50,
+        "ip": 6300,
+        "name": "Elise",
+        "rp": 975,
+        "spells": 70,
+        "type": "Mage"
+    },
+    "Evelynn": {
+        "attack": 40,
+        "attributes": [
+            "assassin",
+            "assassin",
+            "melee",
+            "melee",
+            "stealth",
+            "stealth"
+        ],
+        "date": "2009-05-01",
+        "difficulty": 80,
+        "gender": "female",
+        "health": 20,
+        "ip": 1350,
+        "name": "Evelynn",
+        "rp": 585,
+        "spells": 70,
+        "type": "Assassin"
+    },
+    "Ezreal": {
+        "attack": 50,
+        "attributes": [
+            "carry",
+            "ranged"
+        ],
+        "date": "2010-03-16",
+        "difficulty": 80,
+        "gender": "male",
+        "health": 40,
+        "ip": 4800,
+        "name": "Ezreal",
+        "rp": 880,
+        "spells": 70,
+        "type": "RangedAD"
+    },
+    "Fiddlesticks": {
+        "attack": 20,
+        "attributes": [
+            "jungler",
+            "mage",
+            "ranged"
+        ],
+        "date": "2009-02-21",
+        "difficulty": 50,
+        "gender": "male",
+        "health": 30,
+        "ip": 1350,
+        "name": "Fiddlesticks",
+        "rp": 585,
+        "spells": 90,
+        "type": "Mage"
+    },
+    "Fiora": {
+        "attack": 100,
+        "attributes": [
+            "carry",
+            "melee"
+        ],
+        "date": "2012-02-29",
+        "difficulty": 50,
+        "gender": "female",
+        "health": 40,
+        "ip": 6300,
+        "name": "Fiora",
+        "rp": 975,
+        "spells": 30,
+        "type": "Assassin"
+    },
+    "Fizz": {
+        "attack": 30,
+        "attributes": [
+            "assassin",
+            "fighter",
+            "melee"
+        ],
+        "date": "2011-11-15",
+        "difficulty": 60,
+        "gender": "male",
+        "health": 40,
+        "ip": 6300,
+        "name": "Fizz",
+        "rp": 975,
+        "spells": 70,
+        "type": "Fighter"
+    },
+    "Galio": {
+        "attack": 30,
+        "attributes": [
+            "melee",
+            "support",
+            "tank"
+        ],
+        "date": "2010-08-10",
+        "difficulty": 40,
+        "gender": "male",
+        "health": 70,
+        "ip": 4800,
+        "name": "Galio",
+        "rp": 880,
+        "spells": 60,
+        "type": "Tank"
+    },
+    "Gangplank": {
+        "attack": 70,
+        "attributes": [
+            "carry",
+            "melee"
+        ],
+        "date": "2009-08-19",
+        "difficulty": 50,
+        "gender": "male",
+        "health": 60,
+        "ip": 3150,
+        "name": "Gangplank",
+        "rp": 790,
+        "spells": 40,
+        "type": "Fighter"
+    },
+    "Garen": {
+        "attack": 90,
+        "attributes": [
+            "fighter",
+            "fighter",
+            "melee",
+            "recommended"
+        ],
+        "date": "2010-04-27",
+        "difficulty": 20,
+        "gender": "male",
+        "health": 40,
+        "ip": 450,
+        "name": "Garen",
+        "rp": 260,
+        "spells": 20,
+        "type": "Fighter"
+    },
+    "Gragas": {
+        "attack": 40,
+        "attributes": [
+            "fighter",
+            "melee"
+        ],
+        "date": "2010-02-02",
+        "difficulty": 60,
+        "gender": "male",
+        "health": 90,
+        "ip": 3150,
+        "name": "Gragas",
+        "rp": 790,
+        "spells": 60,
+        "type": "Fighter"
+    },
+    "Graves": {
+        "attack": 80,
+        "attributes": [
+            "carry",
+            "ranged"
+        ],
+        "date": "2011-10-19",
+        "difficulty": 40,
+        "gender": "male",
+        "health": 50,
+        "ip": 6300,
+        "name": "Graves",
+        "rp": 975,
+        "spells": 30,
+        "type": "RangedAD"
+    },
+    "Hecarim": {
+        "attack": 80,
+        "attributes": [
+            "fighter",
+            "jungler",
+            "melee"
+        ],
+        "date": "2012-04-18",
+        "difficulty": 50,
+        "gender": "male",
+        "health": 60,
+        "ip": 6300,
+        "name": "Hecarim",
+        "rp": 975,
+        "spells": 40,
+        "type": "Fighter"
+    },
+    "Heimerdinger": {
+        "attack": 20,
+        "attributes": [
+            "mage",
+            "pusher",
+            "ranged"
+        ],
+        "date": "2009-10-10",
+        "difficulty": 40,
+        "gender": "male",
+        "health": 60,
+        "ip": 3150,
+        "name": "Heimerdinger",
+        "rp": 790,
+        "spells": 80,
+        "type": "Mage"
+    },
+    "Irelia": {
+        "attack": 70,
+        "attributes": [
+            "assassin",
+            "melee"
+        ],
+        "date": "2010-11-16",
+        "difficulty": 50,
+        "gender": "female",
+        "health": 40,
+        "ip": 4800,
+        "name": "Irelia",
+        "rp": 880,
+        "spells": 50,
+        "type": "Assassin"
+    },
+    "Janna": {
+        "attack": 30,
+        "attributes": [
+            "ranged",
+            "support"
+        ],
+        "date": "2009-09-02",
+        "difficulty": 90,
+        "gender": "female",
+        "health": 50,
+        "ip": 1350,
+        "name": "Janna",
+        "rp": 585,
+        "spells": 70,
+        "type": "Support"
+    },
+    "Jarvan IV": {
+        "attack": 60,
+        "attributes": [
+            "fighter",
+            "melee",
+            "pusher"
+        ],
+        "date": "2011-03-01",
+        "difficulty": 50,
+        "gender": "male",
+        "health": 80,
+        "ip": 4800,
+        "name": "Jarvan IV",
+        "rp": 880,
+        "spells": 30,
+        "type": "Fighter"
+    },
+    "Jax": {
+        "attack": 70,
+        "attributes": [
+            "fighter",
+            "melee"
+        ],
+        "date": "2009-02-21",
+        "difficulty": 60,
+        "gender": "male",
+        "health": 50,
+        "ip": 1350,
+        "name": "Jax",
+        "rp": 585,
+        "spells": 70,
+        "type": "Assassin"
+    },
+    "Jayce": {
+        "attack": 60,
+        "attributes": [
+            "fighter",
+            "melee",
+            "ranged"
+        ],
+        "date": "2012-07-07",
+        "difficulty": 70,
+        "gender": "male",
+        "health": 60,
+        "ip": 6300,
+        "name": "Jayce",
+        "rp": 975,
+        "spells": 50,
+        "type": "Fighter"
+    },
+    "Karma": {
+        "attack": 10,
+        "attributes": [
+            "mage",
+            "pusher",
+            "ranged",
+            "support"
+        ],
+        "date": "2011-02-01",
+        "difficulty": 80,
+        "gender": "female",
+        "health": 70,
+        "ip": 3150,
+        "name": "Karma",
+        "rp": 790,
+        "spells": 80,
+        "type": "Support"
+    },
+    "Karthus": {
+        "attack": 20,
+        "attributes": [
+            "mage",
+            "ranged"
+        ],
+        "date": "2009-06-12",
+        "difficulty": 80,
+        "gender": "male",
+        "health": 20,
+        "ip": 3150,
+        "name": "Karthus",
+        "rp": 790,
+        "spells": 100,
+        "type": "Mage"
+    },
+    "Kassadin": {
+        "attack": 30,
+        "attributes": [
+            "assassin",
+            "mage",
+            "melee"
+        ],
+        "date": "2009-08-07",
+        "difficulty": 80,
+        "gender": "male",
+        "health": 50,
+        "ip": 3150,
+        "name": "Kassadin",
+        "rp": 790,
+        "spells": 80,
+        "type": "Mage"
+    },
+    "Katarina": {
+        "attack": 40,
+        "attributes": [
+            "assassin",
+            "melee",
+            "recommended"
+        ],
+        "date": "2009-09-19",
+        "difficulty": 30,
+        "gender": "female",
+        "health": 30,
+        "ip": 3150,
+        "name": "Katarina",
+        "rp": 790,
+        "spells": 90,
+        "type": "Assassin"
+    },
+    "Kayle": {
+        "attack": 50,
+        "attributes": [
+            "fighter",
+            "melee",
+            "ranged",
+            "support"
+        ],
+        "date": "2009-02-21",
+        "difficulty": 30,
+        "gender": "female",
+        "health": 90,
+        "ip": 450,
+        "name": "Kayle",
+        "rp": 260,
+        "spells": 60,
+        "type": "Support"
+    },
+    "Kennen": {
+        "attack": 40,
+        "attributes": [
+            "mage",
+            "ranged"
+        ],
+        "date": "2010-04-08",
+        "difficulty": 50,
+        "gender": "male",
+        "health": 30,
+        "ip": 4800,
+        "name": "Kennen",
+        "rp": 880,
+        "spells": 85,
+        "type": "Mage"
+    },
+    "Kha'Zix": {
+        "attack": 90,
+        "attributes": [
+            "assassin",
+            "jungler",
+            "melee",
+            "stealth"
+        ],
+        "date": "2012-09-27",
+        "difficulty": 70,
+        "gender": "male",
+        "health": 40,
+        "ip": 6300,
+        "name": "Kha'Zix",
+        "rp": 975,
+        "spells": 60,
+        "type": "Assassin"
+    },
+    "Kog'Maw": {
+        "attack": 80,
+        "attributes": [
+            "carry",
+            "ranged"
+        ],
+        "date": "2010-06-24",
+        "difficulty": 80,
+        "gender": "male",
+        "health": 20,
+        "ip": 4800,
+        "name": "Kog'Maw",
+        "rp": 880,
+        "spells": 50,
+        "type": "RangedAD"
+    },
+    "LeBlanc": {
+        "attack": 10,
+        "attributes": [
+            "assassin",
+            "mage",
+            "ranged"
+        ],
+        "date": "2010-11-02",
+        "difficulty": 90,
+        "gender": "female",
+        "health": 40,
+        "ip": 3150,
+        "name": "LeBlanc",
+        "rp": 790,
+        "spells": 100,
+        "type": "Mage"
+    },
+    "Lee Sin": {
+        "attack": 80,
+        "attributes": [
+            "assassin",
+            "jungler",
+            "melee"
+        ],
+        "date": "2011-04-01",
+        "difficulty": 80,
+        "gender": "male",
+        "health": 50,
+        "ip": 4800,
+        "name": "Lee Sin",
+        "rp": 880,
+        "spells": 30,
+        "type": "Assassin"
+    },
+    "Leona": {
+        "attack": 40,
+        "attributes": [
+            "melee",
+            "tank"
+        ],
+        "date": "2011-07-13",
+        "difficulty": 40,
+        "gender": "female",
+        "health": 80,
+        "ip": 4800,
+        "name": "Leona",
+        "rp": 880,
+        "spells": 30,
+        "type": "Tank"
+    },
+    "Lissandra": {
+        "attack": 20,
+        "attributes": [
+            "mage",
+            "ranged"
+        ],
+        "date": "2013-04-30",
+        "difficulty": 80,
+        "gender": "female",
+        "health": 50,
+        "ip": 6300,
+        "name": "Lissandra",
+        "rp": 975,
+        "spells": 80,
+        "type": "Mage"
+    },
+    "Lulu": {
+        "attack": 40,
+        "attributes": [
+            "ranged",
+            "support"
+        ],
+        "date": "2012-03-20",
+        "difficulty": 50,
+        "gender": "female",
+        "health": 50,
+        "ip": 6300,
+        "name": "Lulu",
+        "rp": 975,
+        "spells": 70,
+        "type": "Support"
+    },
+    "Lux": {
+        "attack": 20,
+        "attributes": [
+            "mage",
+            "ranged",
+            "support"
+        ],
+        "date": "2010-10-19",
+        "difficulty": 60,
+        "gender": "female",
+        "health": 40,
+        "ip": 3150,
+        "name": "Lux",
+        "rp": 790,
+        "spells": 90,
+        "type": "Mage"
+    },
+    "Malphite": {
+        "attack": 50,
+        "attributes": [
+            "fighter",
+            "melee"
+        ],
+        "date": "2009-09-02",
+        "difficulty": 30,
+        "gender": "male",
+        "health": 60,
+        "ip": 1350,
+        "name": "Malphite",
+        "rp": 585,
+        "spells": 70,
+        "type": "Fighter"
+    },
+    "Malzahar": {
+        "attack": 20,
+        "attributes": [
+            "mage",
+            "ranged"
+        ],
+        "date": "2010-06-01",
+        "difficulty": 60,
+        "gender": "male",
+        "health": 20,
+        "ip": 4800,
+        "name": "Malzahar",
+        "rp": 880,
+        "spells": 90,
+        "type": "Mage"
+    },
+    "Maokai": {
+        "attack": 30,
+        "attributes": [
+            "jungler",
+            "melee",
+            "pusher",
+            "tank"
+        ],
+        "date": "2011-02-16",
+        "difficulty": 40,
+        "gender": "male",
+        "health": 80,
+        "ip": 4800,
+        "name": "Maokai",
+        "rp": 880,
+        "spells": 60,
+        "type": "Tank"
+    },
+    "Master Yi": {
+        "attack": 90,
+        "attributes": [
+            "carry",
+            "carry",
+            "jungler",
+            "melee",
+            "melee",
+            "recommended",
+            "recommended"
+        ],
+        "date": "2009-02-21",
+        "difficulty": 20,
+        "gender": "male",
+        "health": 40,
+        "ip": 450,
+        "name": "Master Yi",
+        "rp": 260,
+        "spells": 30,
+        "type": "Assassin"
+    },
+    "Miss Fortune": {
+        "attack": 80,
+        "attributes": [
+            "carry",
+            "ranged"
+        ],
+        "date": "2010-09-08",
+        "difficulty": 30,
+        "gender": "female",
+        "health": 20,
+        "ip": 4800,
+        "name": "Miss Fortune",
+        "rp": 880,
+        "spells": 50,
+        "type": "RangedAD"
+    },
+    "Mordekaiser": {
+        "attack": 60,
+        "attributes": [
+            "fighter",
+            "melee",
+            "pusher"
+        ],
+        "date": "2010-02-24",
+        "difficulty": 30,
+        "gender": "male",
+        "health": 60,
+        "ip": 3150,
+        "name": "Mordekaiser",
+        "rp": 790,
+        "spells": 60,
+        "type": "Fighter"
+    },
+    "Morgana": {
+        "attack": 10,
+        "attributes": [
+            "mage",
+            "ranged",
+            "support"
+        ],
+        "date": "2009-02-21",
+        "difficulty": 70,
+        "gender": "female",
+        "health": 60,
+        "ip": 1350,
+        "name": "Morgana",
+        "rp": 585,
+        "spells": 80,
+        "type": "Support"
+    },
+    "Nami": {
+        "attack": 30,
+        "attributes": [
+            "ranged",
+            "support"
+        ],
+        "date": "2012-12-07",
+        "difficulty": 80,
+        "gender": "female",
+        "health": 40,
+        "ip": 6300,
+        "name": "Nami",
+        "rp": 975,
+        "spells": 90,
+        "type": "Support"
+    },
+    "Nasus": {
+        "attack": 70,
+        "attributes": [
+            "fighter",
+            "melee",
+            "pusher",
+            "recommended"
+        ],
+        "date": "2009-10-01",
+        "difficulty": 20,
+        "gender": "male",
+        "health": 50,
+        "ip": 1350,
+        "name": "Nasus",
+        "rp": 585,
+        "spells": 60,
+        "type": "Fighter"
+    },
+    "Nautilus": {
+        "attack": 40,
+        "attributes": [
+            "melee",
+            "tank"
+        ],
+        "date": "2012-02-14",
+        "difficulty": 50,
+        "gender": "male",
+        "health": 60,
+        "ip": 6300,
+        "name": "Nautilus",
+        "rp": 975,
+        "spells": 80,
+        "type": "Tank"
+    },
+    "Nidalee": {
+        "attack": 50,
+        "attributes": [
+            "pusher",
+            "support"
+        ],
+        "date": "2009-12-17",
+        "difficulty": 80,
+        "gender": "female",
+        "health": 40,
+        "ip": 3150,
+        "name": "Nidalee",
+        "rp": 790,
+        "spells": 70,
+        "type": "Fighter"
+    },
+    "Nocturne": {
+        "attack": 90,
+        "attributes": [
+            "assassin",
+            "jungler",
+            "melee",
+            "pusher"
+        ],
+        "date": "2011-03-15",
+        "difficulty": 50,
+        "gender": "male",
+        "health": 50,
+        "ip": 4800,
+        "name": "Nocturne",
+        "rp": 880,
+        "spells": 20,
+        "type": "Assassin"
+    },
+    "Nunu": {
+        "attack": 40,
+        "attributes": [
+            "fighter",
+            "jungler",
+            "melee",
+            "recommended"
+        ],
+        "date": "2009-02-21",
+        "difficulty": 30,
+        "gender": "male",
+        "health": 60,
+        "ip": 450,
+        "name": "Nunu",
+        "rp": 260,
+        "spells": 70,
+        "type": "Fighter"
+    },
+    "Olaf": {
+        "attack": 90,
+        "attributes": [
+            "fighter",
+            "jungler",
+            "melee"
+        ],
+        "date": "2010-06-09",
+        "difficulty": 40,
+        "gender": "male",
+        "health": 50,
+        "ip": 3150,
+        "name": "Olaf",
+        "rp": 790,
+        "spells": 30,
+        "type": "Fighter"
+    },
+    "Orianna": {
+        "attack": 40,
+        "attributes": [
+            "mage",
+            "ranged"
+        ],
+        "date": "2011-06-01",
+        "difficulty": 100,
+        "gender": "female",
+        "health": 30,
+        "ip": 4800,
+        "name": "Orianna",
+        "rp": 880,
+        "spells": 90,
+        "type": "Mage"
+    },
+    "Pantheon": {
+        "attack": 90,
+        "attributes": [
+            "assassin",
+            "melee"
+        ],
+        "date": "2010-02-02",
+        "difficulty": 30,
+        "gender": "male",
+        "health": 30,
+        "ip": 3150,
+        "name": "Pantheon",
+        "rp": 790,
+        "spells": 30,
+        "type": "Assassin"
+    },
+    "Poppy": {
+        "attack": 40,
+        "attributes": [
+            "assassin",
+            "fighter",
+            "melee"
+        ],
+        "date": "2010-01-13",
+        "difficulty": 60,
+        "gender": "female",
+        "health": 50,
+        "ip": 450,
+        "name": "Poppy",
+        "rp": 260,
+        "spells": 80,
+        "type": "Fighter"
+    },
+    "Quinn": {
+        "attack": 90,
+        "attributes": [
+            "carry",
+            "melee",
+            "ranged"
+        ],
+        "date": "2013-03-01",
+        "difficulty": 70,
+        "gender": "female",
+        "health": 40,
+        "ip": 6300,
+        "name": "Quinn",
+        "rp": 975,
+        "spells": 20,
+        "type": "RangedAD"
+    },
+    "Rammus": {
+        "attack": 40,
+        "attributes": [
+            "jungler",
+            "melee",
+            "tank"
+        ],
+        "date": "2009-07-10",
+        "difficulty": 50,
+        "gender": "male",
+        "health": 100,
+        "ip": 3150,
+        "name": "Rammus",
+        "rp": 790,
+        "spells": 50,
+        "type": "Tank"
+    },
+    "Renekton": {
+        "attack": 90,
+        "attributes": [
+            "fighter",
+            "melee"
+        ],
+        "date": "2011-01-17",
+        "difficulty": 30,
+        "gender": "male",
+        "health": 50,
+        "ip": 4800,
+        "name": "Renekton",
+        "rp": 880,
+        "spells": 20,
+        "type": "Fighter"
+    },
+    "Rengar": {
+        "attack": 70,
+        "attributes": [
+            "fighter",
+            "jungler",
+            "melee",
+            "stealth"
+        ],
+        "date": "2012-08-21",
+        "difficulty": 50,
+        "gender": "male",
+        "health": 40,
+        "ip": 6300,
+        "name": "Rengar",
+        "rp": 975,
+        "spells": 20,
+        "type": "Assassin"
+    },
+    "Riven": {
+        "attack": 80,
+        "attributes": [
+            "fighter",
+            "melee"
+        ],
+        "date": "2011-09-14",
+        "difficulty": 40,
+        "gender": "female",
+        "health": 50,
+        "ip": 6300,
+        "name": "Riven",
+        "rp": 975,
+        "spells": 10,
+        "type": "Fighter"
+    },
+    "Rumble": {
+        "attack": 30,
+        "attributes": [
+            "mage",
+            "melee",
+            "pusher"
+        ],
+        "date": "2011-04-26",
+        "difficulty": 80,
+        "gender": "male",
+        "health": 60,
+        "ip": 4800,
+        "name": "Rumble",
+        "rp": 880,
+        "spells": 80,
+        "type": "Mage"
+    },
+    "Ryze": {
+        "attack": 20,
+        "attributes": [
+            "mage",
+            "ranged",
+            "recommended"
+        ],
+        "date": "2009-02-21",
+        "difficulty": 30,
+        "gender": "male",
+        "health": 20,
+        "ip": 450,
+        "name": "Ryze",
+        "rp": 260,
+        "spells": 100,
+        "type": "Mage"
+    },
+    "Sejuani": {
+        "attack": 50,
+        "attributes": [
+            "jungler",
+            "melee",
+            "tank"
+        ],
+        "date": "2012-01-17",
+        "difficulty": 40,
+        "gender": "female",
+        "health": 70,
+        "ip": 6300,
+        "name": "Sejuani",
+        "rp": 975,
+        "spells": 60,
+        "type": "Tank"
+    },
+    "Shaco": {
+        "attack": 80,
+        "attributes": [
+            "assassin",
+            "jungler",
+            "melee",
+            "stealth"
+        ],
+        "date": "2009-10-10",
+        "difficulty": 90,
+        "gender": "male",
+        "health": 40,
+        "ip": 3150,
+        "name": "Shaco",
+        "rp": 790,
+        "spells": 60,
+        "type": "Assassin"
+    },
+    "Shen": {
+        "attack": 30,
+        "attributes": [
+            "melee",
+            "support",
+            "tank"
+        ],
+        "date": "2010-03-24",
+        "difficulty": 30,
+        "gender": "male",
+        "health": 90,
+        "ip": 3150,
+        "name": "Shen",
+        "rp": 790,
+        "spells": 30,
+        "type": "Tank"
+    },
+    "Shyvana": {
+        "attack": 70,
+        "attributes": [
+            "fighter",
+            "melee"
+        ],
+        "date": "2011-11-01",
+        "difficulty": 40,
+        "gender": "female",
+        "health": 60,
+        "ip": 6300,
+        "name": "Shyvana",
+        "rp": 975,
+        "spells": 50,
+        "type": "Fighter"
+    },
+    "Singed": {
+        "attack": 50,
+        "attributes": [
+            "fighter",
+            "melee"
+        ],
+        "date": "2009-04-18",
+        "difficulty": 50,
+        "gender": "male",
+        "health": 60,
+        "ip": 1350,
+        "name": "Singed",
+        "rp": 585,
+        "spells": 70,
+        "type": "Tank"
+    },
+    "Sion": {
+        "attack": 50,
+        "attributes": [
+            "fighter",
+            "melee"
+        ],
+        "date": "2009-02-21",
+        "difficulty": 40,
+        "gender": "male",
+        "health": 80,
+        "ip": 1350,
+        "name": "Sion",
+        "rp": 585,
+        "spells": 70,
+        "type": "Fighter"
+    },
+    "Sivir": {
+        "attack": 90,
+        "attributes": [
+            "carry",
+            "pusher",
+            "ranged",
+            "recommended"
+        ],
+        "date": "2009-02-21",
+        "difficulty": 30,
+        "gender": "female",
+        "health": 30,
+        "ip": 450,
+        "name": "Sivir",
+        "rp": 260,
+        "spells": 10,
+        "type": "RangedAD"
+    },
+    "Skarner": {
+        "attack": 70,
+        "attributes": [
+            "fighter",
+            "jungler",
+            "melee"
+        ],
+        "date": "2011-08-09",
+        "difficulty": 50,
+        "gender": "male",
+        "health": 60,
+        "ip": 4800,
+        "name": "Skarner",
+        "rp": 880,
+        "spells": 50,
+        "type": "Fighter"
+    },
+    "Sona": {
+        "attack": 60,
+        "attributes": [
+            "ranged",
+            "recommended",
+            "support"
+        ],
+        "date": "2010-09-20",
+        "difficulty": 10,
+        "gender": "female",
+        "health": 30,
+        "ip": 3150,
+        "name": "Sona",
+        "rp": 790,
+        "spells": 80,
+        "type": "Support"
+    },
+    "Soraka": {
+        "attack": 20,
+        "attributes": [
+            "ranged",
+            "recommended",
+            "support"
+        ],
+        "date": "2009-02-21",
+        "difficulty": 30,
+        "gender": "female",
+        "health": 50,
+        "ip": 450,
+        "name": "Soraka",
+        "rp": 260,
+        "spells": 70,
+        "type": "Support"
+    },
+    "Swain": {
+        "attack": 20,
+        "attributes": [
+            "mage",
+            "ranged"
+        ],
+        "date": "2010-10-05",
+        "difficulty": 50,
+        "gender": "male",
+        "health": 60,
+        "ip": 4800,
+        "name": "Swain",
+        "rp": 880,
+        "spells": 90,
+        "type": "Mage"
+    },
+    "Syndra": {
+        "attack": 20,
+        "attributes": [
+            "mage",
+            "ranged"
+        ],
+        "date": "2012-09-13",
+        "difficulty": 100,
+        "gender": "female",
+        "health": 50,
+        "ip": 6300,
+        "name": "Syndra",
+        "rp": 975,
+        "spells": 90,
+        "type": "Mage"
+    },
+    "Talon": {
+        "attack": 90,
+        "attributes": [
+            "assassin",
+            "melee",
+            "stealth"
+        ],
+        "date": "2011-08-24",
+        "difficulty": 60,
+        "gender": "male",
+        "health": 50,
+        "ip": 4800,
+        "name": "Talon",
+        "rp": 880,
+        "spells": 30,
+        "type": "Assassin"
+    },
+    "Taric": {
+        "attack": 40,
+        "attributes": [
+            "melee",
+            "recommended",
+            "support",
+            "tank"
+        ],
+        "date": "2009-08-19",
+        "difficulty": 30,
+        "gender": "male",
+        "health": 80,
+        "ip": 1350,
+        "name": "Taric",
+        "rp": 585,
+        "spells": 50,
+        "type": "Support"
+    },
+    "Teemo": {
+        "attack": 50,
+        "attributes": [
+            "ranged",
+            "stealth",
+            "support"
+        ],
+        "date": "2009-02-21",
+        "difficulty": 40,
+        "gender": "male",
+        "health": 30,
+        "ip": 1350,
+        "name": "Teemo",
+        "rp": 585,
+        "spells": 70,
+        "type": "RangedAD"
+    },
+    "Thresh": {
+        "attack": 40,
+        "attributes": [
+            "ranged",
+            "support",
+            "tank"
+        ],
+        "date": "2013-01-23",
+        "difficulty": 70,
+        "gender": "male",
+        "health": 60,
+        "ip": 6300,
+        "name": "Thresh",
+        "rp": 975,
+        "spells": 80,
+        "type": "Support"
+    },
+    "Tristana": {
+        "attack": 90,
+        "attributes": [
+            "carry",
+            "ranged",
+            "recommended"
+        ],
+        "date": "2009-02-21",
+        "difficulty": 30,
+        "gender": "female",
+        "health": 40,
+        "ip": 1350,
+        "name": "Tristana",
+        "rp": 585,
+        "spells": 30,
+        "type": "RangedAD"
+    },
+    "Trundle": {
+        "attack": 70,
+        "attributes": [
+            "fighter",
+            "melee"
+        ],
+        "date": "2010-12-01",
+        "difficulty": 50,
+        "gender": "male",
+        "health": 60,
+        "ip": 4800,
+        "name": "Trundle",
+        "rp": 880,
+        "spells": 20,
+        "type": "Fighter"
+    },
+    "Tryndamere": {
+        "attack": 100,
+        "attributes": [
+            "carry",
+            "melee"
+        ],
+        "date": "2009-05-01",
+        "difficulty": 60,
+        "gender": "male",
+        "health": 50,
+        "ip": 1350,
+        "name": "Tryndamere",
+        "rp": 585,
+        "spells": 20,
+        "type": "Assassin"
+    },
+    "Twisted Fate": {
+        "attack": 60,
+        "attributes": [
+            "assassin",
+            "pusher",
+            "ranged"
+        ],
+        "date": "2009-02-21",
+        "difficulty": 90,
+        "gender": "male",
+        "health": 20,
+        "ip": 1350,
+        "name": "Twisted Fate",
+        "rp": 585,
+        "spells": 60,
+        "type": "RangedAD"
+    },
+    "Twitch": {
+        "attack": 90,
+        "attributes": [
+            "carry",
+            "ranged",
+            "stealth"
+        ],
+        "date": "2009-05-01",
+        "difficulty": 80,
+        "gender": "male",
+        "health": 20,
+        "ip": 3150,
+        "name": "Twitch",
+        "rp": 790,
+        "spells": 30,
+        "type": "RangedAD"
+    },
+    "Udyr": {
+        "attack": 60,
+        "attributes": [
+            "fighter",
+            "jungler",
+            "melee"
+        ],
+        "date": "2009-12-02",
+        "difficulty": 70,
+        "gender": "male",
+        "health": 80,
+        "ip": 1350,
+        "name": "Udyr",
+        "rp": 585,
+        "spells": 50,
+        "type": "Fighter"
+    },
+    "Urgot": {
+        "attack": 80,
+        "attributes": [
+            "fighter",
+            "ranged"
+        ],
+        "date": "2010-08-24",
+        "difficulty": 80,
+        "gender": "male",
+        "health": 50,
+        "ip": 3150,
+        "name": "Urgot",
+        "rp": 790,
+        "spells": 30,
+        "type": "RangedAD"
+    },
+    "Varus": {
+        "attack": 70,
+        "attributes": [
+            "carry",
+            "ranged"
+        ],
+        "date": "2012-05-08",
+        "difficulty": 60,
+        "gender": "male",
+        "health": 30,
+        "ip": 6300,
+        "name": "Varus",
+        "rp": 975,
+        "spells": 40,
+        "type": "RangedAD"
+    },
+    "Vayne": {
+        "attack": 90,
+        "attributes": [
+            "assassin",
+            "carry",
+            "ranged",
+            "stealth"
+        ],
+        "date": "2011-05-10",
+        "difficulty": 70,
+        "gender": "female",
+        "health": 10,
+        "ip": 4800,
+        "name": "Vayne",
+        "rp": 880,
+        "spells": 20,
+        "type": "RangedAD"
+    },
+    "Veigar": {
+        "attack": 20,
+        "attributes": [
+            "mage",
+            "ranged"
+        ],
+        "date": "2009-07-24",
+        "difficulty": 60,
+        "gender": "male",
+        "health": 20,
+        "ip": 1350,
+        "name": "Veigar",
+        "rp": 585,
+        "spells": 100,
+        "type": "Mage"
+    },
+    "Vi": {
+        "attack": 80,
+        "attributes": [
+            "fighter",
+            "mage",
+            "melee",
+            "pusher",
+            "ranged"
+        ],
+        "date": "2012-12-19",
+        "difficulty": 50,
+        "gender": "female",
+        "health": 50,
+        "ip": 6300,
+        "name": "Vi",
+        "rp": 975,
+        "spells": 30,
+        "type": "Fighter"
+    },
+    "Viktor": {
+        "attack": 20,
+        "attributes": [
+            "mage",
+            "pusher",
+            "ranged"
+        ],
+        "date": "2011-12-29",
+        "difficulty": 70,
+        "gender": "male",
+        "health": 50,
+        "ip": 6300,
+        "name": "Viktor",
+        "rp": 975,
+        "spells": 80,
+        "type": "Mage"
+    },
+    "Vladimir": {
+        "attack": 20,
+        "attributes": [
+            "fighter",
+            "mage",
+            "ranged"
+        ],
+        "date": "2010-07-27",
+        "difficulty": 20,
+        "gender": "male",
+        "health": 60,
+        "ip": 4800,
+        "name": "Vladimir",
+        "rp": 880,
+        "spells": 80,
+        "type": "Mage"
+    },
+    "Volibear": {
+        "attack": 60,
+        "attributes": [
+            "fighter",
+            "jungler",
+            "melee",
+            "tank"
+        ],
+        "date": "2011-11-29",
+        "difficulty": 40,
+        "gender": "male",
+        "health": 70,
+        "ip": 6300,
+        "name": "Volibear",
+        "rp": 975,
+        "spells": 40,
+        "type": "Fighter"
+    },
+    "Warwick": {
+        "attack": 70,
+        "attributes": [
+            "fighter",
+            "jungler",
+            "melee",
+            "recommended"
+        ],
+        "date": "2009-02-21",
+        "difficulty": 20,
+        "gender": "male",
+        "health": 40,
+        "ip": 450,
+        "name": "Warwick",
+        "rp": 260,
+        "spells": 40,
+        "type": "Fighter"
+    },
+    "Wukong": {
+        "attack": 80,
+        "attributes": [
+            "fighter",
+            "melee",
+            "stealth"
+        ],
+        "date": "2011-07-26",
+        "difficulty": 30,
+        "gender": "male",
+        "health": 50,
+        "ip": 4800,
+        "name": "Wukong",
+        "rp": 880,
+        "spells": 20,
+        "type": "Fighter"
+    },
+    "Xerath": {
+        "attack": 10,
+        "attributes": [
+            "mage",
+            "ranged"
+        ],
+        "date": "2011-10-05",
+        "difficulty": 60,
+        "gender": "male",
+        "health": 30,
+        "ip": 6300,
+        "name": "Xerath",
+        "rp": 975,
+        "spells": 100,
+        "type": "Mage"
+    },
+    "Xin Zhao": {
+        "attack": 80,
+        "attributes": [
+            "assassin",
+            "fighter",
+            "jungler",
+            "melee",
+            "pusher"
+        ],
+        "date": "2010-07-13",
+        "difficulty": 30,
+        "gender": "male",
+        "health": 60,
+        "ip": 3150,
+        "name": "Xin Zhao",
+        "rp": 790,
+        "spells": 30,
+        "type": "Assassin"
+    },
+    "Yorick": {
+        "attack": 60,
+        "attributes": [
+            "fighter",
+            "melee",
+            "pusher"
+        ],
+        "date": "2011-06-22",
+        "difficulty": 30,
+        "gender": "male",
+        "health": 60,
+        "ip": 4800,
+        "name": "Yorick",
+        "rp": 880,
+        "spells": 60,
+        "type": "Fighter"
+    },
+    "Zac": {
+        "attack": 50,
+        "attributes": [
+            "fighter",
+            "jungler",
+            "melee",
+            "pusher",
+            "tank"
+        ],
+        "date": "2013-03-29",
+        "difficulty": 30,
+        "gender": "male",
+        "health": 60,
+        "ip": 6300,
+        "name": "Zac",
+        "rp": 975,
+        "spells": 70,
+        "type": "Fighter"
+    },
+    "Zed": {
+        "attack": 80,
+        "attributes": [
+            "assassin",
+            "melee"
+        ],
+        "date": "2012-11-13",
+        "difficulty": 80,
+        "gender": "male",
+        "health": 40,
+        "ip": 6300,
+        "name": "Zed",
+        "rp": 975,
+        "spells": 10,
+        "type": "Assassin"
+    },
+    "Ziggs": {
+        "attack": 30,
+        "attributes": [
+            "mage",
+            "pusher",
+            "ranged"
+        ],
+        "date": "2012-02-01",
+        "difficulty": 70,
+        "gender": "male",
+        "health": 50,
+        "ip": 6300,
+        "name": "Ziggs",
+        "rp": 975,
+        "spells": 90,
+        "type": "Mage"
+    },
+    "Zilean": {
+        "attack": 20,
+        "attributes": [
+            "mage",
+            "ranged",
+            "support"
+        ],
+        "date": "2009-04-18",
+        "difficulty": 40,
+        "gender": "male",
+        "health": 50,
+        "ip": 1350,
+        "name": "Zilean",
+        "rp": 585,
+        "spells": 80,
+        "type": "Support"
+    },
+    "Zyra": {
+        "attack": 40,
+        "attributes": [
+            "mage",
+            "pusher",
+            "ranged"
+        ],
+        "date": "2012-07-24",
+        "difficulty": 70,
+        "gender": "female",
+        "health": 30,
+        "ip": 6300,
+        "name": "Zyra",
+        "rp": 975,
+        "spells": 80,
+        "type": "Mage"
+    }
+}
