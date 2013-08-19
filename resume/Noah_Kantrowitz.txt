@@ -14,7 +14,13 @@ Passionate programmer perpetually pursuing pragmatic perfection.
 
 Experience
 ==========
-Operations Programmer, Cryptic Studios; Los Gatos, CA — 2008-Present
+Lead Web Developer, Opscode; Seattle, WA — 2011-2013 
+---------------------------------------------------------------------
+Architected and lead the next-generation web interface for Enterprise Chef.
+Maintained all Opscode web properties including opscode.com andcommunity.opscode.com.
+Implemented new Chef cookbooks to support Python applications.
+
+Operations Programmer, Cryptic Studios; Los Gatos, CA — 2008-2011
 ---------------------------------------------------------------------
 Maintained game patching systems and internal version control tools. Built a
 game launcher and integrated installer system. Ported legacy game
@@ -27,16 +33,11 @@ Implemented the Bitfrost security platform for the XO laptops. Other duties
 include maintaining the bug tracking system and working on the game
 development tools.
 
-Programmer and Administrator, VoiceFlight Systems LLC.; Troy, NY - 2006-2007
-----------------------------------------------------------------------------
-Writing support tools for voice recognition, as well as building and
-maintaining the server infrastructure.
-
 Open Source Developer; The Internet - 2006-Present
 --------------------------------------------------------
-Created a wide variety of plugins and other enhancements for the Trac project
-management system. Active in the Django community and the greater Python web
-ecosystem.
+Operations Lead for the Python Software Foundation, supporting all PSF services
+and running the Infrastructure Staff team. Also active in the Chef, JavaScript,
+and Python web communities.
 
 Education
 =========
