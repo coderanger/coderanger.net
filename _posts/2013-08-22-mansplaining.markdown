@@ -27,6 +27,8 @@ To summarize [several](http://en.wiktionary.org/wiki/mansplaining)
 
     (v) To explain something in a demeaning or belittling fashion.
 
+<br/>
+
 As shown above, this is commonly associated with a man speaking to a woman.
 
 ## Confusion
