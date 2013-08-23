@@ -26,7 +26,7 @@
   })();
 
   $(function() {
-    $('a').embedly({method: 'afterParent'});
+    $('a.embed').embedly({method: 'afterParent'});
   });
   </script>
 </head>
@@ -46,7 +46,7 @@
   <div id="main">
     {{ content }}
   </div>
-  
+
   <div id="footer"></div>
   <script type="text/javascript">
     $("a[rel*='external']").click(function(){
