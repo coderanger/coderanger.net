@@ -14,13 +14,13 @@ Passionate programmer perpetually pursuing pragmatic perfection.
 
 Experience
 ==========
-Lead Web Developer, Opscode; Seattle, WA — 2011-2013 
+Lead Web Developer, Opscode; Seattle, WA - 2011-2013
 ---------------------------------------------------------------------
 Architected and lead the next-generation web interface for Enterprise Chef.
 Maintained all Opscode web properties including opscode.com andcommunity.opscode.com.
 Implemented new Chef cookbooks to support Python applications.
 
-Operations Programmer, Cryptic Studios; Los Gatos, CA — 2008-2011
+Operations Programmer, Cryptic Studios; Los Gatos, CA - 2008-2011
 ---------------------------------------------------------------------
 Maintained game patching systems and internal version control tools. Built a
 game launcher and integrated installer system. Ported legacy game
