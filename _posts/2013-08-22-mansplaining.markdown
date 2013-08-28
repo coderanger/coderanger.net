@@ -59,7 +59,7 @@ broken culture that affects everyone regardless of gender.
 
 ## Can a woman mansplain?
 
-Sometimes. An individual woman can just as rude and obnoxious as any other
+Sometimes. An individual woman can be just as rude and obnoxious as any other
 person, but if we call this (down)splaining then it would by definition not be
 mansplaining. Most people belong to more than one group though, and a white
 woman disparagingly explaining racism to a black man could certainly be seen
