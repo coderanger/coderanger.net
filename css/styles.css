@@ -19,7 +19,7 @@ em {
 }
 
 #header, #menu, #main, #footer {
-  width: 923px; 
+  width: 923px;
   margin: 0 auto;
 }
 
@@ -187,7 +187,7 @@ em {
   font-size: 150%;
 }
 
-#post p, #post ul {
+#post > p, #post > ul, #post > blockquote, #post > pre {
   margin-bottom: 0.9em;
 }
 
@@ -203,6 +203,14 @@ em {
   padding: 0;
   margin-top: -0.6em;
   margin-bottom: 0.9em;
+}
+
+#post blockquote {
+  padding: 0.5em;
+  margin-left: 0.9em;
+  margin-right: 0.9em;
+  background-color: #DDD;
+  border-radius: 5px;
 }
 
 /* Resume page */
