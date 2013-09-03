@@ -259,3 +259,8 @@ em {
   height: 80px;
   background:url(/images/bg_footer.png) no-repeat bottom center;
 }
+
+/* /2013/09/making/ */
+#making-how span { text-align: justify; }
+#making-how span:after { content: ""; }
+#making-how span, #making-how span:after { display: inline-block; width: 100%; }

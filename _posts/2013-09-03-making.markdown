@@ -99,13 +99,7 @@ servers.
 
 ## How
 
-<style type="text/css">
-#how span { text-align: justify; }
-#how span:after { content: ""; }
-#how span, #how span:after { display: inline-block; width: 100%; }
-</style>
-
-<p id="how">
+<p id="making-how">
 <span>HTML, CSS, Javascript, Objective-C, Java, Django, Rails, Express, Chef, Puppet, Ansible,</span>
 <span style="font-size: 80%;">Fabric, Nagios, Graphite, PagerDuty, Git, Logstash, NPM, Rubygems, Bunder, Pip, Setuptools, PyPy, Nginx, HAProxy,</span>
 <span style="font-size: 60%;">Apache, Linux, Docker, Illumos, FPM, Omnibus, ZooKeeper, Subversion, Mercurial, Perl, C, Python, Ruby, PHP, Go, Scala, Clojure, Postgres, MySQL,</span>
