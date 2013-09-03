@@ -3,7 +3,7 @@ layout: post
 title: Making Things
 ---
 
-    Braincrack: (n) an idea you would rather plan about than execute.
+<blockquote>Braincrack: (n) an idea you would rather plan about than execute.</blockquote>
 
 First used [by Ze Frank](https://www.youtube.com/watch?v=0sHCQWjTrJ8), braincrack
 is one of those ideas that gets lodged in your brain. That you just never quite
