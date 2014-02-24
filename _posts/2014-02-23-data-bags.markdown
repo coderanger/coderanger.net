@@ -1,0 +1,100 @@
+---
+layout: post
+title: Data Bags are a Code Smell
+---
+
+## What are Bags?
+
+Chef-server offers an API for "data bags". These are mostly unstructured JSON
+data with a strict two-level hierarchy:
+
+    bag1/
+      item1
+      item2
+    bag2/
+      item1
+      item2
+
+Both bags and items offer basic CRUD operations, and items can be used with
+Chef's search API so you can do simple key/value queries.
+
+This is commonly used, and indeed considered by most to be a best-practice, for
+storing data that doesn't map one-to-one with nodes. For example, having a bag
+calls `users` with one item for each of your system users with keys like
+`name` and `ssh_keys`. You can then write a single Chef recipe to loop over
+each item in the bag and create their user account, populate `authorized_keys`,
+and so on.
+
+## So what is the problem?
+
+The data bags (hereafter: bags) system has two main use cases in my experience.
+The first is the one mentioned above, storing structured data as files in git
+and then using it in as recipe. The thing is, we already have that, they are
+just called cookbooks. Storing the data separately as JSON files which you
+manage in Git and then upload them to the bags API, and then do the exact
+same dance for the cookbook that consumes them is just more work for little gain.
+As an example, I recently switched our [users cookbook](https://github.com/balanced-cookbooks/balanced-user)
+from using bags to recipes and resources:
+
+{% highlight ruby %}
+balanced_user 'asmithee' do
+  sudo true
+  github_username 'alan'
+  dotfiles %w{.tmux.conf}
+  ssh_keys [
+    'ssh-rsa ...',
+  ]
+end
+{% endhighlight %}
+
+Note that this is basically the same data structure as we had in the bag JSON,
+just expressed in Ruby and Chef resources instead. This means we get all the
+benefits of cookbook versioning as well as fewer moving pieces and a unified
+workflow. What do we lose? We can't use JSON-based tools to process our user
+data and we can't use Chef search on it. Fortunately neither of these things
+were actually done, so no loss there.
+
+The second use case is using the bags API as a simple database. An example
+would be storing which version of your application to deploy and updating that
+from Jenkins or similar. The problem here is that the API is so minimal and has
+so few semantics that building a sane system is nearly impossible. The biggest
+issue most people run in to is that multiple updaters will hit race conditions.
+At the first Chef community summit we discussed some additions to the API to
+improve this, but nothing has materialized so far. If need a simple database like
+this, you are probably better off building a small API service with Flask/Sinatra/Express
+that provides the semantics you need. ZooKeeper and Etcd are also options, though
+that rabbit hold goes very deep and may be more complex than you need.
+
+## What about encrypted data bags?
+
+Added a few years ago, encrypted data bags offer a limited way to store secret
+information in a data bag without the server being able to read it. Unfortunately
+secrets management is a very hard problem and encrypted bags only address a very
+specific attack vector. If you are using Hosted Enterprise Chef and you want to
+store something like database connection information in a bag (though I hope
+after reading this that you won't) then you don't want a compromise of Hosted Chef
+to leak your database passwords and other secrets. For this case, encrypted bags
+protect you from Chef Inc and vice versa.
+
+For this to work you need to distribute a decryption key to every machine that
+has to read encrypted data. This means you _must_ have a system in place to
+distribute secrets to all your servers, so why not just use that to distribute
+the original secret data and skip the whole bag thing?
+
+Secrets management is a very complex topic on its own, easily worthy of its own
+post but a tl;dr is that we are using [S3 via the citadel cookbook](https://github.com/balanced-cookbooks/citadel)
+with a close eye on [Barbican](https://github.com/cloudkeep/barbican) and [Red October](https://github.com/cloudflare/redoctober).
+You could also do worse than [chef-vault](https://github.com/Nordstrom/chef-vault)
+though it is based around bags at heart so shares many of the same issues.
+
+## So I should just use resources for everything?
+
+In most cases, yes. There are some more advanced uses for bags like using the
+same bag in two difference recipes which can solved by inverting things
+(build a new resource that handles both of the things you want to do with the
+data) but this doesn't always work out cleanly. Another option is to make a
+recipe that simply stores the data in `node.run_state` and then process it
+exactly as you would with a bag in the other recipes.
+
+Overall though, yes, take the code you used to have inside the loop which processed
+your bag and build a resource (LWRP or class-based), and then use that in a recipe.
