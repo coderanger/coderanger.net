@@ -29,7 +29,7 @@ and so on.
 
 The data bags (hereafter: bags) system has two main use cases in my experience.
 The first is the one mentioned above, storing structured data as files in git
-and then using it in as recipe. The thing is, we already have that, they are
+and then using it in a recipe. The thing is, we already have that, they are
 just called cookbooks. Storing the data separately as JSON files which you
 manage in Git and then upload them to the bags API, and then do the exact same
 dance for the cookbook that consumes them is just more work for little gain.
@@ -72,7 +72,7 @@ the original secret data and skip the whole bag thing?
 Secrets management is easily worthy of its own
 post but a tl;dr is that we at Balanced are using [S3 via the citadel cookbook](https://github.com/balanced-cookbooks/citadel)
 with a close eye on [Barbican](https://github.com/cloudkeep/barbican) and [Red October](https://github.com/cloudflare/redoctober).
-You could also do worse than [chef-vault](https://github.com/Nordstrom/chef-vault)
+You could also do worse than [chef-vault](https://github.com/Nordstrom/chef-vault),
 though it is based around bags at heart so shares many of the same issues.
 
 ## So I should just use resources for everything?
@@ -123,7 +123,7 @@ end
 So in short, for each user, we create the user account, create a .ssh folder, and
 create an authorized_keys file.
 
-To converge this to being resource-based, lets create a `mycompany_user` LWRP:
+To convert this to being resource-based, let's create a `mycompany_user` LWRP:
 
 {% highlight ruby %}
 # resources/default.rb
