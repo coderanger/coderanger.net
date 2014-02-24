@@ -31,26 +31,17 @@ The data bags (hereafter: bags) system has two main use cases in my experience.
 The first is the one mentioned above, storing structured data as files in git
 and then using it in as recipe. The thing is, we already have that, they are
 just called cookbooks. Storing the data separately as JSON files which you
-manage in Git and then upload them to the bags API, and then do the exact
-same dance for the cookbook that consumes them is just more work for little gain.
-As an example, I recently switched our [users cookbook](https://github.com/balanced-cookbooks/balanced-user)
-from using bags to recipes and resources:
+manage in Git and then upload them to the bags API, and then do the exact same
+dance for the cookbook that consumes them is just more work for little gain.
 
-{% highlight ruby %}
-balanced_user 'asmithee' do
-  sudo true
-  github_username 'alan'
-  dotfiles %w{.tmux.conf}
-  ssh_keys ['ssh-rsa ...']
-end
-{% endhighlight %}
-
-Note that this is basically the same data structure as we had in the bag JSON,
-just expressed in Ruby and Chef resources instead. This means we get all the
-benefits of cookbook versioning as well as fewer moving pieces and a unified
-workflow. What do we lose? We can't use JSON-based tools to process our user
-data and we can't use Chef search on it. "Most users don't use either of these
-features, so this is not generally a significant downside."
+A simpler solution is to use resources and recipes like with anything else in
+Chef. Each item maps to a single resource, and each bag to a recipe. The code
+used to process each bag can either go in an LWRP or a class-based resource.
+This means we get all the benefits of cookbook versioning as well as fewer
+moving pieces and a unified workflow. What do we lose? We can't use JSON-based
+tools to process our user data and we can't use Chef search on it. Most users
+don't use either of these features, so this is not generally a significant
+downside.
 
 The second use case is using the bags API as a simple database. An example would
 be storing which version of your application to deploy and updating that from
@@ -102,9 +93,9 @@ Let's start with a users bag item like:
 
 {% highlight json %}
 {
-  "id" : "asmithee",
-  "comment" : "Alan Smithee",
-  "ssh_keys" :["ssh-rsa ..."]
+  "id": "asmithee",
+  "comment": "Alan Smithee",
+  "ssh_keys": ["ssh-rsa ..."]
 }
 {% endhighlight %}
 
