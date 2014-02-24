@@ -98,3 +98,82 @@ exactly as you would with a bag in the other recipes.
 
 Overall though, yes, take the code you used to have inside the loop which processed
 your bag and build a resource (LWRP or class-based), and then use that in a recipe.
+
+## How do I rewrite my recipe?
+
+Let's start with a users bag item like:
+
+{% highlight json %}
+{
+  "id" : "asmithee",
+  "comment" : "Alan Smithee",
+  "ssh_keys" :["ssh-rsa ..."]
+}
+{% endhighlight %}
+
+Our current recipe looks like:
+
+{% highlight ruby %}
+search(:users, '*:*').each do |u|
+  user u['id'] do
+    comment u['comment']
+    supports manage_home: true
+  end
+
+  directory "/home/#{u['id']}/.ssh" do
+    owner u['id']
+  end
+
+  file "/home/#{u['id']}/.ssh/authorized_keys" do
+    owner u['id']
+    mode '644'
+    content u['ssh_keys'].join("\n")
+  end
+end
+{% endhighlight %}
+
+So in short, for each user, we create the user account, create a .ssh folder, and
+create an authorized_keys file.
+
+To converge this to being resource-based, lets create a `mycompany_user` LWRP:
+
+{% highlight ruby %}
+# resources/default.rb
+default_action(:create)
+
+attribute(:comment)
+attribute(:ssh_keys)
+
+
+# providers/default.rb
+action :create do
+  user new_resource.name do
+    comment new_resource.comment
+    supports manage_home: true
+  end
+
+  directory "/home/#{new_resource.name}/.ssh" do
+    owner new_resource.name
+  end
+
+  file "/home/#{new_resource.name}/.ssh/authorized_keys" do
+    owner new_resource.name
+    mode '644'
+    content new_resource.ssh_keys.join("\n")
+  end
+end
+{% endhighlight %}
+
+As you can see, the provider code very closely mirrors our old recipe code, just
+using the `new_resource` helper instead of `u`. We can then convert our old bag
+item into a recipe:
+
+{% highlight ruby %}
+mycompany_user 'asmithee' do
+  comment 'Alan Smithee'
+  ssh_keys ['ssh-rsa ...']
+end
+{% endhighlight %}
+
+And again you can see a very tight correlation between the recipe code and the
+bag item.
