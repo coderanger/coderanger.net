@@ -41,9 +41,7 @@ balanced_user 'asmithee' do
   sudo true
   github_username 'alan'
   dotfiles %w{.tmux.conf}
-  ssh_keys [
-    'ssh-rsa ...',
-  ]
+  ssh_keys ['ssh-rsa ...']
 end
 {% endhighlight %}
 
@@ -51,19 +49,18 @@ Note that this is basically the same data structure as we had in the bag JSON,
 just expressed in Ruby and Chef resources instead. This means we get all the
 benefits of cookbook versioning as well as fewer moving pieces and a unified
 workflow. What do we lose? We can't use JSON-based tools to process our user
-data and we can't use Chef search on it. Fortunately neither of these things
-were actually done, so no loss there.
+data and we can't use Chef search on it. "Most users don't use either of these
+features, so this is not generally a significant downside."
 
-The second use case is using the bags API as a simple database. An example
-would be storing which version of your application to deploy and updating that
-from Jenkins or similar. The problem here is that the API is so minimal and has
-so few semantics that building a sane system is nearly impossible. The biggest
-issue most people run in to is that multiple updaters will hit race conditions.
-At the first Chef community summit we discussed some additions to the API to
-improve this, but nothing has materialized so far. If need a simple database like
-this, you are probably better off building a small API service with Flask/Sinatra/Express
-that provides the semantics you need. ZooKeeper and Etcd are also options, though
-that rabbit hold goes very deep and may be more complex than you need.
+The second use case is using the bags API as a simple database. An example would
+be storing which version of your application to deploy and updating that from
+Jenkins or similar. Unfortunately the Chef API is very susceptible to race
+conditions when you have multiple writers/updaters. At the first Chef community
+summit we discussed some additions to the API to improve this, but nothing has
+materialized so far. If you need a simple database like this, you are probably
+better off building a small API service with Flask/Sinatra/Express that provides
+the semantics you need. ZooKeeper and Etcd are also options, though that rabbit
+hole goes very deep and may be more complex than you need.
 
 ## What about encrypted data bags?
 
@@ -81,8 +78,8 @@ has to read encrypted data. This means you _must_ have a system in place to
 distribute secrets to all your servers, so why not just use that to distribute
 the original secret data and skip the whole bag thing?
 
-Secrets management is a very complex topic on its own, easily worthy of its own
-post but a tl;dr is that we are using [S3 via the citadel cookbook](https://github.com/balanced-cookbooks/citadel)
+Secrets management is easily worthy of its own
+post but a tl;dr is that we at Balanced are using [S3 via the citadel cookbook](https://github.com/balanced-cookbooks/citadel)
 with a close eye on [Barbican](https://github.com/cloudkeep/barbican) and [Red October](https://github.com/cloudflare/redoctober).
 You could also do worse than [chef-vault](https://github.com/Nordstrom/chef-vault)
 though it is based around bags at heart so shares many of the same issues.
