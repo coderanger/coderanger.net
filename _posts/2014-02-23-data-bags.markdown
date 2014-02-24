@@ -164,4 +164,5 @@ end
 {% endhighlight %}
 
 And again you can see a very tight correlation between the recipe code and the
-bag item.
+bag item. If you would like to see a more full-featured example of this, check
+out the [balanced-user cookbook](https://github.com/balanced-cookbooks/balanced-user).
