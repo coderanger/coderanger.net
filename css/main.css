@@ -1,0 +1,119 @@
+body {
+  background-color: #E9E9E9;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header, #content, footer {
+  box-sizing: border-box;
+  width: 640px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+header a, footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  color: #FFF;
+  background-color: #000;
+  height: 64px;
+  line-height: 64px;
+  font-size: 30px;
+}
+
+#header-name {
+  font-weight: bold;
+}
+
+#header-icons {
+  float: right;
+}
+
+#header-icons a {
+  margin-left: 20px;
+}
+
+#content {
+  background-color: #FFF;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  min-height: 100px;
+}
+
+footer {
+  padding-top: 10px;
+  color: #777;
+  font-size: 12px;
+}
+
+#footer-contact:hover {
+  text-decoration: underline;
+}
+
+#footer-copyright {
+  float: right;
+}
+
+/* Home Page */
+.home .posts {
+  margin: 0;
+  padding: 0;
+}
+
+.home .posts li {
+  list-style: none;
+  line-height: 28px;
+  border-top: 2px solid #999;
+  margin-top: 16px;
+  padding-top: 16px;
+}
+
+.home .posts li:first-child {
+  border: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.home .posts a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.home .post-title:hover {
+  text-decoration: underline;
+}
+
+.home .post-title {
+  font-size: 28px;
+}
+
+.home .post-date {
+  float: right;
+}
+
+/* Blog Post */
+.post .post-header {
+  margin-top: 0;
+  line-height: 28px;
+}
+
+.post .post-title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.post .post-date {
+  float: right;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.post h2 {
+  margin-bottom: 0;
+}
+
+.post p {
+  margin-top: 0;
+}

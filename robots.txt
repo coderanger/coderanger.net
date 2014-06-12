@@ -1,0 +1,5 @@
+# Sitemap: http://coderanger.net/sitemap.xml
+
+User-agent: *
+Disallow: /readme.markdown
+Disallow: /404.html
