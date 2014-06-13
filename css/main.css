@@ -60,38 +60,38 @@ footer {
 }
 
 /* Home Page */
-.home .posts {
+.biglist {
   margin: 0;
   padding: 0;
 }
 
-.home .posts li {
+.biglist li {
   list-style: none;
-  line-height: 28px;
+  line-height: 40px;
   border-top: 2px solid #999;
-  margin-top: 16px;
-  padding-top: 16px;
+  margin-top: 10px;
+  padding-top: 10px;
 }
 
-.home .posts li:first-child {
+.biglist li:first-child {
   border: 0;
-  margin-top: 0;
+  margin-top: -6px;
   padding-top: 0;
 }
 
-.home .posts a {
+.biglist a {
   text-decoration: none;
 }
 
-.home .post-title:hover {
+.biglist .biglist-label:hover {
   text-decoration: underline;
 }
 
-.home .post-title {
+.biglist .biglist-label {
   font-size: 28px;
 }
 
-.home .post-date {
+.biglist .biglist-pull {
   float: right;
 }
 
@@ -170,3 +170,12 @@ footer {
   text-decoration: underline;
 }
 
+.biglist .contact-icon {
+  font-size: 20px;
+  margin-top: 0;
+  margin-right: 7px;
+}
+
+.biglist a:hover .contact-icon {
+  color: #000;
+}
