@@ -117,3 +117,33 @@ footer {
 .post p {
   margin-top: 0;
 }
+
+/* Contact */
+.contact-row {
+  line-height: 50px;
+}
+
+.contact-icon {
+  font-size: 40px;
+  display: inline-block;
+  width: 40px;
+}
+
+.contact-icon .fa {
+  display: block;
+  width: 40px;
+  line-height: 40px;
+}
+
+.contact-icon.contact-icon-stack .fa {
+  margin-top: -40px;
+  margin-left: 7px;
+  color: #FFF;
+  font-size: 20px;
+}
+
+.contact-icon.contact-icon-stack .fa-square {
+  margin: 0;
+  color: inherit;
+  font-size: inherit;
+}
