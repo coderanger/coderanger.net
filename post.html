@@ -6,7 +6,7 @@
     <title>Data Bags are a Code Smell – Noah Kantrowitz</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Inconsolata:400,700|Montserrat:400,700">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/main.css">
@@ -35,6 +35,24 @@
         pharetra eget iaculis quis, imperdiet at arcu. Sed ac arcu a orci
         dignissim pharetra sed sed sem.
       </p>
+      <div class="highlight"><pre><code class="ruby"><span class="n">search</span><span class="p">(</span><span class="ss">:users</span><span class="p">,</span> <span class="s1">'*:*'</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">u</span><span class="o">|</span>
+  <span class="n">user</span> <span class="n">u</span><span class="o">[</span><span class="s1">'id'</span><span class="o">]</span> <span class="k">do</span>
+    <span class="n">comment</span> <span class="n">u</span><span class="o">[</span><span class="s1">'comment'</span><span class="o">]</span>
+    <span class="n">supports</span> <span class="n">manage_home</span><span class="p">:</span> <span class="kp">true</span>
+  <span class="k">end</span>
+
+  <span class="n">directory</span> <span class="s2">"/home/</span><span class="si">#{</span><span class="n">u</span><span class="o">[</span><span class="s1">'id'</span><span class="o">]</span><span class="si">}</span><span class="s2">/.ssh"</span> <span class="k">do</span>
+    <span class="n">owner</span> <span class="n">u</span><span class="o">[</span><span class="s1">'id'</span><span class="o">]</span>
+  <span class="k">end</span>
+
+  <span class="n">file</span> <span class="s2">"/home/</span><span class="si">#{</span><span class="n">u</span><span class="o">[</span><span class="s1">'id'</span><span class="o">]</span><span class="si">}</span><span class="s2">/.ssh/authorized_keys"</span> <span class="k">do</span>
+    <span class="n">owner</span> <span class="n">u</span><span class="o">[</span><span class="s1">'id'</span><span class="o">]</span>
+    <span class="n">mode</span> <span class="s1">'644'</span>
+    <span class="n">content</span> <span class="n">u</span><span class="o">[</span><span class="s1">'ssh_keys'</span><span class="o">].</span><span class="n">join</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+</div>
       <p>
         Sed accumsan consequat odio eu condimentum. Nunc a euismod nisl, ac
         feugiat lacus. Duis elementum varius purus. Aenean varius rhoncus justo,

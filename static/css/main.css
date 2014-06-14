@@ -136,13 +136,57 @@ footer {
   font-weight: normal;
 }
 
-.post h2 {
-  margin-bottom: 0;
+.post h2, .post h3, .post h4, .post h5, .post h6 {
+  margin-bottom: 2px;
 }
 
 .post p {
   margin-top: 0;
 }
+
+/* Code Highlight, based on the 'bw' style from Pygments */
+code {
+  font-family: 'Inconsolata', monospace;
+  display: inline-block;
+  width: 100%;
+  word-wrap: normal;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+code .c  { color: #888; font-style: italic; } /* Comment */
+code .err { border: 1px solid #F00; } /* Error */
+code .k  { font-weight: bold; } /* Keyword */
+code .cm { color: #888; font-style: italic; } /* Comment.Multiline */
+code .c1 { color: #888; font-style: italic; } /* Comment.Single */
+code .cs { color: #888; font-style: italic; } /* Comment.Special */
+code .ge { font-style: italic; } /* Generic.Emph */
+code .gh { font-weight: bold; } /* Generic.Heading */
+code .gp { font-weight: bold; } /* Generic.Prompt */
+code .gs { font-weight: bold; } /* Generic.Strong */
+code .gu { font-weight: bold; } /* Generic.Subheading */
+code .kc { font-weight: bold; } /* Keyword.Constant */
+code .kd { font-weight: bold; } /* Keyword.Declaration */
+code .kn { font-weight: bold; } /* Keyword.Namespace */
+code .kr { font-weight: bold; } /* Keyword.Reserved */
+code .s  { font-style: italic; } /* Literal.String */
+code .nc { font-weight: bold; } /* Name.Class */
+code .ni { font-weight: bold; } /* Name.Entity */
+code .ne { font-weight: bold; } /* Name.Exception */
+code .nn { font-weight: bold; } /* Name.Namespace */
+code .nt { font-weight: bold; } /* Name.Tag */
+code .ow { font-weight: bold; } /* Operator.Word */
+code .sb { font-style: italic; } /* Literal.String.Backtick */
+code .sc { font-style: italic; } /* Literal.String.Char */
+code .sd { font-style: italic; } /* Literal.String.Doc */
+code .s2 { font-style: italic; } /* Literal.String.Double */
+code .se { font-style: italic; } /* Literal.String.Escape */
+code .sh { font-style: italic; } /* Literal.String.Heredoc */
+code .si { font-style: italic; } /* Literal.String.Interpol */
+code .sx { font-style: italic; } /* Literal.String.Other */
+code .sr { font-style: italic; } /* Literal.String.Regex */
+code .s1 { font-style: italic; } /* Literal.String.Single */
+code .ss { font-style: italic; } /* Literal.String.Symbol */
 
 /* Contact */
 .contact-row {
