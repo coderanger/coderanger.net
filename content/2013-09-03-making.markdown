@@ -1,0 +1,166 @@
+---
+layout: post
+title: Making Things
+---
+
+<blockquote>Braincrack: (n) an idea you would rather plan about than execute.</blockquote>
+
+First used [by Ze Frank](https://www.youtube.com/watch?v=0sHCQWjTrJ8), braincrack
+is one of those ideas that gets lodged in your brain. That you just never quite
+get around to creating or executing, but always tell yourself you'll get back to.
+Maybe it is your eternally unfinished novel, or maybe a funny site about cats in
+sombreros, or maybe it is a complex web application. In the end the problem is often the same,
+making things is hard. Let's look at this process both generally and for my
+hypothetical cat photosharing site.
+
+## What
+
+At heart everything starts as an idea somewhere, an idea we are committed to not
+allow to become the fabled braincrack. Often this is just a given, you have an
+idea you want to share with the world but don't know how to proceed. For those that
+want to practice but don't have a specific plan, we have
+special gatherings that celebrate starting an idea from scratch. Weekend hackathons
+have become increasingly common as a marketing vehicle, and online game jams like
+[PyWeek](http://pyweek.org/) and [Ludum Dare](http://www.ludumdare.com/) encourage
+coming in with nothing but a passion for making things.
+
+In the end, though, ideas are the easy part. Executing every passing concept
+would take many lifetimes, filtering down to just the most worthy of time and
+attention takes experience that paradoxically only comes from choosing poorly
+many times. Make wrong turns, and try to see when to put down your tools and work on
+something else for a while.
+
+For my photosharing site I was fortunate to have a serendipitous realization
+that the world needs a dedicated place to share photos of cats in sombreros. The
+outline from there flows naturally. I can look at existing photosharing sites for
+inspiration on the interface, as well as places like [PatternTap](http://patterntap.com/?terms=photo).
+
+## Who
+
+Even the best of concepts generally needs to be grown and honed before you can
+jump into building it. Here is where having a social network to tap can truly shine.
+Posting your idea to [Reddit](http://reddit.com/) or [Hacker News](http://news.ycombinator.com/)
+can get of eyeballs on it (ex. [hyperloop with over 45000 votes](http://www.reddit.com/r/technology/comments/1k8bhi/elon_musk_has_unveiled_new_details_about_the/)),
+however it can be both demoralizing and time consuming to tease apart the useful
+input from the overwhelming wall of noise.
+
+Organizations like [PyLadies](http://www.pyladies.com/)
+have worked hard to create safe spaces to explore new ideas, though these can
+be few and far between. Community hackerspaces are also a good place to seek
+safe input. I am happy to have seen rapid growth and proliferation in these kinds
+of communities, and look forward to them being more available to everyone. To
+slightly misquote [John Green, we need to keep "making places where people can fall and get caught"](http://nerdfighteria.info/video/54/STZdi7aTuOU).
+
+Generally when talking about functions within a team (in the context of something
+this early in its life cycle) you would hear about three main roles: designer,
+developer, and sysadmin. These three silos have far more in common than they
+differ, but they do often remain unfortunately far apart. Make sure to balance
+your own skills with those of others, and cultivate relationships with as many
+other domains and domain experts as you can, your second drafts will thank you.
+
+Back to my brilliant idea. A quick IM with some friends revealed that catsinsombreros.com
+was available and is a natural fit. We quickly brainstormed some ideas about how
+to run the service and what kind of community it would be. We quickly iterated on a logo to share in the
+hopes of rallying others to our cause. All of these things rely on having
+a community to work with, that you trust to provide good feedback and be honest
+with you.
+
+## Where
+
+If your idea is entirely or largely informational, something you just want to
+share with the world, there is now some good news. Between WordPress and Tumblr,
+it is easier than ever to launch a site with some quick content. If these don't
+address your needs, unfortunately the path ahead drops out from under you very
+quickly. Many Platform-as-a-Service (PaaS, ex. [Heroku](https://www.heroku.com/),
+[Google App Engine](https://developers.google.com/appengine/))
+services offer robust free tiers which can be an enormous boon to a nascent project.
+As before though, these services have a very proscribed way of doing things and
+deviation will lead to an even sharper drop than last time. After that the next
+place to look is generally a public cloud vendor, some of which offer limited
+free resources but in general you will have to be willing to put up some money in
+one way or another.
+
+Beyond just hosting options there are a lot more moving pieces in just getting
+something up where people can see it. Domain registration, DNS configuration,
+mail server records, all of these can present serious roadblocks as you need to
+integrate many disparate moving pieces.
+
+The emergence of well-supported and clearly defined free tiers has been a colossal
+leap forward in allowing people to play with ideas. If you are a service provider
+of any kind, I would strongly encourage you to look in to offering one.
+
+For catsinsombreros.com my first stop is my domain registrar, [Hover](http://hover.com/).
+My registrar offers free DNS hosting, as do many others, so I don't have to find
+a separate host for that though I do have to configure it myself. For an application
+this simple, and given that I expect my launch to be small with the current
+surplus of photosharing sites I can easily start with a free tier application on
+Heroku and either scale up there when my service takes off, or migrate to my own
+servers.
+
+## How
+
+<p id="making-how">
+<span>HTML, CSS, Javascript, Objective-C, Java, Django, Rails, Express, Chef, Puppet, Ansible,</span>
+<span style="font-size: 80%;">Fabric, Nagios, Graphite, PagerDuty, Git, Logstash, NPM, Rubygems, Bunder, Pip, Setuptools, PyPy, Nginx, HAProxy,</span>
+<span style="font-size: 60%;">Apache, Linux, Docker, Illumos, FPM, Omnibus, ZooKeeper, Subversion, Mercurial, Perl, C, Python, Ruby, PHP, Go, Scala, Clojure, Postgres, MySQL,</span>
+<span style="font-size: 40%;">Redis, Riak, MongoDB, EC2, Rackspace, OpenStack, HTTP, TLS, bcrypt, SHA2, HMAC, OAuth, REST, Jenkins, Travis, Sublime Text, Vim, Emacs, TextMate, Twitter, Facebook, Google+, Reddit, Hacker News, Marketing, Sales, Support.</span>
+</p>
+
+We have built an astonishing number of tools, frameworks, and communities around
+making things with computers. This is not an indictment of any of them, but the
+fact remains that mastering even a small subset can take decades, by which point
+your skills will surely be outdated. Most people, myself included, advocate one
+particular stack of tools or another, sometimes to the point of dogma and fanaticism.
+Ignore us, all of us. Do it wrong, ruin your first deploy because you forgot to
+rebuild your CSS, get woken up at 3AM because you didn't setup automatic fail-over on your
+database, but get something up there.
+
+Will you regret not doing it the "right way" during that 3AM outage when your
+customers or friends are annoyed at you? Absolutely, but you will regret doing
+nothing far more, and the world will be lesser for it. Don't forget all those
+pain points either, share them, make sure we all keep talking about them so when
+it is the next maker's turn, they have an easier time of it.
+
+For my site I can pick some simple components to build up from. Heroku provides
+a hosted Postgres database, so that is a natural fit for data storage. For storing
+the actual pictures I can use Amazon S3, and for the web application I can use Django.
+There is a lot not covered in this, things like SSL or monitoring or off-site backups
+can realistically wait until after the main site is up and running, but be sure
+you don't leave it for too long or you are in for one of those nasty 3AM phone calls.
+
+### The Exception
+
+In a complete 180 from the above, there is one place where "don't worry, just
+fail" can't usually apply: security. While you don't have to immediately deploy
+TLS Perfect Forward Secrecy or DNSSEC, you do need a certain baseline to ensure
+you don't put data from users at risk. One option is to just not have any data
+from users, thus sidestepping any hazards. Another is to make use of the password
+and user data storage options in a popular framework, which often gives you the
+current best practices for things like key derivation functions. Unfortunately
+getting experienced help with internet security concerns can be very difficult,
+even I only have a few resources so my only suggestion is that if you are at all
+unsure if you are about to do something unsafe please [ask me](https://twitter.com/kantrn).
+I don't claim to be an expert, but hopefully I can point you at one if needed.
+
+## When
+
+Now. Let go of the braincrack. It won't be perfect the first time around, or
+probably even all that good, but it will be real. Only there can you start the
+journey towards awesomeness.
+
+## Why
+
+I am a maker, and I think you should be too. I can't help you write that novel
+or finish that painting, but I can help you put all these and more on the internet.
+As time goes on, we are moving closer and closer to ideas being the true currency
+of the world, but an idea must be made manifest before you can show it to others.
+One of the original goals of the [OLPC](http://laptop.org/) was to create a whole
+generation of makers, to unleash upon the world children that had no preconceptions
+about it being difficult to make and share things across the room or around the world.
+Much progress has been made, and we build on the shoulders of giants.
+
+-----
+
+As I lead off with, making things is hard. Specifically of interest to me is that launching a website is
+at least an order of magnitude harder than it needs to be. I am going to fix this. If you want to fix this too,
+maybe you should <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#110;&#111;&#x61;&#104;&#x40;&#x63;&#x6f;&#x64;&#101;&#114;&#x61;&#110;&#103;&#101;&#x72;&#46;&#110;&#x65;&#x74;?subject=Work with me">hire me</a>.

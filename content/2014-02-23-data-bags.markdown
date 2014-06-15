@@ -1,0 +1,168 @@
+---
+layout: post
+title: Data Bags are a Code Smell
+---
+
+## What are Bags?
+
+Chef-server offers an API for "data bags". These are mostly unstructured JSON
+data with a strict two-level hierarchy:
+
+    bag1/
+      item1
+      item2
+    bag2/
+      item1
+      item2
+
+Both bags and items offer basic CRUD operations, and items can be used with
+Chef's search API so you can do simple key/value queries.
+
+This is commonly used, and indeed considered by most to be a best-practice, for
+storing data that doesn't map one-to-one with nodes. For example, having a bag
+calls `users` with one item for each of your system users with keys like
+`name` and `ssh_keys`. You can then write a single Chef recipe to loop over
+each item in the bag and create their user account, populate `authorized_keys`,
+and so on.
+
+## So what is the problem?
+
+The data bags (hereafter: bags) system has two main use cases in my experience.
+The first is the one mentioned above, storing structured data as files in git
+and then using it in a recipe. The thing is, we already have that, they are
+just called cookbooks. Storing the data separately as JSON files which you
+manage in Git and then upload them to the bags API, and then do the exact same
+dance for the cookbook that consumes them is just more work for little gain.
+
+A simpler solution is to use resources and recipes like with anything else in
+Chef. Each item maps to a single resource, and each bag to a recipe. The code
+used to process each bag can either go in an LWRP or a class-based resource.
+This means we get all the benefits of cookbook versioning as well as fewer
+moving pieces and a unified workflow. What do we lose? We can't use JSON-based
+tools to process our user data and we can't use Chef search on it. Most users
+don't use either of these features, so this is not generally a significant
+downside.
+
+The second use case is using the bags API as a simple database. An example would
+be storing which version of your application to deploy and updating that from
+Jenkins or similar. Unfortunately the Chef API is very susceptible to race
+conditions when you have multiple writers/updaters. At the first Chef community
+summit we discussed some additions to the API to improve this, but nothing has
+materialized so far. If you need a simple database like this, you are probably
+better off building a small API service with Flask/Sinatra/Express that provides
+the semantics you need. ZooKeeper and Etcd are also options, though that rabbit
+hole goes very deep and may be more complex than you need.
+
+## What about encrypted data bags?
+
+Added a few years ago, encrypted data bags offer a limited way to store secret
+information in a data bag without the server being able to read it. Unfortunately
+secrets management is a very hard problem and encrypted bags only address a very
+specific attack vector. If you are using Hosted Enterprise Chef and you want to
+store something like database connection information in a bag (though I hope
+after reading this that you won't) then you don't want a compromise of Hosted Chef
+to leak your database passwords and other secrets. For this case, encrypted bags
+protect you from Chef Inc and vice versa.
+
+For this to work you need to distribute a decryption key to every machine that
+has to read encrypted data. This means you _must_ have a system in place to
+distribute secrets to all your servers, so why not just use that to distribute
+the original secret data and skip the whole bag thing?
+
+Secrets management is easily worthy of its own
+post but a tl;dr is that we at Balanced are using [S3 via the citadel cookbook](https://github.com/balanced-cookbooks/citadel)
+with a close eye on [Barbican](https://github.com/cloudkeep/barbican) and [Red October](https://github.com/cloudflare/redoctober).
+You could also do worse than [chef-vault](https://github.com/Nordstrom/chef-vault),
+though it is based around bags at heart so shares many of the same issues.
+
+## So I should just use resources for everything?
+
+In most cases, yes. There are some more advanced uses for bags like using the
+same bag in two difference recipes which can solved by inverting things
+(build a new resource that handles both of the things you want to do with the
+data) but this doesn't always work out cleanly. Another option is to make a
+recipe that simply stores the data in `node.run_state` and then process it
+exactly as you would with a bag in the other recipes.
+
+Overall though, yes, take the code you used to have inside the loop which processed
+your bag and build a resource (LWRP or class-based), and then use that in a recipe.
+
+## How do I rewrite my recipe?
+
+Let's start with a users bag item like:
+
+{% highlight json %}
+{
+  "id": "asmithee",
+  "comment": "Alan Smithee",
+  "ssh_keys": ["ssh-rsa ..."]
+}
+{% endhighlight %}
+
+Our current recipe looks like:
+
+{% highlight ruby %}
+search(:users, '*:*').each do |u|
+  user u['id'] do
+    comment u['comment']
+    supports manage_home: true
+  end
+
+  directory "/home/#{u['id']}/.ssh" do
+    owner u['id']
+  end
+
+  file "/home/#{u['id']}/.ssh/authorized_keys" do
+    owner u['id']
+    mode '644'
+    content u['ssh_keys'].join("\n")
+  end
+end
+{% endhighlight %}
+
+So in short, for each user, we create the user account, create a .ssh folder, and
+create an authorized_keys file.
+
+To convert this to being resource-based, let's create a `mycompany_user` LWRP:
+
+{% highlight ruby %}
+# resources/default.rb
+default_action(:create)
+
+attribute(:comment)
+attribute(:ssh_keys)
+
+
+# providers/default.rb
+action :create do
+  user new_resource.name do
+    comment new_resource.comment
+    supports manage_home: true
+  end
+
+  directory "/home/#{new_resource.name}/.ssh" do
+    owner new_resource.name
+  end
+
+  file "/home/#{new_resource.name}/.ssh/authorized_keys" do
+    owner new_resource.name
+    mode '644'
+    content new_resource.ssh_keys.join("\n")
+  end
+end
+{% endhighlight %}
+
+As you can see, the provider code very closely mirrors our old recipe code, just
+using the `new_resource` helper instead of `u`. We can then convert our old bag
+item into a recipe:
+
+{% highlight ruby %}
+mycompany_user 'asmithee' do
+  comment 'Alan Smithee'
+  ssh_keys ['ssh-rsa ...']
+end
+{% endhighlight %}
+
+And again you can see a very tight correlation between the recipe code and the
+bag item. If you would like to see a more full-featured example of this, check
+out the [balanced-user cookbook](https://github.com/balanced-cookbooks/balanced-user).

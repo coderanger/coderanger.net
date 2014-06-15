@@ -1,0 +1,61 @@
+---
+layout: post
+title: "Why I don't like GSoC"
+published: false
+---
+
+That's right, you heard me. I think [Google Summer of Code](http://code.google.com/soc/)
+is a waste of time. Why, you ask? Simply put, Google gets far more out of it
+than anyone else, and certainly more than the open source community.
+
+To see why, let us break down who is involved in the process:
+
+## The Students
+
+The real bulk of those that are supposed to benefit, and don't get me wrong,
+some do. There do exist students that have a great experience, learn much about
+real software development, and contribute to the open source community.
+Unfortunately this doesn't seem be the majority. Mentorship is highly variable,
+many not really having the time to bring someone up to speed on years of
+community standards, design policy, and politics. This usually leaves the
+student in a very precarious position. Compared to the training and support
+a student can get from a good internship, it hardly seems like students come
+out ahead in end.
+
+## [The Crazy Ones](http://www.crazyonesquote.com/)
+
+Those that found open source on their own, have been active members in their
+respective communities, and probably already have submitted patches to many
+projects. Despite all of this, they are still technically students and so
+qualify for GSoC. This is nice, but these are also the ones that know where to
+look for more direct funding sources (internship from a major user,
+[grants](http://www.python.org/psf/grants/),
+[crowdfunding](http://pypy.org/py3donate.html)) so the actual benefit is
+marginal. There have even been unofficial cases of someone both acting as a
+student and mentoring another project at the same time.
+
+## The Mentors
+
+Really the point isn't for the mentors to get much out of GSoC themselves, so
+this one is understandable. Moving on ...
+
+## The Projects
+
+GSoC is framed as both a way to give student's real-world experience, but also
+as a public good, funding development all over the open-source ecosystem.
+Realistically the code that comes out of it all rarely lives up to this
+expectation. Programming is a skill you must practice like anything else, so
+naturally the first entry foary into real-world software often results in
+disorganized, unmaintainable code. Additionally most students don't stick around
+after the end of the summer. So in the end each project has a handful of braches
+full of very green code, and no maintainers to stand behind them. As with
+any similar patch, this is usually a death sentence, or at least a recipe for
+limbo.
+
+## Google
+
+So we reach the end, the buck stops here. Google spends a lot money and gets
+what? They get a list of hundreds of students, skilled developers that will
+generally be looking for work in a year or two. Spending five or ten thousand
+to hire a developer is an absolute bargain. This is the true by-product of GSoC,
+contact lists on an HR desk.
