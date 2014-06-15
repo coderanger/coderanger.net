@@ -1,6 +1,6 @@
 ---
 title: Test Post
-date: Soon
+date: 2014-06-15
 kind: post
 ---
 
