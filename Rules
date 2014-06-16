@@ -13,6 +13,38 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
+preprocess do
+  # Anything with an explicit published: false should vanish
+  items.reject! {|item| item[:published] == false}
+
+  items.each do |item|
+    # Extract date from filename if present
+    item.identifier.match(%r{(/.*)?/(\d\d\d\d-\d\d-\d\d)-(.*)/}) do |md|
+      item.identifier = "#{md[1]}/#{md[3]}/"
+      item[:date] ||= md[2]
+    end
+
+    # Set the kind for certin subfolders
+    case item.identifier.split('/')[1]
+    when 'posts'
+      item[:kind] ||= 'post'
+    end
+
+    # Parse the date if present
+    item[:date] = Date.parse(item[:date]) if item[:date].is_a?(String)
+
+    # Convert the identifier into the title if not present
+    if item[:kind]
+      item[:title] ||= begin
+        words = item.identifier.split('/').last.split('-')
+        words.first.capitalize! # Always cap the first word
+        words.each {|word| word.capitalize! if word.length > 3}
+        words.join(' ')
+      end
+    end
+  end
+end
+
 compile '/static/*' do
   # Don't touch static stuff
 end

@@ -1,8 +1,3 @@
----
-layout: post
-title: Fixing Making
----
-
 [Making things is hard](/2013/09/making/), and I think I can make it better.
 Over the past 12-18 months I've found myself drawn to what I think is a void in
 the current tech landscape. As I said in my last post, I want to see tech in

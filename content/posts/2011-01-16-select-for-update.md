@@ -1,6 +1,5 @@
 ---
-layout: post
-title: "Using SELECT FOR UPDATE in Django"
+title: Using SELECT FOR UPDATE in Django
 ---
 
 <blockquote><b>Update:</b> As of version 1.4<a href="https://docs.djangoproject.com/en/1.4/ref/models/querysets/#select-for-update">
@@ -32,37 +31,41 @@ As long as you can express all your operations using SQL expressions in an
 `UPDATE`, this isolation is sufficient. For example, you can increment an
 integer column via `UPDATE foo SET x=x+1 WHERE id=1;`. Unfortunately Django
 doesn't make this easy. The naive way to perform the same operation is:
-{% highlight python %}
+
+```python
 obj = Foo.objects.get(id=1)
 obj.x += 1
 obj.save()
-{% endhighlight %}
+```
 
 This means that two requests can come in simultaneously and the second
 will clobber the first:
-{% highlight python %}
+
+```python
 A: obj = Foo.objects.get(id=1) # obj.x is now 1
 B: obj = Foo.objects.get(id=1)
 A: obj.x += 1 # obj.x is now 2
-B: obj.x += 1 
+B: obj.x += 1
 A: obj.save() # obj.x saved as 2, as expected
 B: obj.save() # obj.x is still only 2, when it should be 3
-{% endhighlight %}
+```
 
 To do this correctly in plain Django calls, we can use
 [QuerySet.update](http://docs.djangoproject.com/en/1.2/ref/models/querysets/#update)
 and an [F expression](http://docs.djangoproject.com/en/1.2/topics/db/queries/#filters-can-reference-fields-on-the-model):
-{% highlight python %}
+
+```python
 Foo.objects.filter(id=1).update(x=F('x')+1)
-{% endhighlight %}
+```
 
 This works, but the syntax is a bit unfortunate, even moreso when you just
 want to update a field on a model you already have. I highly recommend using
 Andy McCurdy's [update method](https://github.com/andymccurdy/django-tips-and-tricks/blob/master/model_update.py):
-{% highlight python %}
+
+```python
 obj = Foo.objects.get(id=1)
 update(obj, x=F('x')+1)
-{% endhighlight %}
+```
 
 Using `update()` like this also has the added advantage of only sending the
 given fields to the database, as opposed to `save()` which serializes the
@@ -86,7 +89,7 @@ the query system, but with some creativity we can add it in. Much of the
 credit for this goes to [Alexander Artemenko](http://dev.svetlyak.ru/select-update-django-en/)
 who wrote the initial version of the helper.
 
-{% highlight python %}
+```python
 from django.db import models, connections
 from django.db.models.query import QuerySet
 
@@ -101,16 +104,16 @@ class ForUpdateQuerySet(QuerySet):
 class ForUpdateManager(models.Manager):
     def get_query_set(self):
         return ForUpdateQuerySet(self.model, using=self._db)
-{% endhighlight %}
+```
 
 Then all you have to do is inherit from `ForUpdateManager` in your manager and
 use `for_update()` at the end of the filter chain:
 
-{% highlight python %}
+```python
 qs = Foo.objects.filter(id=1).for_update()
 obj = qs[0]
 update(obj, x=something_complex())
-{% endhighlight %}
+```
 
 An example
 ----------
@@ -120,11 +123,12 @@ specifically their next billing date for people on monthly cycles. Due to the
 nature of MMOs, it is possible that someone could redeem a game-time card at
 the exact moment that a background task is processing them for monthly billing.
 At heart this code boils down to:
-{% highlight python %}
+
+```python
 user = User.objects.filter(id=1).for_update()[0]
 new_date = user.next_billing_date + relativedelta(months=1, day=user.next_billing_day)
 update(user, next_billing_date=new_date)
-{% endhighlight %}
+```
 
 This is both transactionally safe and concise, which is just about all you
 can ask for from a SQL database.

@@ -1,6 +1,5 @@
 ---
-layout: post
-title: "System monitoring: A play in 5 acts"
+title: "System Monitoring: A Play in 5 Acts"
 ---
 
 Act 1: Munin

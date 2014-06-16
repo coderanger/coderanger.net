@@ -1,6 +1,5 @@
 ---
-layout: post
-title: "Writing DSLs in Javascript"
+title: Writing DSLs in Javascript
 ---
 
 Beginnings
@@ -41,7 +40,7 @@ very least I need quoted strings. Given my massive programmer brain, I
 immediately set forth to write such a beast. Below is the final version of it,
 with luck it can serve as a warning to others:
 
-{% highlight javascript %}
+```javascript
 // Parse arguments
 var raw_buffer = value.substring(value.indexOf(command_name)+command_name.length+1).split('');
 var args = [];
@@ -68,7 +67,7 @@ while(raw_buffer.length > 0) {
         buffer = '';
     }
 }
-{% endhighlight %}
+```
 
 Parser 2.0
 ----------
@@ -81,20 +80,20 @@ implementation of the bits of Javascript that I needed out of the box, so only
 a few modifications were needed. For starters I changed how name tokens are
 handled in ``advance()``:
 
-{% highlight javascript %}
+```javascript
 o = scope.find(v);
 if(!o) {
     o = scope.define(t);
 }
-{% endhighlight %}
+```
 
 This means that any name token will be created in the scope it appears in. I
 also didn't want things like flow control or functions so I altered the
 returned parser to use:
 
-{% highlight javascript %}
+```javascript
 var s = expression(0);
-{% endhighlight %}
+```
 
 This provided a solid base to build the DSL on, with Javascript literals (
 numbers, strings, objects, and arrays), basic math operators, attribute access,
@@ -106,7 +105,7 @@ Interpreter
 Crockford's code only provides a parser, the other half is to have something
 to execute that parse tree. Below is a snippet of my callback-based function:
 
-{% highlight javascript %}
+```javascript
 switch(node.arity) {
 case "literal": cont(node.value); return;
 case "name":
@@ -127,13 +126,13 @@ case "binary":
     case "+":
         interpret(node.first, function(value1) {
             interpret(node.second, function(value2) {
-               cont(value1 + value2); 
+               cont(value1 + value2);
             }, err);
         }, err);
         return;
     }
 }
-{% endhighlight %}
+```
 
 It isn't the fastest thing on the block, but it is perfectly adequate for
 interactive usage.

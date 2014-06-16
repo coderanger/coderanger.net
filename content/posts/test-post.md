@@ -1,7 +1,5 @@
 ---
-title: Test Post
 date: 2014-06-15
-kind: post
 ---
 
 # Woooooo

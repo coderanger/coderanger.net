@@ -1,8 +1,3 @@
----
-layout: post
-title: Mansplaining
----
-
 What is mansplaining? Is it sexist? Can only men mansplain? "Mansplain" and
 "mansplaining" have become much more common in discussions of both femnism and
 online activism over the last few years. If you have ever been confused by these
