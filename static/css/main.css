@@ -80,7 +80,6 @@ footer {
 
 .biglist li {
   list-style: none;
-  line-height: 40px;
   border-top: 2px solid #999;
   margin-top: 10px;
   padding-top: 10px;
@@ -94,6 +93,10 @@ footer {
 
 .biglist a {
   text-decoration: none;
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+  line-height: 40px;
 }
 
 .biglist .biglist-label:hover {
@@ -102,6 +105,14 @@ footer {
 
 .biglist .biglist-label {
   font-size: 28px;
+  float: left;
+}
+
+.biglist .biglist-sublabel {
+  font-size: 16px;
+  line-height: 16px;
+  float: left;
+  clear: left;
 }
 
 .biglist .biglist-pull {
@@ -110,9 +121,10 @@ footer {
 
 
 /* Home Nav */
-.home-speaking, .home-consulting, .home-training {
+.biglist .home-speaking, .biglist .home-consulting, .biglist .home-training {
   display: inline-block;
   width: calc(100% / 3);
+  float: none;
 }
 
 .home-speaking:hover, .home-consulting:hover, .home-training:hover {

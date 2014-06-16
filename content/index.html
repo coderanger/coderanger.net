@@ -11,8 +11,8 @@ body_class: home
   <%- items.select{|item| item[:kind] == 'post'}.sort_by!{|item| item[:date]}.reverse!.each do |item| -%>
   <li>
     <a href="<%= item.rep_named(:default).path %>">
-      <span class="biglist-label"><%= item[:title] ||= item.identifier %></span>
       <span class="biglist-pull"><%= item[:date] %></span>
+      <span class="biglist-label"><%= item[:title] ||= item.identifier %></span>
     </a>
   </li>
   <%- end -%>
