@@ -35,6 +35,10 @@ preprocess do
     # Parse the date if present
     item[:date] = Date.parse(item[:date]) if item[:date].is_a?(String)
 
+    # Set the extra timestamps for the Blogging helper
+    item[:created_at] = item[:date].to_time if item[:date]
+    item[:updated_at] = item[:mtime] if item[:mtime]
+
     # Convert the identifier into the title if not present
     if item[:kind]
       item[:title] ||= begin
@@ -49,6 +53,14 @@ end
 
 compile '/static/*' do
   # Don't touch static stuff
+end
+
+compile '/atom/' do
+  filter :erubis
+end
+
+compile '/sitemap/' do
+  filter :erubis
 end
 
 [
@@ -75,6 +87,14 @@ end
 
 route '/404/' do
   '/404.html'
+end
+
+route '/atom/' do
+  '/atom.xml'
+end
+
+route '/sitemap/' do
+  '/sitemap.xml'
 end
 
 route '*' do

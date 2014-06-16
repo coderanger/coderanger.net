@@ -1,0 +1,1 @@
+<%= xml_sitemap rep_select: lambda {|rep| rep.name != :old_url } %>

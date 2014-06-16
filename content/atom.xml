@@ -1,0 +1,6 @@
+---
+title: Noah Kantrowitz
+author_name: Noah Kantrowitz
+author_uri: https://coderanger.net/
+---
+<%= atom_feed articles: items.select{|item| item[:kind] == 'post'}, icon: 'https://coderanger.net/favicon.png' %>

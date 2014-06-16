@@ -6,6 +6,7 @@ gem 'kramdown'
 gem 'pygments.rb'
 gem 'nokogiri'
 gem 'erubis'
+gem 'builder'
 
 group(:development) do
   gem 'guard-nanoc'
