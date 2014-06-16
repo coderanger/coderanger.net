@@ -1,5 +1,5 @@
 ---
-title: Using SELECT FOR UPDATE in Django
+title: SELECT FOR UPDATE in Django
 ---
 
 <blockquote><b>Update:</b> As of version 1.4<a href="https://docs.djangoproject.com/en/1.4/ref/models/querysets/#select-for-update">
