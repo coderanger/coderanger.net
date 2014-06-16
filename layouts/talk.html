@@ -1,0 +1,21 @@
+<h1 class="post-header">
+  <span class="post-title"><%= @item[:title] %></span>
+  <span class="post-date"><%= @item[:date] %></span>
+</h1>
+<%= yield %>
+
+<%- if @item[:vimeo_id] || @item[:youtube_id] || @item[:blip_id] -%>
+<h2>Video</h2>
+<%- if @item[:vimeo_id] -%>
+<iframe width="608" height="<%= 608 / @item[:vimeo_ratio] %>" src="//player.vimeo.com/video/<%= @item[:vimeo_id] %>?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<%- elsif @item[:youtube_id] -%>
+<iframe width="608" height="<%= 608 / @item[:youtube_ratio] %>" src="//www.youtube.com/embed/<%= @item[:youtube_id] %>" frameborder="0" allowfullscreen></iframe>
+<%- end -%>
+<%- end -%>
+
+<%- if @item[:speakerdeck_id] || @item[:slideshare_id] -%>
+<h2>Slides</h2>
+<%- if @item[:speakerdeck_id] -%>
+<script async class="speakerdeck-embed" data-id="<%= @item[:speakerdeck_id] %>" data-ratio="<%= @item[:speakerdeck_ratio] %>" src="//speakerdeck.com/assets/embed.js"></script>
+<%- end -%>
+<%- end -%>

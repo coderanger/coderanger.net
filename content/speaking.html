@@ -1,0 +1,17 @@
+---
+body_class: speaking
+---
+
+<ul class="biglist">
+  <%- items.select{|item| item[:kind] == 'talk'}.sort_by!{|item| item[:date]}.reverse!.each do |item| -%>
+  <li>
+    <a href="<%= item.rep_named(:default).path %>">
+      <span class="biglist-pull"><%= item[:venue] || item[:date] %></span>
+      <span class="biglist-label"><%= item[:title] ||= item.identifier %></span>
+      <%- if item[:subtitle] %>
+      <span class="biglist-sublabel"><%= item[:subtitle] %></span>
+      <%- end -%>
+    </a>
+  </li>
+  <%- end -%>
+</ul>
