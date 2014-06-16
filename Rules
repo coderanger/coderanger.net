@@ -28,6 +28,8 @@ preprocess do
     case item.identifier.split('/')[1]
     when 'posts'
       item[:kind] ||= 'post'
+    when 'talks'
+      item[:kind] ||= 'talk'
     end
 
     # Parse the date if present
