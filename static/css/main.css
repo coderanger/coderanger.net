@@ -7,6 +7,19 @@ a {
   color: inherit;
 }
 
+h2, h3, h4, h5, h6 {
+  margin-bottom: 2px;
+}
+
+p {
+  margin-top: 0;
+}
+
+/* For some old posts */
+img {
+  max-width: 100%;
+}
+
 header, #content, footer {
   box-sizing: border-box;
   width: 640px;
@@ -119,33 +132,25 @@ footer {
 }
 
 
-/* Blog Post */
-.post .post-header {
+/* Post Header */
+.post-header {
   margin-top: 0;
   line-height: 28px;
 }
 
-.post .post-title {
+.post-title {
   font-size: 28px;
   font-weight: bold;
 }
 
-.post .post-date {
+.post-date {
   float: right;
   font-size: 16px;
   font-weight: normal;
 }
 
-.post h2, .post h3, .post h4, .post h5, .post h6 {
-  margin-bottom: 2px;
-}
-
-.post p {
-  margin-top: 0;
-}
-
 /* Code Highlight, based on the 'bw' style from Pygments */
-code {
+pre code {
   font-family: 'Inconsolata', monospace;
   display: inline-block;
   width: 100%;
