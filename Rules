@@ -73,6 +73,10 @@ route '/posts/*/' do
   item.identifier[6..-1] + 'index.html'
 end
 
+route '/404/' do
+  '/404.html'
+end
+
 route '*' do
   item.identifier + 'index.html'
 end
