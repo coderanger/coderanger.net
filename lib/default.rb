@@ -1,2 +1,2 @@
-# All files in the 'lib' directory will be loaded
-# before nanoc starts compiling.
+# The require inside Nanoc::Filter::Erubis seems to have issues inside guard
+require 'erubis'

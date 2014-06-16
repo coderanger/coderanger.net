@@ -75,7 +75,8 @@ route '*' do
   item.identifier + 'index.html'
 end
 
-layout '*', :erb
 route '/posts/*/', rep: :old_url do
   "/#{item[:date].year}/#{'%02d' % item[:date].month}#{item.identifier[6..-1]}index.html"
 end
+
+layout '*', :erubis
