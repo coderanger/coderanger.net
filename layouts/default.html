@@ -6,6 +6,7 @@
     <title><%= @item[:title] + ' – ' if @item[:title] %>Noah Kantrowitz</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="nanoc <%= Nanoc::VERSION %>">
+    <link rel="canonical" href="<%= @item.rep_named(:default).path %>">
     <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Montserrat:400,700">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
