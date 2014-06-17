@@ -143,6 +143,10 @@ footer {
   text-align: right;
 }
 
+/* Content Styles */
+#content ul {
+  padding-left: 1em;
+}
 
 /* Post Header */
 #content h1 {
