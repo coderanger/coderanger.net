@@ -5,9 +5,10 @@ body_class: training
 
 # Training
 
-I offer training services in advanced Chef usage and other server operations
-topics. The advanced Chef classes are one or two day sessions for up to ten
-students:
+I offer intensive, hands-on Chef training, tailored to your needs and goals.
+Classes can be on-site for the convince of the students, or we can find a
+central location for your distributed team. While every class is a little
+different, sessions are generally one-to-two days and cover some combination of:
 
 #### Advanced Chef Usage
 Berkshelf workflow, writing LWRPs, and more.
@@ -34,8 +35,10 @@ How to use AWS CloudFormation to manage infrastructure alongside Chef.
 #### Testing your Cookbooks
 Using Test Kitchen and ChefSpec to improve cookbook quality.
 
+<p class="well">
 If you are interested in discussing a training session for your company, please
 contact me at [&#110;&#111;&#97;&#104;&#64;&#99;&#111;&#100;&#101;&#114;&#97;&#110;&#103;&#101;&#114;&#46;&#110;&#101;&#116;](&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#110;&#111;&#97;&#104;&#64;&#99;&#111;&#100;&#101;&#114;&#97;&#110;&#103;&#101;&#114;&#46;&#110;&#101;&#116;).
+</p>
 
 ## Public Training
 
