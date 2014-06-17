@@ -1,7 +1,8 @@
-<h1 class="post-header">
-  <span class="post-title"><%= @item[:title] %></span>
-  <span class="post-date"><%= @item[:date] %></span>
+<h1>
+  <%= @item[:title] %>
+  <span class="date"><%= @item[:date] %></span>
 </h1>
+
 <%= yield %>
 
 <%- if @item[:vimeo_id] || @item[:youtube_id] || @item[:blip_id] -%>

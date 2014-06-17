@@ -1,5 +1,6 @@
-<h1 class="post-header">
-  <span class="post-title"><%= @item[:title] %></span>
-  <span class="post-date"><%= @item[:date] %></span>
+<h1>
+  <%= @item[:title] %>
+  <span class="date"><%= @item[:date] %></span>
 </h1>
+
 <%= yield %>
