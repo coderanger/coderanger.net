@@ -99,7 +99,7 @@ footer {
   line-height: 40px;
 }
 
-.biglist .biglist-label:hover {
+.biglist a:hover .biglist-label {
   text-decoration: underline;
 }
 
