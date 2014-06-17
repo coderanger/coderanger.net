@@ -7,7 +7,7 @@ more of a pull towards the community side of the equation. Fixing and improving
 our software is definitely a piece of the puzzle, but I've come to believe that
 community building and evangelism are just as important.
 
-## Documentation
+# Documentation
 
 Most of the tools that make up modern application stacks are fairly well
 documented themselves. You can load up the Postgres docs and deploy a simple
@@ -22,7 +22,7 @@ iterate over them, my goal is to remove as many steps as possible. Some of this
 can be through sane defaults, some through outright bug fixes, and many through
 continued evolution of standards for system interaction between components.
 
-## Community Building
+# Community Building
 
 The operations community is a similarly fragmented landscape. There are vibrant
 and helpful communities around each individual tool, Django, Postgres, Heroku,
@@ -36,7 +36,7 @@ helps those of us already a part of the cloud development/operations world, it
 also provides a starting point for the massive influx of new folks I hope we can
 bring in to the fold.
 
-## Composable Infrastructure
+# Composable Infrastructure
 
 To borrow a description from the inimitable [Jim Meyer](https://twitter.com/purp),
 I want to see application operations more as a set of LEGO bricks bricks than

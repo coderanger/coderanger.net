@@ -3,7 +3,7 @@ What is mansplaining? Is it sexist? Can only men mansplain? "Mansplain" and
 online activism over the last few years. If you have ever been confused by these
 terms or seen them as an attack on you, read on.
 
-## Origins
+# Origins
 
 The exact etymology of the term are a bit hard to trace. The most cited piece
 when talking about origins is a [2008 op-ed by Rebecca Solnit](http://articles.latimes.com/2008/apr/13/opinion/op-solnit13).
@@ -14,7 +14,7 @@ like others understood her meaning, so I can only conjecture that it may have
 been in use elsewhere prior to this, or potentially it was so clear that it
 required no further explanation.
 
-## Meaning
+# Meaning
 
 To summarize [several](http://en.wiktionary.org/wiki/mansplaining)
 [popular](http://geekfeminism.wikia.com/wiki/Splaining)
@@ -24,7 +24,7 @@ To summarize [several](http://en.wiktionary.org/wiki/mansplaining)
 
 As shown above, this is commonly associated with a man speaking to a woman.
 
-## Confusion
+# Confusion
 
 This leads to what I think is a source of consternation, "mansplaining" can
 refer to two very different things. In one case you have the simple act of
@@ -35,7 +35,7 @@ or even the group as a whole. The frustration is often compounded when the
 explainer describes someones own maginalization to them, such a man explaining
 sexism to a woman.
 
-## Clarity
+# Clarity
 
 A number of people have suggested changing the term to avoid the gendered language.
 [GeekFeminism has settled on splaining](http://geekfeminism.wikia.com/wiki/Splaining),
@@ -50,7 +50,7 @@ with any discussion of cultural standards and norms, I ask fellow men to
 appreciate that such a term is not an attack on *you*, it is a recognition of
 broken culture that affects everyone regardless of gender.
 
-## Can a woman mansplain?
+# Can a woman mansplain?
 
 Sometimes. An individual woman can be just as rude and obnoxious as any other
 person, but if we call this (down)splaining then it would by definition not be
@@ -59,7 +59,7 @@ woman disparagingly explaining racism to a black man could certainly be seen
 as mansplaining. In the end the answer is mostly up to your exact views and
 can easily lead to miscommunications.
 
-## Intersectionality bonus round
+# Intersectionality bonus round
 
 Allies for feminism come in all shapes and sizes, many of them on the male
 side of the spectrum. As I've made clear, I think the concept of mansplaining is

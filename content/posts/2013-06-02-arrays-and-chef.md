@@ -42,7 +42,7 @@ node['chruby']['rubies'] == ['jruby', '1.9.3', '2.0.0', '1.8.7']
 
 Needless to say this can result in much confusion.
 
-## A better way
+# A better way
 
 In light of these confusing and unhelpful semantics for arrays, I generally recommend people avoid them. Most uses of arrays in Chef code are situations where order doesn't actually matter. In the case of the above example, what we actually have is a set of three boolean flags. This leads us to a somewhat more verbose, but also more flexible system:
 
@@ -75,7 +75,7 @@ This both clarifies your existing code, and allows flexibility you may need in t
 node['chruby']['rubies'].inject([]) {|memo, (key, value)| memo << key if value; memo}
 ```
 
-## But what about order?
+# But what about order?
 
 So one crucial difference between using an array and a hash of boolean flags is a loss of ordering. Ruby does track the insertion order in hashes, so usually the final order of keys will follow the default/normal/override ordering that attributes themselves use, but sometimes this is not enough. In these cases we can instead use a hash of weight values, which we sort on afterwards:
 
