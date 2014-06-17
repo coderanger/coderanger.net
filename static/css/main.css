@@ -119,7 +119,6 @@ footer {
   float: right;
 }
 
-
 /* Home Nav */
 .biglist .home-speaking, .biglist .home-consulting, .biglist .home-training {
   display: inline-block;
@@ -144,6 +143,14 @@ footer {
 }
 
 /* Content Styles */
+#content {
+  padding-bottom: 1px; /* Really I want 0 but with border-box that drops the p margin */
+}
+
+#content.talk {
+  padding-bottom: 16px;
+}
+
 #content ul {
   padding-left: 1em;
 }
