@@ -11,7 +11,11 @@
     <link rel="openid2.local_id" href="https://www.google.com/profiles/coderanger" />
     <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Montserrat:400,700">
+    <%- if @site.config.fetch(:font_awesome_cdn, true) -%>
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <%- else -%>
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <%- end -%>
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/main.css">
   </head>
