@@ -70,7 +70,7 @@ end
 ].each do |args|
   compile(*args) do
     filter :erubis
-    filter :kramdown, input: 'GFM', header_offset: item[:kind] ? 1 : 0, enable_coderay: false, hard_wrap: false, auto_id_stripping: true if item[:extension] == 'md'
+    filter :kramdown, input: 'GFM', header_offset: item[:kind] ? 1 : 0, enable_coderay: false, hard_wrap: false, auto_id_stripping: true, parse_block_html: true if item[:extension] == 'md'
     filter :colorize_syntax, default_colorizer: :pygmentsrb
     layout item[:kind] if item[:kind]
     layout 'default'
