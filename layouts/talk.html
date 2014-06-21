@@ -3,6 +3,10 @@
   <span class="date"><%= @item[:date] %></span>
 </h1>
 
+<%- if @item[:subtitle] -%>
+<h2 class="subtitle"><%= @item[:subtitle] %></h2>
+<%- end -%>
+
 <%= yield %>
 
 <%- if @item[:vimeo_id] || @item[:youtube_id] || @item[:blip_id] -%>
