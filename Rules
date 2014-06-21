@@ -25,11 +25,14 @@ preprocess do
     end
 
     # Set the kind for certin subfolders
-    case item.identifier.split('/')[1]
-    when 'posts'
-      item[:kind] ||= 'post'
-    when 'talks'
-      item[:kind] ||= 'talk'
+    parts = item.identifier.split('/')
+    if parts.length > 2
+      case parts[1]
+      when 'posts'
+        item[:kind] ||= 'post'
+      when 'talks'
+        item[:kind] ||= 'talk'
+      end
     end
 
     # Parse the date if present
