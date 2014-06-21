@@ -147,10 +147,6 @@ footer {
   padding-bottom: 1px; /* Really I want 0 but with border-box that drops the p margin */
 }
 
-#content.talk {
-  padding-bottom: 12px;
-}
-
 #content ul {
   padding-left: 1em;
 }
