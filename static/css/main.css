@@ -51,6 +51,10 @@ header {
   margin-left: 20px;
 }
 
+#header-icons a:hover {
+  color: #999;
+}
+
 #content {
   background-color: #FFF;
   padding-top: 16px;
