@@ -66,6 +66,7 @@ footer {
   padding-top: 10px;
   color: #777;
   font-size: 12px;
+  min-height: 80px;
 }
 
 #footer-contact:hover {
