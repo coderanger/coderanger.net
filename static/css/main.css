@@ -129,6 +129,7 @@ footer {
   display: inline-block;
   width: calc(100% / 3);
   float: none;
+  font-weight: bold;
 }
 
 .home-speaking:hover, .home-consulting:hover, .home-training:hover {
