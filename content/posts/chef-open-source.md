@@ -24,7 +24,7 @@ I know big companies have a bad rap with both B2B startups and the open source w
 
 Chef is an excellent enterprise automation toolkit with a generous free product offering. And it turns out that's what most people want. I can probably name all of the people that are emotionally invested in Chef being a strong open source community (myself included) but we alone have not been enough to maintain the community ethos. But again, I don't think this is going to be the doom of Chef or ChefInc, the market has spoken and they are happy with a free product. Additionally having the code on GitHub gives a nice warm and fuzzy feeling that there is no vendor-lock-in, even though there is no other game in town.
 
-You can see this trend as ChefInc gets worse and worse at building Chef in the open. How many of you know about the [Chef RFCs](https://github.com/opscode/chef-rfc)? While the process exists, it is used inconsistently at best, and discussion rarely moves beyond the few people involved in each pull request. The roadmap for Chef features is increasingly inscrutable, community-wide decisions are made either in private or behind open doors that are very well hidden, and community contributions and taken a nose dive.
+You can see this trend as ChefInc gets worse and worse at building Chef in the open. How many of you know about the [Chef RFCs](https://github.com/opscode/chef-rfc)? While the process exists, it is used inconsistently at best, and discussion rarely moves beyond the few people involved in each pull request. The roadmap for Chef features is increasingly inscrutable, community-wide decisions are made either in private or behind open doors that are very well hidden, and community contributions have taken a nose dive.
 
 # Case Study: Chef Support
 
