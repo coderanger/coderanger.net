@@ -157,6 +157,14 @@ footer {
   padding-left: 1em;
 }
 
+#content ol {
+  padding-left: 1.5em;
+}
+
+#content ol li {
+  margin-bottom: 5px;
+}
+
 #content .biglist {
   padding-left: 0; /* Undo the above padding */
 }
