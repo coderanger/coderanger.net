@@ -2,8 +2,10 @@
 title: SELECT FOR UPDATE in Django
 ---
 
-<blockquote><b>Update:</b> As of version 1.4<a href="https://docs.djangoproject.com/en/1.4/ref/models/querysets/#select-for-update">
-Django supports SELECT FOR UPDATE</a>.</blockquote>
+<blockquote>
+<b>Update:</b> As of version 1.4<a href="https://docs.djangoproject.com/en/1.4/ref/models/querysets/#select-for-update">
+Django supports SELECT FOR UPDATE</a>.
+</blockquote>
 
 A frequently overlooked feature of SQL is the `FOR UPDATE` clause on `SELECT`.
 Even in this age of NoSQL datastores, most large-scale webapps will use a
