@@ -16,6 +16,8 @@ Chef: 11.12.8
 ```
 
 There is also a `chef-10` component available if you want Chef 10.x releases.
+Packages are behind the Cloudfront CDN, so installation should also be faster
+than the `install.sh` script.
 
 New releases will be added automatically, so you can handle upgrades as you do
 any other package.
