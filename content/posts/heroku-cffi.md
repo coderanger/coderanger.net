@@ -1,7 +1,6 @@
 ---
 title: Heroku and CFFI
 date: 2014-07-22
-published: false
 ---
 
 
@@ -13,8 +12,8 @@ from Python. Some major libraries that depend on it include:
 * [psycopg2cffi](https://github.com/chtd/psycopg2cffi)
 * [PyNaCl](https://pynacl.readthedocs.org/)
 
-This buildpack allow any of these libraries to be installed and used from Heroku
-applications.
+[buildpack-cffi](https://github.com/coderanger/heroku-buildpack-cffi) allows any
+of these libraries to be installed and used in Heroku applications.
 
 # Usage
 
@@ -42,7 +41,7 @@ libffi-dev
 
 Then just put the Python libraries you need in the normal requirements.txt.
 
-If you are building CFFI for Cryptography, no additional configuration should be
+If you are installing Cryptography, no additional configuration should be
 required.
 
 ----
