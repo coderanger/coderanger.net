@@ -6,7 +6,7 @@ body_class: training
 # Training
 
 I offer intensive, hands-on Chef training, tailored to your needs and goals.
-Classes can be on-site for the convince of the students, or we can find a
+Classes can be on-site for the convenience of the students, or we can find a
 central location for your distributed team. While every class is a little
 different, sessions are generally one-to-two days and cover some combination of:
 
