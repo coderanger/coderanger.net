@@ -141,7 +141,8 @@ encryption, meaning that a given secret can be encrypted so that any N out of
 the total M people can access it. Let's say you have 5 engineers, you could
 set some secrets to be 1-of-5 so they are accessible by anyway, while more
 important secrets could be 3-or-5 to ensure a majority of the team authorizes
-the access.
+the access. For very high-value secrets this helps ensure a single laptop
+compromise doesn't put you at risk.
 
 Unfortunately tooling around it is incredibly minimal, and it offers little
 logging. If you are looking for a solid offline storage tool for
