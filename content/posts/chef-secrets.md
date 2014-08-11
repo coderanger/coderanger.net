@@ -53,7 +53,7 @@ Encrypted data bags use a shared secret and symmetric encryption of the data
 bag values. The current version (v2) uses AES-256-CBC with an additional
 SHA256 HMAC. The next version (v3) will use AES-256-GCM.
 
-This offer. a bit of a trade, you can achieve Least Privilege
+This offers a bit of a trade, you can achieve Least Privilege
 by ensuring that only those that are granted access will have the decryption
 key for a particular secret. The downside of this is now you need to manage
 and distribute the decryption keys. While this isn't impossible, the keys
