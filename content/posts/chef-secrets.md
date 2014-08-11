@@ -169,5 +169,5 @@ If none of these apply, you are likely between a rock and a hard place.
 
 ---
 
-Looking for help with Chef? Check out my [training](/training/) and
+Looking for help getting the most out of Chef? Check out my [training](/training/) and
 [consulting](/consulting/) services.
