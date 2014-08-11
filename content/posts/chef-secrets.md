@@ -69,7 +69,7 @@ same APIs for access, the same issues with audit logging carry over.
 The same general issues apply to
 [Ansible's Vault](http://docs.ansible.com/playbooks_vault.html) system.
 
-# chef-vault
+# Chef-vault
 
 [Chef-vault](https://github.com/Nordstrom/chef-vault) builds on encrypted
 data bags. Rather than a single shared decryption key, chef-vault creates a
@@ -92,7 +92,7 @@ some handy DSL extensions.
 
 # Citadel
 
-The [citadel cookbook](https://github.com/poise/citadel) uses a different
+The [Citadel cookbook](https://github.com/poise/citadel) uses a different
 approach. Rather than control access using encryption, it uses a **Trusted Third
 Party** to mediate access, specifically AWS IAM. It makes use of the IAM Role
 feature of EC2 to provide AWS API credentials to the server. Combined with a
