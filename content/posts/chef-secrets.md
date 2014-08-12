@@ -156,6 +156,22 @@ system to restrict access, but I've not seen many cases of it being used well
 due to the high level of complexity. etcd and consul both lack authentication
 and authorization controls, but they are being worked on.
 
+# The Future
+
+One potential solution for this mess in the future is to move more services
+toward asymmetric keys for authentication instead of shared (symmetric) secrets.
+This is already supported in both PostgreSQL and MySQL. This trades secrets
+management for identity management, which is still a hard problem but does
+have some nicer characteristics. Notably the private key for a given server
+never has to leave the machine, and the public key doesn't need to be kept
+secret from anyone. The hard part becomes knowing which keys to authorize for
+which resources and managing signatures. This generally requires another
+Trusted Third Party to handle role/identity information, like a chef-server
+or the AWS API.
+
+The tooling isn't there today, but this does offer a path out of the current
+miasma.
+
 # tl;dr
 
 If you are 100% on AWS, use [Citadel](https://github.com/poise/citadel).
