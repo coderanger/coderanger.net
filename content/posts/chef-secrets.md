@@ -136,7 +136,7 @@ Citadel works, but against a local Barbican server instead of AWS.
 
 [Red October](https://github.com/cloudflare/redoctober) is an N-of-M storage
 system developed by CloudFlare. It is primarily aimed at offline storage, but
-does provide a remote API for online use. It's defining feature is the N-of-M
+does provide a remote API for online use. Its defining feature is the N-of-M
 encryption, meaning that a given secret can be encrypted so that any N out of
 the total M people can access it. Let's say you have 5 engineers, you could
 set some secrets to be 1-of-5 so they are accessible by anyone, while more
