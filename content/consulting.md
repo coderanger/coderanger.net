@@ -18,6 +18,9 @@ automation to improve your operations team or get started with Chef.
 * Cryptography and security engineering
 
 <p class="well">
-[Contact me](&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#110;&#111;&#97;&#104;&#64;&#99;&#111;&#100;&#101;&#114;&#97;&#110;&#103;&#101;&#114;&#46;&#110;&#101;&#116;)
+<a onmousedown="ga('send', 'event', 'consulting-contact', 'click');"
+   href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#110;&#111;&#97;&#104;&#64;&#99;&#111;&#100;&#101;&#114;&#97;&#110;&#103;&#101;&#114;&#46;&#110;&#101;&#116;">
+  Contact me at &#110;&#111;&#97;&#104;&#64;&#99;&#111;&#100;&#101;&#114;&#97;&#110;&#103;&#101;&#114;&#46;&#110;&#101;&#116;
+</a>
 to discuss how we can improve your infrastructure!
 </p>
