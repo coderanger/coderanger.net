@@ -6,19 +6,18 @@ published: false
 
 Everyone has secrets. Database passwords, API credentials, recovery questions.
 These secrets need to be stored somewhere, and then made available to servers
-that require them.
+that use them.
 
 # Requirements
 
 When working with secrets we have a few needs above and beyond that of "normal"
 configuration data. As with any security-relevant system, the overarching rule
-must be the **Principle of Least Privilege**. This means that if a person or
-server doesn't require a specific secret, it should not have access to it. We
-also generally want some level of access logging to analyze any future problems.
-We are also sometimes willing to give up some ground, usually in the form of
-version control. Accessing the old value of a password is only needed in
-*"oops"* situations, so it isn't as much of a hard requirement for the storage
-system.
+must be the **Principle of Least Privilege**. This means that if a server
+doesn't require a specific secret, it should not have access to it. We also
+generally want some level of access logging to analyze any future problems. We
+are sometimes willing to give up some ground, usually in the form of version
+control. Accessing the old value of a password is only needed in *"oops"*
+situations, so it isn't always a hard requirement for the storage system.
 
 ## Online vs. offline
 
@@ -45,7 +44,8 @@ say the least. Access logs do exist, but there is nothing to easily
 search/manage them. If you use Hosted Chef, the access logs are not directly
 accessible at all.
 
-Overall I recommend not using data bags for secrets storage.
+I'll spare you many more reasons they are unsuitable but overall I recommend not
+using data bags for secrets storage.
 
 # Encrypted data bags
 
@@ -93,7 +93,7 @@ some handy DSL extensions.
 # Citadel
 
 The [Citadel cookbook](https://github.com/poise/citadel) uses a different
-approach. Rather than control access using encryption, it uses a **Trusted Third
+approach. Rather than control access via encryption, it uses a **Trusted Third
 Party** to mediate access, specifically AWS IAM. It makes use of the IAM Role
 feature of EC2 to provide AWS API credentials to the server. Combined with a
 private S3 bucket and IAM access policies bound to a role and you can very
@@ -117,11 +117,11 @@ non-Chef tools, but it doesn't have the same slick DSL extensions for use
 within Chef. It also requires an external synchronization server of some kind,
 currently it supports S3 and SCP as mechanisms to get the encrypted data to
 the server before Trousseau can process it. Due to the complexities of the
-synchronization, I would consider Trousseau to mostly be an offline storage
+synchronization, I would consider Trousseau to be a mostly offline storage
 system.
 
 I don't actually know of anyone using Trousseau with Chef, so this is mentioned
-mostly for completeness.
+largely for completeness.
 
 # Barbican
 
@@ -139,8 +139,8 @@ system developed by CloudFlare. It is primarily aimed at offline storage, but
 does provide a remote API for online use. It's defining feature is the N-of-M
 encryption, meaning that a given secret can be encrypted so that any N out of
 the total M people can access it. Let's say you have 5 engineers, you could
-set some secrets to be 1-of-5 so they are accessible by anyway, while more
-important secrets could be 3-or-5 to ensure a majority of the team authorizes
+set some secrets to be 1-of-5 so they are accessible by anyone, while more
+important secrets could be 3-of-5 to ensure a majority of the team authorizes
 the access. For very high-value secrets this helps ensure a single laptop
 compromise doesn't put you at risk.
 
@@ -156,18 +156,22 @@ system to restrict access, but I've not seen many cases of it being used well
 due to the high level of complexity. etcd and consul both lack authentication
 and authorization controls, but they are being worked on.
 
+If you are willing to bite off the complexity that is ZooKeeper ACLs, it can
+be a good option. You will need to consider the ZooKeeper hosts a Trusted
+Third Party for the most part, so be prepared to harden those machines more than
+usual.
+
 # The Future
 
-One potential solution for this mess in the future is to move more services
-toward asymmetric keys for authentication instead of shared (symmetric) secrets.
-This is already supported in both PostgreSQL and MySQL. This trades secrets
-management for identity management, which is still a hard problem but does
-have some nicer characteristics. Notably the private key for a given server
-never has to leave the machine, and the public key doesn't need to be kept
-secret from anyone. The hard part becomes knowing which keys to authorize for
-which resources and managing signatures. This generally requires another
-Trusted Third Party to handle role/identity information, like a chef-server
-or the AWS API.
+One potential solution for this mess is to move more services toward asymmetric
+keys for authentication instead of shared (symmetric) secrets. This is already
+supported in both PostgreSQL and MySQL. This trades secrets management for
+identity management, which is still a hard problem but does have some nicer
+characteristics. Notably the private key for a given server never has to leave
+the machine, and the public key doesn't need to be kept secret from anyone. The
+hard part becomes knowing which keys to authorize for which resources and
+managing signatures. This generally requires another Trusted Third Party to
+handle role/identity information, like a chef-server or the AWS API.
 
 The tooling isn't there today, but this does offer a path out of the current
 miasma.
@@ -186,5 +190,5 @@ If none of these apply, you are likely between a rock and a hard place.
 
 ---
 
-Looking for help getting the most out of Chef? Check out my [training](/training/) and
-[consulting](/consulting/) services.
+Looking for help getting the most out of Chef? Check out my
+[training](/training/) and [consulting](/consulting/) services.
