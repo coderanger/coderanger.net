@@ -1,6 +1,7 @@
 ---
 title: Heroku and CFFI
 date: 2014-07-22
+hire_me: Looking for help with Python development or operations? Check out my <a href="/training/">training</a> and <a href="/consulting/">consulting</a> services.
 ---
 
 
@@ -43,8 +44,3 @@ Then just put the Python libraries you need in the normal requirements.txt.
 
 If you are installing Cryptography, no additional configuration should be
 required.
-
-----
-
-Looking for help with Python development or operations? Check out my [training](/training/) and
-[consulting](/consulting/) services.

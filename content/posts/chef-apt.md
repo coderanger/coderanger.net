@@ -1,6 +1,7 @@
 ---
 title: Chef Apt Repositories
 date: 2014-07-15
+hire_me: Looking for help getting the most out of Chef? Check out my <a href="/training/">training</a> and <a href="/consulting/">consulting</a> services.
 ---
 
 Do you love Chef? Do you hate `curl | bash` installations? Good news!
@@ -21,8 +22,3 @@ than the `install.sh` script.
 
 New releases will be added automatically, so you can handle upgrades as you do
 any other package.
-
-----
-
-Looking for help with Chef? Check out my [training](/training/) and
-[consulting](/consulting/) services.

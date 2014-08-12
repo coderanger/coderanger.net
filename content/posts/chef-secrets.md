@@ -2,6 +2,7 @@
 title: Secrets Management and Chef
 date: 2014-08-08
 published: false
+hire_me: Looking for help getting the most out of Chef? Check out my <a href="/training/">training</a> and <a href="/consulting/">consulting</a> services.
 ---
 
 Everyone has secrets. Database passwords, API credentials, recovery questions.
@@ -187,8 +188,3 @@ If you need to store rarely used but high-value secrets, use
 [Red October](https://github.com/cloudflare/redoctober).
 
 If none of these apply, you are likely between a rock and a hard place.
-
----
-
-Looking for help getting the most out of Chef? Check out my
-[training](/training/) and [consulting](/consulting/) services.

@@ -4,3 +4,15 @@
 </h1>
 
 <%= yield %>
+
+<hr>
+
+<%- if @item[:hire_me] -%>
+<p>
+  <%= @item[:hire_me] %>
+</p>
+<%- end -%>
+
+<p>
+  <a href="/">Back to articles</a>
+</p>

@@ -1,6 +1,7 @@
 ---
 title: Chef is not Open Source
 date: 2014-07-01
+hire_me: Many thanks to all those that reviewed drafts of this post.
 ---
 
 
@@ -73,7 +74,3 @@ If things are to improve I think it is clear on all fronts that things need to c
 5. Investigate transferring Chef as a project to the Software Freedom Conservancy or similar.
 
 None of these are a silver bullet, but together I think they could make a difference. I think a stronger and more diverse Chef community will build better tools. I think the open source model is a far more sustainable way to make software. I hope you all will join me.
-
-----
-
-Many thanks to all those that reviewed drafts of this post.
