@@ -6,7 +6,7 @@ published: false
 ---
 
 Server operations involves a lot of jargon, and there is a lot of variance
-between major organizations. I won't claim these terms are universal, but I've
+between organizations. I won't claim these terms are universal, but I've
 found them fairly general and enough to get your meaning across between
 sub-dialects. Some tools span multiple classifications, and some focus on only
 one.
