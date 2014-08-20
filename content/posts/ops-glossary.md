@@ -93,7 +93,7 @@ system to be anything capable of running an artifact. This includes things
 commonly thought of as "heavier" virtual machines, as well as simply running
 a process. Most container systems are only compatible with a few types of
 artifacts so they are generally chosen together, Amazon EC2 can only run AMIs
-while a .deb package can be run either directly.
+while a .deb package can be run either directly or inside Docker, et al.
 
 #### Examples
 
