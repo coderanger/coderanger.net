@@ -13,6 +13,7 @@ automation to improve your operations team or get started with Chef.
 
 * Advanced Chef usage
 * Writing extensible Chef cookbooks
+* Cloud infrastructure and operations
 * Open Source ecosystem management
 * Berkshelf, Test-Kitchen, and other Chef workflow tools
 * Cryptography and security engineering
