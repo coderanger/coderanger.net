@@ -1,7 +1,7 @@
 ---
 title: Ops Glossary
-date: 2014-08-08
-hire_me: Looking for help getting the most out of Chef? Check out my <a href="/training/">training</a> and <a href="/consulting/">consulting</a> services.
+date: 2014-08-20
+hire_me: Looking for help with your infrastructure? Check out my <a href="/training/">training</a> and <a href="/consulting/">consulting</a> services.
 published: false
 ---
 
@@ -18,13 +18,23 @@ it usually refers to some kind of disk image that will be used to spawn either
 a service or a virtual machine. As the word is somewhat long, I sometimes use
 the term "slug" to refer to the same thing.
 
-#### Examples:
+### Examples:
 
-* Amazon AMIs
-* Docker images
-* Omnibus packages
-* JAR
-* Wheel
+<table class="examples">
+  <tr>
+    <td>Amazon AMI</td>
+    <td>Docker image</td>
+  </tr>
+  <tr>
+    <td>Omnibus package</td>
+    <td>Java JAR</td>
+  </tr>
+  <tr>
+    <td>Python Wheel</td>
+    <td>Tarball</td>
+  </tr>
+</table>
+
 
 ## Artifact Builder
 
@@ -35,10 +45,21 @@ artifacts.
 
 #### Examples:
 
-* Packer
-* `docker build`
-* Omnibus
-* Nix
+<table class="examples">
+  <tr>
+    <td>Packer</td>
+    <td>docker build</td>
+  </tr>
+  <tr>
+    <td>Omnibus</td>
+    <td>Nix</td>
+  </tr>
+  <tr>
+    <td>Heroku buildpacks</td>
+    <td>Maven</td>
+  </tr>
+</table>
+
 
 ## Artifact Storage
 
@@ -49,29 +70,48 @@ formats like apt and yum.
 
 #### Examples:
 
-* Nexus
-* Artifactory
-* AWS
-* S3
-* Depot
-* DevPI
+<table class="examples">
+  <tr>
+    <td>Nexus</td>
+    <td>Artifactory</td>
+  </tr>
+  <tr>
+    <td>S3 (AMIs or apt/yum)</td>
+    <td>DevPI</td>
+  </tr>
+  <tr>
+    <td>Docker Registry</td>
+    <td>Glance</td>
+  </tr>
+</table>
+
 
 # Container
 
 This one will probably be a little more controversial. I consider a container
 system to be anything capable of running an artifact. This includes things
-commonly thought of as "heavier" virtual machine, as well as simply running
+commonly thought of as "heavier" virtual machines, as well as simply running
 a process. Most container systems are only compatible with a few types of
 artifacts so they are generally chosen together, Amazon EC2 can only run AMIs
-while a .deb package can be run either directly
+while a .deb package can be run either directly.
 
 #### Examples
 
-* Xen
-* KVM
-* LXC
-* exec()
-* Tomcat
+<table class="examples">
+  <tr>
+    <td>Xen</td>
+    <td>KVM</td>
+  </tr>
+  <tr>
+    <td>Docker</td>
+    <td>Mesos</td>
+  </tr>
+  <tr>
+    <td>exec()</td>
+    <td>Tomcat</td>
+  </tr>
+</table>
+
 
 ## Isolation
 
@@ -81,11 +121,25 @@ running container can take and how they can affect the outside world.
 
 #### Examples
 
-* Xen
-* KVM
-* Chroot
-* LXC
-* ZeroVM
+<table class="examples">
+  <tr>
+    <td>Xen</td>
+    <td>KVM</td>
+  </tr>
+  <tr>
+    <td>LXC</td>
+    <td>Libcontainer</td>
+  </tr>
+  <tr>
+    <td>Chroot</td>
+    <td>ZeroVM</td>
+  </tr>
+  <tr>
+    <td>Zone</td>
+    <td>Jail</td>
+  </tr>
+</table>
+
 
 # Service Management
 
@@ -96,9 +150,21 @@ monitoring, and alerting.
 
 #### Examples
 
-* Systemd
-* ASGs
-* Supervisord
+<table class="examples">
+  <tr>
+    <td>Systemd</td>
+    <td>AWS Auto-Scaling Group</td>
+  </tr>
+  <tr>
+    <td>Supervisord</td>
+    <td>Runit</td>
+  </tr>
+  <tr>
+    <td>Aurora</td>
+    <td>Fleet</td>
+  </tr>
+</table>
+
 
 # Virtualization
 

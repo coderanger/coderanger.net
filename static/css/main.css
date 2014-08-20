@@ -174,6 +174,18 @@ footer {
   padding: 12px;
 }
 
+#content table.examples {
+  font-size: 90%;
+}
+
+#content table.examples td {
+  padding-left: 20px;
+}
+
+#content table.examples td:first-child {
+  padding-left: 0;
+}
+
 /* Post Header */
 #content h1 {
   margin-top: 0;
