@@ -2,7 +2,6 @@
 title: Ops Glossary
 date: 2014-08-20
 hire_me: Looking for help with your infrastructure? Check out my <a href="/training/">training</a> and <a href="/consulting/">consulting</a> services.
-published: false
 ---
 
 Server operations involves a lot of jargon, and there is a lot of variance
