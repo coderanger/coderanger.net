@@ -5,6 +5,9 @@ hire_me: Looking for help with Python development or operations? Check out my <a
 ---
 
 
+**UPDATE: This is no longer needed, the Python buildpack will install libffi for
+you if `cffi` or `cryptography` is present in your requirements.txt.**
+
 [CFFI](https://cffi.readthedocs.org/) is a popular Python library to call C code
 from Python. Some major libraries that depend on it include:
 
