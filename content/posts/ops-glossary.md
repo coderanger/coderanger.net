@@ -1,5 +1,5 @@
 ---
-title: Ops Glossary: Containers
+title: "Ops Glossary: Containers"
 date: 2014-08-20
 hire_me: Looking for help with your infrastructure? Check out my <a href="/training/">training</a> and <a href="/consulting/">consulting</a> services.
 ---
