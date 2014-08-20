@@ -36,7 +36,7 @@ the term "slug" to refer to the same thing.
 </table>
 
 
-## Artifact Builder
+# Artifact Builder
 
 The artifact builder (or slug builder) is the tool or service that creates an
 artifact. This sometimes just means assembling files in to a disk image, or
@@ -61,7 +61,7 @@ artifacts.
 </table>
 
 
-## Artifact Storage
+# Artifact Storage
 
 Once you have a built artifact, you need to store it somewhere. The simplest
 form is a single web server and local files, but something with an API allows
@@ -113,7 +113,7 @@ while a .deb package can be run either directly or inside Docker, et al.
 </table>
 
 
-## Isolation
+# Isolation
 
 Security isolation between containers helps to allow multi-tenancy and improve
 security in single-tenant systems. Isolation systems limit the operations a
