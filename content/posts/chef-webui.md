@@ -51,7 +51,7 @@ chef-server-ctl reconfigure
 If you visit the Chef Server in a web browser you should now see an Nginx
 error page.
 
-# How Do I Create My Chef Users Without the Web Interface?
+# How Do I Get Started?
 
 On your Chef Server machine, look in `/etc/chef-server`. You will see both a
 `validation.pem` and an `admin.pem`. The validation key should be copied
