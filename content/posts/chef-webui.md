@@ -20,7 +20,7 @@ of this is that was that a single codebase could no longer be shared between
 Enterprise Chef and Open Source Chef. This led to the new web interface being
 budgeted and planned as an Enterprise Chef value-add feature.
 
-# What does Deprecation Mean?
+# What Does Deprecation Mean?
 
 Chef Software has committed to maintaining security fixes on the current
 web interface through the life cycle of Chef Server 12. No feature development
