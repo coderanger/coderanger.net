@@ -24,7 +24,7 @@ budgeted and planned as an Enterprise Chef value-add feature.
 
 Chef Software has committed to maintaining security fixes on the current
 web interface through the life cycle of Chef Server 12. No feature development
-is planned, and bugs only being fixed in a "best effort" fashion. To the
+is planned, and bugs are only being fixed in a "best effort" fashion. To the
 best of my knowledge, Chef Software will not provide official support for the
 Open Source web interface any longer. At some future point, likely Chef Server
 12, the Open Source web interface will be removed from Chef Server omnibus
