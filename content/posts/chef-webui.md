@@ -57,7 +57,7 @@ On your Chef Server machine, look in `/etc/chef-server`. You will see both a
 `validation.pem` and an `admin.pem`. The validation key should be copied
 to your workstation to use with `knife bootstrap` in the future. The admin
 key can be used to setup your initial user account. The easiest option is to
-copy it to your workstation and do:
+copy it to your workstation and run:
 
 ```bash
 knife client create -a -u admin -k /path/to/admin.pem yourusername
