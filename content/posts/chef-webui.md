@@ -43,7 +43,8 @@ You can disable the Open Source web interface by creating an
 `chef_server_webui['enable'] = false` to it and then running a reconfigure:
 
 ```bash
-echo "chef_server_webui['enable'] = false" >> /etc/chef-server/chef-server.rb
+cd /etc/chef-server
+echo "chef_server_webui['enable'] = false" >> chef-server.rb
 chef-server-ctl reconfigure
 ```
 
