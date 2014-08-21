@@ -2,7 +2,6 @@
 title: The Future of the Chef Web UI
 date: 2014-08-21
 hire_me: Looking for help getting the most out of Chef? Check out my <a href="/training/">training</a> and <a href="/consulting/">consulting</a> services.
-published: false
 ---
 
 While not a secret, it hasn't been widely known throughout the Chef community
