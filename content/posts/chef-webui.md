@@ -11,11 +11,11 @@ back at the release of Chef Server 11, but little has been said since then.
 # Why?
 
 Several years ago Chef Software (then Opscode) started work on a full rewrite
-of the Chef web interface. Full disclosure: I lead the team on this rewrite, so
+of the Chef web interface. Full disclosure: I led the team on this rewrite, so
 I'm far from unbiased in all of this. The decision back then was to make sure
 Enterprise Chef organizations were a first-class element of the new interface
 as this was a common complaint about the old one for Hosted Chef. The downside
-of this is that was that a single codebase could no longer be shared between
+of that was that a single codebase could no longer be shared between
 Enterprise Chef and Open Source Chef. This led to the new web interface being
 budgeted and planned as an Enterprise Chef value-add feature.
 
