@@ -2,7 +2,6 @@
 title: Derived Attributes in Chef
 date: 2014-08-25
 hire_me: Looking to get the most out of Chef? Check out my <a href="/training/">training</a> and <a href="/consulting/">consulting</a> services.
-published: false
 ---
 
 As the Chef community has moved more and more towards wrapper cookbooks,
