@@ -11,7 +11,7 @@ authors.
 
 # What is a Derived Attribute?
 
-A node attribute which depends on another the value of node attribute. As
+A node attribute which depends on the value of another node attribute. As
 roles, nodes, and environments must be entirely static, this can currently only
 happen in cookbooks. A common example is including a version number in a path
 or URL:
