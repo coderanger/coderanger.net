@@ -1,5 +1,5 @@
 ---
-title: Chef RFCs
+title: Chef RFCs and You
 date: 2014-09-03
 hire_me: Looking for help getting the most out of Chef? Check out my <a href="/training/">training</a> and <a href="/consulting/">consulting</a> services.
 ---
