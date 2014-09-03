@@ -11,7 +11,7 @@ Chef RFCs are a way to propose and discuss changes to Chef and related projects.
 
 Each RFC proposes a major change to Chef or another piece of software, or to the
 processes we use to develop them. Not every change requires an RFC, but for big
-changes or those that may affect a large number of people, the RFC process
+changes or those that may affect a large number of people the RFC process
 allows us to discuss and develop them together. Each RFC describes the problem
 it is solving, the motivation for the change, a specification of the change, and
 a discussion of how this specification was arrived at.
