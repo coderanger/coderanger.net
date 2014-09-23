@@ -1,7 +1,6 @@
 ---
 title: Python ♡ Ada
 date: 2014-09-23
-published: false
 ---
 
 # What is the Ada Initiative?
