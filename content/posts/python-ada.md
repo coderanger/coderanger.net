@@ -27,9 +27,9 @@ people.
 # Why am I reading this?
 
 Because the Ada Initiative needs our help! For the next five days,
-[Jacob Kaplan-Moss](http://jacobian.org/), [Alex Gaynor](http://alexgaynor.net/), and
-[Carl Meyer](http://oddbird.net/authors/carl/) will be matching donations toward
-a goal of $7,500. These funds will help further the mission of supporting women
+[Jacob Kaplan-Moss](http://jacobian.org/), [Alex Gaynor](http://alexgaynor.net/),
+[Carl Meyer](http://oddbird.net/authors/carl/), and [Jim Meyer](http://blog.geekdaily.org/) will be matching donations toward
+a goal of <del>$7,500</del> $10,000. These funds will help further the mission of supporting women
 in tech through more resources for event organizers, research in to the trends
 and forces in our industry, and new curricula for workshops.
 
