@@ -20,9 +20,10 @@ and [hosted their own conference about women in open technology and open culture
 Women in tech are routinely ignored, harassed, and abused. Every. Day.
 
 Friends are pushed out of public spaces by the raw hatred that we all allow to
-fester. Ladies are leaving this community at an ever increasing rate. This is
-not me pushing political correctness culture or whatever else Twitter has
-decided on today. This is an organization that actually helps people.
+fester. Women are leaving this community at an increasing rate. This is not me
+pushing a culture of over sensitivity or political correctness, or whatever else
+it is that people think equality is. This is an organization that actually helps
+people.
 
 # Why am I reading this?
 
