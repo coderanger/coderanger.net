@@ -34,3 +34,13 @@ its configuration directly from an HTTP server. Given how little this feature is
 believed to be used, an aggressive deprecation schedule will be used such that
 the feature will throw a warning in future Chef 11 versions and be entirely
 removed in Chef 12.
+
+# RFCs Under Review
+
+## [Proposed Governance and Maintenance Policy](https://github.com/opscode/chef-rfc/pull/58)
+
+There are two more weeks to discuss the new governance and maintenance policies.
+These documents specify how the Chef project (and other related projects) will
+be managed and governed by the community going forward. I would like to say
+"thank you" again to Adam for getting these policies polished and up for
+discussion so we can get the whole community moving forward together!
