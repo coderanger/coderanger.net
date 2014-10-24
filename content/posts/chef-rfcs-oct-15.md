@@ -8,7 +8,7 @@ This week five RFCs have been accepted, planned for inclusion in Chef 12:
 
 ## [RFC 22: Arbitrary Cookbook Identifiers](https://github.com/opscode/chef-rfc/blob/master/rfc022-arbitrary-cookbook-identifiers.md)
 
-This defines a new API to manage cookbooks with identifiers other the current
+This defines a new API to manage cookbooks with identifiers other than the current
 three-integer-semver structure in use now.
 
 ## [RFC 23: Chef 12 Attributes Changes](https://github.com/opscode/chef-rfc/blob/master/rfc023-chef-12-attributes-changes.md)
