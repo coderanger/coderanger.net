@@ -62,7 +62,7 @@ Becoming a maintainer is a simple majority vote from other maintainers in the
 component, and is handled by creating a pull request adding your name to the
 appropriate section of the MAINTAINERS file. Maintainers get commit access to
 the relevant project, and are expected to be available to assist users with
-issues and to attend the twice-monthly developer meetings on IRC.
+issues and to attend the [developer meetings every other Thursday](http://timesched.pocoo.org/?date=2014-11-08&tz=pacific-standard-time!,eastern-standard-time,gb:london,au:sydney,de:berlin&range=540,600) on IRC.
 
 Each component team manages their own roadmap and release schedule (if
 applicable), and the Lieutenant is responsible for publishing it and resolving
