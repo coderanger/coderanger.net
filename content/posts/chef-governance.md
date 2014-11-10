@@ -1,7 +1,6 @@
 ---
 title: Chef Governance & Maintenance
-date: 2014-11-08
-published: false
+date: 2014-11-10
 ---
 
 In a way this is a follow-up to my earlier [post about the state of community
