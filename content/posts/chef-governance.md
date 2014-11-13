@@ -29,7 +29,7 @@ of Chef. Major components/projects within the Chef ecosystem will elect a
 Lieutenant to manage them, with localized veto power. Maintainers (commiters)
 can be approved by simple majority of existing Maintainers in their component.
 
-# [Governance Policy](https://github.com/opscode/chef-rfc/blob/gov_maint/new/governance_policy.md)
+# [Governance Policy](https://github.com/opscode/chef-rfc/blob/master/rfc029-governance-policy.md)
 
 The general idea of the governance policy is to ensure that users have a voice
 in the long term planning of Chef as a project. The advisory board, named CBGB,
@@ -44,7 +44,7 @@ Lead. Other than the Project Lead, all members are elected by the Maintainers
 for one year terms. Any active contributor can run for the board in their
 respective category.
 
-# [Maintenance Policy](https://github.com/opscode/chef-rfc/blob/gov_maint/new/maintenance_policy.md)
+# [Maintenance Policy](https://github.com/opscode/chef-rfc/blob/master/rfc030-maintenance-policy.md)
 
 As noted in earlier posts, almost all current Chef maintainers are employees of
 Chef Software. The new maintenance policy helps to split those two roles apart.
