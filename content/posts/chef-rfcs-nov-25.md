@@ -1,6 +1,6 @@
 ---
 title: Accepted Chef RFCs for Nov 25
-date: 2014-11-125
+date: 2014-11-25
 hire_me: Looking for help getting the most out of Chef? Check out my <a href="/training/">training</a> and <a href="/consulting/">consulting</a> services.
 ---
 
