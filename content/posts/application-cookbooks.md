@@ -1,7 +1,6 @@
 ---
 title: "Application Cookbooks: A Tale"
 date: 2014-12-08
-published: false
 ---
 
 Application deployment with Chef has always been a sensitive topic. Many
