@@ -1,5 +1,5 @@
 ---
-title: "Application Cookbooks: A Chronicle"
+title: "Application Cookbooks: A Tale"
 date: 2014-12-08
 published: false
 ---
