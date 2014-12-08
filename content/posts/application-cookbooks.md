@@ -14,7 +14,7 @@ difficult.
 # A Brief History
 
 When I first started on the rewrite of the application cookbooks my goal was
-simple, build a modular system for a PaaS on top of Chef. The original
+simple, build a modular PaaS-ish system on top of Chef. The original
 cookbook offered a few pre-baked deployment strategies that could be slightly
 customized through [data bags](/data-bags/) but was overall relatively
 inflexible. The deployment strategies couldn't be extended without forking
@@ -27,7 +27,7 @@ them together. This allowed pulling in configuration from both data bags and
 node attributes, as well as developing new deployment strategies outside of the
 community cookbooks. This approach has proven its worth many times over so far,
 enabling many contributors to develop new deployment strategies and release
-them as their own cookbooks.
+them independently.
 
 # What Went Wrong
 
@@ -42,7 +42,7 @@ sense in a config management context where the files are being updated
 automatically.
 
 The second issue is the use of LWRPs for both the core framework and the
-strategies. Due to the way LWRPs are loaded, they cannot be easily subclassed
+strategies. Due to the way LWRPs are loaded, they cannot be easily extended
 or inherit from other code. This leads to an unfortunate amount of copy-pasta
 when extending a deployment strategy. Additionally writing new deployment
 strategies can be confusing to new users where is deviates from normal Chef
@@ -50,22 +50,22 @@ conventions, like defining callback types as actions.
 
 # The Road Ahead
 
-The first step in any improvement to the core application framework will be to
-build a new core apart from the deploy resource. This will allow more
+The first step in any improvement to the application framework will be to
+write a new core without the deploy resource. This will allow more
 flexibility with getting code to the target machine. At a minimum I would
 like to see support for packages like debs and RPMs, tarball downloads, and
 artifact repos like Artifactory and Nexus. Removing the deploy resource will
-also allow re-imagining the strategy resources as more traditional Chef
+also allow re-imagining the deployment strategies as more traditional Chef
 resources rather than simple callbacks.
 
 My [Poise](https://github.com/poise/poise) helper library takes many of the
 patterns first attempted in the application cookbooks and refines them
-considerably. This will allow for much less frustrating implementation of
+considerably. This will allow for much less frustrating implementations of
 things like subresources and option blocks.
 
 Moving the strategy code to normal resource classes will also allow them to be
 extended and customized by users. This could be as simple as adding an extra
-deployment command or as complex as changing the language interpreter. I
+deployment command or as complex as changing the file layout. I
 would also like to present a more diverse set of strategies to build on top of
 instead of the relatively siloed stacks for single frameworks.
 
