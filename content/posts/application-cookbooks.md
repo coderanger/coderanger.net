@@ -79,6 +79,6 @@ company currently uses the application cookbooks or thinks that they would
 like to given the improvements mentioned, I invite you to contribute to the
 campaign, [Delightful Application Deployment with Chef](https://www.kickstarter.com/projects/coderanger/delightful-application-deployment-with-chef/).
 
-<div style="margin: auto; width: 298px; height: 82px; overflow: hidden;">
-  <iframe style="display: block; margin: -300px 0 0 -1px;" frameborder="0" height="380" scrolling="no" src="https://www.kickstarter.com/projects/coderanger/delightful-application-deployment-with-chef/widget/card.html?v=2" width="300"></iframe>
+<div style="margin: 0 auto 20px auto; width: 298px; height: 56px; overflow: hidden;">
+  <iframe style="display: block; margin: -360px 0 0 -1px;" frameborder="0" height="500" scrolling="no" src="https://www.kickstarter.com/projects/coderanger/delightful-application-deployment-with-chef/widget/card.html?v=2" width="300"></iframe>
 </div>
