@@ -1,7 +1,6 @@
 ---
 title: Winding Down
 date: 2015-01-30
-published: false
 ---
 
 As some of you have noticed by now, I've started winding down my unpaid Chef
