@@ -8,8 +8,8 @@
     <meta name="generator" content="nanoc <%= Nanoc::VERSION %>">
     <link rel="canonical" href="<%= @item.rep_named(:default).path %>">
     <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="/atom.xml">
-    <link rel="openid2.provider" href="https://pypi.python.org/">
-    <link rel="openid2.local_id" href="https://pypi.python.org/id/coderanger">
+    <link rel="openid2.provider" href="https://indieauth.com/openid/">
+    <link rel="openid2.local_id" href="https://coderanger.net/">
     <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Montserrat:400,700">
     <%- if @site.config.fetch(:font_awesome_cdn, true) -%>
@@ -25,8 +25,8 @@
       <a href="/" id="header-name">NOAH KANTROWITZ</a>
       <span id="header-icons">
         <a href="/contact/"><i class="fa fa-envelope-o"></i></a>
-        <a href="https://twitter.com/kantrn" target="_blank"><i class="fa fa-twitter"></i></a>
-        <a href="https://github.com/coderanger" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="https://twitter.com/kantrn" rel="me" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="https://github.com/coderanger" rel="me" target="_blank"><i class="fa fa-github"></i></a>
       </span>
     </header>
     <div id="content" class="<%= @item[:body_class] || @item[:kind] %>">
