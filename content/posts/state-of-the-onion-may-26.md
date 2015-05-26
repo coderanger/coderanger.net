@@ -5,25 +5,26 @@ date: 2015-05-26
 
 It has now been almost six months since I started on my adventures in application
 deployment and I want to update everybody on how things are progressing. First
-off a huge "thank you" to my [Kickstarter backers](https://github.com/poise/application/blob/master/SUPPORTERS.md)
+off, a huge "thank you" to my [Kickstarter backers](https://github.com/poise/application/blob/master/SUPPORTERS.md)
 and [Bloomberg](http://www.bloomberg.com/company/technology/) for supporting
 this development time. It truly would not have been possible without community
 support.
 
 ## Halite
 
-The biggest new development so far has been [Halite](https://github.com/poise/halite).
-While not specifically related to application deployment, it has greatly
-improved my development workflow for cookbooks. You can read more in the Halite
-documentation, the short version is that Halite allows converting normal
-Ruby gems in to Chef cookbooks. This is handy for cookbooks that are otherwise
-99% library code anyway as I can use the normal gem workflow tools more
-effectively, and then convert to a cookbook for release/upload. Halite 1.0 is
-available on Rubygems.org and should be ready for general use if you find the
-workflow helpful. I wouldn't go so far as to call it a "best practice" and
-normal cookbooks are still perfectly fine if you prefer them. All my Halite'd
-cookbooks are released in cookbook form to the Supermarket, so you can use them
-without needing to care about any of this.
+The biggest new development so far has been
+[Halite](https://github.com/poise/halite). While not specifically related to
+application deployment, it has greatly improved my development workflow for
+cookbooks. You can read more in the Halite documentation, the short version is
+that Halite allows converting normal Ruby gems in to Chef cookbooks. This is
+handy for cookbooks that are otherwise 99% library code anyway as I can use the
+normal gem workflow tools more effectively, and then convert to a cookbook for
+release/upload. Halite 1.0 is available on Rubygems.org and should be ready for
+general use if you find the workflow helpful. I wouldn't go so far as to call it
+a "best practice" and normal cookbooks are still perfectly fine if you prefer
+them. All my Halite'd cookbooks are released in cookbook form to the
+[Supermarket](https://supermarket.chef.io/), so you can use them without needing
+to care about any of this.
 
 If you want to try out prerelease versions of my cookbooks you will have to
 do a little extra work to get Berkshelf to recognize them. Halite includes a
@@ -49,11 +50,11 @@ build the prerelease cookbook from the gem code as needed.
 ## Poise
 
 [Poise](https://github.com/poise/poise) has seen big internal improvements and
-restructuring around Halite and some other workflow tools I've written, but as a
-user it is still pretty much the same. A few new helpers have been added
-including Fused mode where action implementations can be written directly in the
-resource class, and Inversion which adds dependency injection/inversion to the
-Chef resource and provider model.
+restructuring around Halite and some other workflow tools I've written, but from
+a user perspective it is still mostly the same. A few new helpers have been
+added including Fused mode where action implementations can be written directly
+in the resource class, and Inversion which adds dependency injection/inversion
+to the Chef resource and provider model.
 
 Poise 2.0 has been released to both Rubygems.org and the Supermarket.
 
@@ -63,8 +64,8 @@ The core `application` cookbook has been rebuilt from scratch to be more
 flexible and powerful. It no longer uses the `deploy` resource internally and
 many of the old bugs are gone thanks to switching to Poise instead of the early,
 ad-hoc versions of the helpers I wrote all those years ago. It will still be
-plugin-based, but rather than a model based around the `deploy` resource
-callbacks plugins are now nested sub-resources and can define their own internal
+plugin-based; but rather than a model based around the `deploy` resource
+callbacks, plugins are now nested sub-resources and can define their own internal
 structure as needed. This also means that the explicit deployment phases are
 gone, instead relying on the ordering of resources in your code.
 
