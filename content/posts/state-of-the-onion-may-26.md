@@ -1,6 +1,6 @@
 ---
 title: State of the Onion for May 26
-date: 2015-06-26
+date: 2015-05-26
 ---
 
 It has now been almost six months since I started on my adventures in application
