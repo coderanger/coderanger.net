@@ -152,10 +152,10 @@ recipes I would greatly value your feedback on the design and functionality.
 As part of the Python and Javascript revamps I plan to work on equivalents to
 `poise-ruby` for each of those. Java would be nice too, but is enough of a mess
 that I don't currently plan to rework the `java` cookbook itself. Bloomberg is
-also going to support application deployment plugins for Go and Erlang, as well
-as exploratory work on integrating service discovery frameworks like ZooKeeper
-and Consul in to Chef for situations where Chef Search is not available or
-usable.
+also going to support basic application deployment plugins for Go and Erlang, as
+well as exploratory work on integrating service discovery frameworks like
+ZooKeeper and Consul in to Chef for situations where Chef Search is not
+available or usable.
 
 ## Secrets Management
 
