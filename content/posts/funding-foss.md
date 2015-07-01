@@ -7,10 +7,10 @@ published: false
 This past week I attended [Open Source Bridge
 2015](http://opensourcebridge.org/) to speak about [how the Internet
 works](/talks/internet/). A common topic both in the talks and the hallway track
-was how to improve the funding of open source software, or more broadly how to
-ensure that the software ecosystem we enjoy today is sustainable. I wanted to
-summarize some of my feelings on the topic as this is something I care about
-deeply both personally and professionally.
+was how to improve the funding of open source software or, put more generally,
+how to ensure that the software ecosystem we enjoy today is sustainable. I
+wanted to summarize some of my feelings on the topic as this is something I care
+about deeply both personally and professionally.
 
 # What is a society?
 
@@ -34,18 +34,18 @@ population (and therefore workforce), etc.
 
 # Why does Open Source matter?
 
-Open source software is a new, and very powerful, branch of the Commons. We
-have created an amazingly powerful collection of tools and techniques which
-now power the vast majority of new businesses. Even old holdouts like Microsoft
-have recently started to try to engage the open source community, to tap our
+Open source software is a new, and very powerful, branch of the Commons. We have
+created an amazingly powerful collection of tools and techniques which now power
+the vast majority of new businesses. Even old holdouts like Microsoft have
+recently started to try to engage the open source community, to tap our
 willingness to build the Commons. I don't think it is an overstatement to say
 that without our collective investment in this shared platform, we would not
 have nearly the same rate of technological development as we have today. Beyond
 the tools themselves, within a rounding error the Internet itself is a
-manifestation of all our communities. There are some places using IIS here or
-Oracle there, and many core implementations of things like BGP are proprietary,
-but the same community aesthetic powers groups like the
-[IETF](https://www.ietf.org/) and [W3C](https://www.ietf.org/).
+manifestation of all our communities. There are some places using Microsoft's
+IIS here or Oracle's database there, and many core implementations of things
+like BGP are proprietary, but the same community aesthetic powers groups like
+the [IETF](https://www.ietf.org/) and [W3C](https://www.ietf.org/).
 
 # Where did it all go wrong?
 
@@ -87,19 +87,19 @@ a departure from the models we used to get here.
 
 ## and why am I in this handbasket?
 
-The tech sector and the glut of VC money that props it up is addicted to free
-software. It is flat-out assumed that a company can launch a product without
-paying a dime (again, either in time or money) in software costs. The biggest
-software expense for your average startup will be either buying SublimeText or
-their GitHub subscription. In and of itself, this reliance on everything being
-free at first is not a problem. The issue is that no one ever wants to pay the
-piper. Companies that succeed do not pay forward the "loan" they got from the
-Commons. We see lots of companies launching open source projects because they
-want to "give back", but we've all felt that pang of dread when we realize the
-project is really a marketing stunt in disguise. Some of these projects are
-really beneficial to the community and I'm glad they exist, but even with that
-the balance between value derived from the Commons and value put in to it is
-woefully lopsided.
+The tech sector and the glut of VC money that keeps it afloat is addicted to
+free (as in beer) software. It is flat-out assumed that a company can launch a
+product without paying a dime (again, either in time or money) in software
+costs. The biggest software expense for your average startup will be either
+buying SublimeText or their GitHub subscription. In and of itself, this reliance
+on everything being free at first is not a problem. The issue is that no one
+ever wants to pay the piper. Companies that succeed do not pay forward the
+"loan" they got from the Commons. We see lots of companies launching open source
+projects because they want to "give back", but we've all felt that pang of dread
+when we realize the project is really a marketing stunt in disguise. Some of
+these projects are really beneficial to the community and I'm glad they exist,
+but even with that the balance between value derived from the Commons and value
+put in to it is woefully lopsided.
 
 # How do we make things better?
 
@@ -116,9 +116,10 @@ recommend this option to others. Fund-raising (or advertising a Kickstarter
 campaign) is hugely emotionally draining, and the mental burden of "I've already
 sold these features to people" is considerable. Patreon is at least an ongoing
 donation, as opposed to a one-time cash infusion, but I've not yet seen anyone
-receive even close to a living wage on there or any similar service. If you are
-far more outgoing and comfortable with self-promotion than I am, this might be
-a path for you.
+receive even close to a living wage on there or any similar service. Even if you
+do manage to raise a good amount of money, 10% immediately vanishes to fees. If
+you are far more outgoing and comfortable with self-promotion than I am, this
+might be a path for you.
 
 ## Hiring contributors
 
@@ -141,7 +142,7 @@ their rights over the work in exchange for a paycheck. This is summarized by
 
 I think a more stable model for "I want to pay someone to make open source
 better" is that of Renaissance era patronage. It was considered socially
-"required" that a rich personal or family (which is roughly comparable to a
+"required" that a rich person or family (which is roughly comparable to a
 company in modern terms) would have one or more artists who they would support.
 These artists would make great art to show off to the patron's friends and such.
 I would love to see a world where every successful tech company is simply
@@ -170,6 +171,13 @@ One avenue to improve this would be to hire professional fund-raisers. The
 non-profit and NGO world has lots of full time workers that focus on raising
 money for the foundation. As long as they bring in more than they cost, this is
 still a beneficial arrangement.
+
+Grants by companies have also had some level of success. I am not a huge fan of
+Google's [Summer of Code](https://developers.google.com/open-source/gsoc/) or
+[Highly Open Participation](https://developers.google.com/open-source/ghop/)
+projects, but they do show the viability of corporate grants as a model. Bug
+bounties are also a small version of this, though rarely big enough to claim to
+actually support development overall.
 
 ## National Endowment for Engineering
 
