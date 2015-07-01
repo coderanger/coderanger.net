@@ -194,6 +194,19 @@ world in which they are pervasive enough to continue the current rate of growth
 that has been powered by untold hours of unpaid labor. Unfortunately this
 solution is also the one I feel the least equipped to help move forward on.
 
+## Universal Basic Income
+
+An end game solution: provide a basic standard of living so people that want
+to dedicate themselves to enriching society can do so without putting their own
+needs in jeopardy. [UBI](https://en.wikipedia.org/wiki/Basic_income) is, to put
+it mildly, a contentious issue. Small pilot programs in many places around the
+world have had promising results, but we don't have any clear path to serious
+adoption right now. Beyond the logistical challenges, discussing any
+non-capitalist system is often politically unfeasible in most governments. My
+thoughts on a post-capitalism world are worth a whole post on their own, but
+this is something we should all keep in mind as we displace more and more jobs
+via automation.
+
 # What do we do now?
 
 Unfortunately many of these options are unhelpful for one individual trying
