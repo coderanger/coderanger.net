@@ -1,7 +1,7 @@
 ---
 title: Funding FOSS
-date: 2015-06-28
-published: false
+date: 2015-07-01
+hire_me: "Many thanks to all those that reviewed drafts of this post: Donald Stufft, Steve Klabnik, Laurens van Houten, Jacob Kaplan-Moss, and Seth Vargo."
 ---
 
 This past week I attended [Open Source Bridge
