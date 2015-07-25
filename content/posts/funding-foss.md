@@ -161,7 +161,7 @@ software foundations can't fund more than a handful of full-time developers.
 This is a good step, but not enough to make a dent in the needs of the
 community.
 
-This is been successful at small scales with mini-foundations like
+This has been successful at small scales with mini-foundations like
 [RubyTogether](https://rubytogether.org/) and [Node Security](https://nodesecurity.io/).
 These mini-foundations generally find ongoing corporate sponsors and fund a
 small number of full time developers. Scaling up to either bigger teams or
