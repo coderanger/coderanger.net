@@ -57,11 +57,11 @@ for those upgrading from the current versions of the cookbooks.
 I want to get all the previously mentioned cookbooks shipped so people can start
 using them before I move on to creating new ones. I'm hopeful that shortly after
 the big `x.0.0` releases there will be a flurry of smaller feature releases as
-people point on options and patterns common enough to be promoted to full DSL
+people point out options and patterns common enough to be promoted to full DSL
 support instead of being in configuration files.
 
 After that the next big application type on my list is server-side JavaScript,
-and then smaller helpers for Java, Go, and Erlang. Also on smaller side of
+and then smaller helpers for Java, Go, and Erlang. Also on the smaller side of
 things is some exploratory work on a general-purpose service discovery API for
 Chef recipes.
 
