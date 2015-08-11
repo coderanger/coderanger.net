@@ -1,7 +1,6 @@
 ---
 title: State of the Onion for August 11
 date: 2015-08-11
-published: false
 ---
 
 It has been a few months since [my last status update](/state-of-the-onion-may-26/)
