@@ -19,6 +19,11 @@
     <%- end -%>
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/main.css">
+    <%- if @item[:extra_css] -%>
+    <%- Array(@item[:extra_css]).each do |path| -%>
+    <link rel="stylesheet" href="/css/<%= path %>">
+    <%- end -%>
+    <%- end -%>
   </head>
   <body>
     <header>
