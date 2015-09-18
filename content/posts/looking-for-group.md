@@ -5,16 +5,16 @@ published: false
 ---
 
 *Disclaimer: I will not respond to recruiters or staffing firms. If you are a
-recruiter, please have the hiring manager to contact me first.*
+recruiter, please have the hiring manager contact me first.*
 
-Way back in December of last year I ran a Kickstarter to fund a few weeks of
+Way back in December of last year I ran a [Kickstarter](https://www.kickstarter.com/projects/coderanger/delightful-application-deployment-with-chef) to fund a few weeks of
 open source development time. Thanks to that campaign, some generous private
 sponsors, and a bit of scope creep around the edges, I'm happy to say I'm finally
 wrapping up the bulk of that work with a whole suite of new Chef cookbooks. With
 that work winding down, I'm putting my hat back in the ring as a professional
 ProgDevOpsCoderSecGineer!
 
-# About Me
+# About Me ([Resume](/resume/))
 
 * Toolsmith, teacher, troublemaker.
 * Long-time Chef contributor and developer.
@@ -44,8 +44,6 @@ new developers in the San Francisco Python scene through SFPython and the local
 PyLadies chapter. I enjoy [speaking at conferences](/talks/) with a particular
 focus on making broad and mildly bespoke topics more accessible to the average
 engineer.
-
-My [resume is available in several formats](/resume/).
 
 # About You
 
