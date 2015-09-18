@@ -1,0 +1,54 @@
+#resume {
+  padding-bottom: 10px;
+}
+
+#resume #summary {
+  font-size: 2em;
+  font-style: italic;
+  background: url(../img/quote.png) no-repeat top left;
+  padding-bottom: 1px;
+  color: #666;
+  text-align: center;
+}
+
+#resume h2 {
+  text-transform: uppercase;
+}
+
+#resume .experience {
+  margin-top: 0.5em;
+}
+
+#resume .experience.first {
+  margin-top: 0;
+}
+
+#resume .experience .details, #resume .education .location {
+  font-weight: bold;
+}
+
+#resume #expertise a {
+  text-decoration: none;
+}
+
+#resume #formats a {
+  font-size: 1.2em;
+}
+
+#resume ol {
+  padding: 0;
+}
+
+#resume ol li {
+  list-style-type: none;
+}
+
+@media print {
+  #header-icons, footer, #resume .noprint {
+    display: none !important;
+  }
+
+  #resume #summary {
+    font-size: 1.1em;
+  }
+}

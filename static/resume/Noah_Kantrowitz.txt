@@ -1,0 +1,62 @@
+===============
+Noah Kantrowitz
+===============
+noah@coderanger.net
+https://coderanger.net/
+
+Profile
+=======
+Passionate programmer perpetually pursuing pragmatic perfection.
+
+Experience
+==========
+Master Chef, Balanced Payments; San Francisco, CA — 2013-2014 
+---------------------------------------------------------------------
+Improved Chef usage and trained the engineering team in Chef tools and
+workflows. Built a Jenkins-based CI/CD pipeline, speeding product deployment and
+allowing greatly improved testing of all aspects of the deploy process.
+
+Lead Web Developer, Chef Software (née Opscode); Seattle, WA — 2011-2013 
+---------------------------------------------------------------------
+Architected and lead the next-generation web interface, Chef Manage.
+Maintained all Chef web properties including opscode.com and community.opscode.com.
+Implemented new Chef cookbooks to support Python applications.
+
+Operations Programmer, Cryptic Studios; Los Gatos, CA — 2008-2011
+---------------------------------------------------------------------
+Maintained game patching systems and internal version control tools. Built a
+game launcher and integrated installer system. Ported legacy game
+infrastructure to standards-compliant web services using Django. Built Chef
+configurations for Python and PHP applications.
+
+Security Engineer, One Laptop Per Child; Cambridge, MA - 2007-2008
+---------------------------------------------------------------------
+Implemented the Bitfrost security platform for the XO laptops. Other duties
+include maintaining the bug tracking system and working on the game
+development tools.
+
+Open Source Developer; The Internet - 2006-Present
+--------------------------------------------------------
+Operations Lead for the Python Software Foundation, supporting all PSF services
+and running the Infrastructure Staff team. Also active in the Chef, JavaScript,
+and Python web communities.
+
+Education
+=========
+Rensselaer Polytechnic Institute - Troy, NY
+BS of Computer Science, May 2008
+
+Expertise
+=========
+Apache, Bash, C, Chef, Django, Git, JavaScript, Linux, Postgres, Python, Ruby
+
+Skills
+======
+Well versed in many programming languages. A passionate advocate of software
+engineering practices, and very familiar with many common tools and
+environments. Experienced with all major operating systems and numerous
+software stacks, from kernel hacking to web APIs.
+
+Referrals
+=========
+Available on request.
