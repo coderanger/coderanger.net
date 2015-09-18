@@ -10,19 +10,19 @@ Passionate programmer perpetually pursuing pragmatic perfection.
 
 Experience
 ==========
-Master Chef, Balanced Payments; San Francisco, CA — 2013-2014 
+Master Chef, Balanced Payments; San Francisco, CA - 2013-2014 
 ---------------------------------------------------------------------
 Improved Chef usage and trained the engineering team in Chef tools and
 workflows. Built a Jenkins-based CI/CD pipeline, speeding product deployment and
 allowing greatly improved testing of all aspects of the deploy process.
 
-Lead Web Developer, Chef Software (née Opscode); Seattle, WA — 2011-2013 
+Lead Web Developer, Chef Software (nee Opscode); Seattle, WA - 2011-2013 
 ---------------------------------------------------------------------
 Architected and lead the next-generation web interface, Chef Manage.
 Maintained all Chef web properties including opscode.com and community.opscode.com.
 Implemented new Chef cookbooks to support Python applications.
 
-Operations Programmer, Cryptic Studios; Los Gatos, CA — 2008-2011
+Operations Programmer, Cryptic Studios; Los Gatos, CA - 2008-2011
 ---------------------------------------------------------------------
 Maintained game patching systems and internal version control tools. Built a
 game launcher and integrated installer system. Ported legacy game
