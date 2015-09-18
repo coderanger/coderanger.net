@@ -1,7 +1,6 @@
 ---
 title: Lvl29 DevOp Looking For Group
 date: 2015-09-18
-published: false
 ---
 
 *Disclaimer: I will not respond to recruiters or staffing firms. If you are a
