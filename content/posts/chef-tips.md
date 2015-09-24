@@ -1,5 +1,5 @@
 ---
-title: 8 Short Chef Tips
+title: Eight Short Chef Tips
 date: 2015-09-24
 hire_me: Like these Chef tips? Hiring Chef engineers or tool developers? I'm looking for a new team! Check out my <a href="/looking-for-group/">Looking for Group</a> post for details.
 ---
