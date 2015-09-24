@@ -1,7 +1,7 @@
 ---
 title: 8 Chef Tips
 date: 2015-09-24
-published: false
+hire_me: Like these Chef tips? Hiring Chef engineers or tool developers? I'm looking for a new team! Check out my <a href="/looking-for-group/">Looking for Group</a> post for details.
 ---
 
 As a perk for my Kickstarter backers, I sent postcards with some helpful Chef
