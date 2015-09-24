@@ -5,7 +5,7 @@ hire_me: Like these Chef tips? Hiring Chef engineers or tool developers? I'm loo
 ---
 
 As a perk for my Kickstarter backers, I sent postcards with some helpful Chef
-tips. While those cards will forever be a collectors item, I want to share the
+tips. While those cards will forever be collectors items, I want to share the
 tips with you all as they have proven a useful reference for new Chef users!
 
 <h2><a class="no-underline" href="#1" name="1">Tip #1: platform? and platform_family?</a></h2>
