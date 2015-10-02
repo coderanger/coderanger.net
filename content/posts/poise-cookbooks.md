@@ -8,7 +8,7 @@ As part of the continuing development of my Kickstarter work, I've written a
 lot of new cookbooks over the past few months. I would like to summarize a bit
 about each of them so everyone knows what is out there. Some of these cookbooks
 are still in the final stages of pre-release testing, so you may need to pull
-them in from GitHub rather than the Supermarket for a short time longer.
+them in from GitHub rather than the Supermarket for a little while longer.
 
 # Service Management
 
