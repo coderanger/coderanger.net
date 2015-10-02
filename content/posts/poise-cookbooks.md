@@ -36,13 +36,13 @@ cookbook without forking](https://github.com/poise/poise-service#service-options
 
 The [`poise-ruby`](https://github.com/poise/poise-ruby) cookbook provides
 resources for installing Ruby from system packages or RedHat's SCL packages.
-It also has resources for install Ruby gems, running `bundle install`, and
+It also has resources for installing Ruby gems, running `bundle install`, and
 running Ruby scripts or programs with automatic handling for `bundle exec`.
 
 ## poise-ruby-build
 
 The [`poise-ruby-build`](https://github.com/poise/poise-ruby-build) cookbook
-adds support for installing Ruby using `ruby-build` to `poise-ruby`. This takes
+adds support for using `ruby-build` to `poise-ruby`. This takes
 the place of using tools like `rvm` or `rbenv` in a server environment.
 
 ## poise-python
@@ -52,7 +52,7 @@ resources for installing Python as `poise-ruby` does, with additional support
 for the Portable PyPy binary builds to get started with PyPy quickly and easily.
 As with Ruby, there are also resources for installing Python packages with `pip`,
 managing virtualenvs, installing `requirements.txt` files, and running Python
-scripts and commands. This replaces the now-deprecated `python` cookbook.
+scripts and commands. This replaces the now-deprecated [`python`](https://github.com/poise/python) cookbook.
 
 ## poise-javascript
 
@@ -87,7 +87,7 @@ deployment-oriented options.
 
 The [`application_ruby`](https://github.com/poise/application_ruby) cookbook
 supports deploying Ruby web applications like Rails and Sinatra projects. It
-supports running Rack applications behind Thin and Unicorn, as well as most
+supports running application services using Thin and Unicorn, as well as most
 standard Rails deployment steps.
 
 ## application_python
