@@ -3,9 +3,6 @@ title: Lvl29 DevOp Looking For Group
 date: 2015-09-18
 ---
 
-*Disclaimer: I will not respond to recruiters or staffing firms. If you are a
-recruiter, please have the hiring manager contact me first.*
-
 Way back in December of last year I ran a [Kickstarter](https://www.kickstarter.com/projects/coderanger/delightful-application-deployment-with-chef) to fund a few weeks of
 open source development time. Thanks to that campaign, some generous private
 sponsors, and a bit of scope creep around the edges, I'm happy to say I'm finally
