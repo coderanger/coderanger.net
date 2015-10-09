@@ -135,7 +135,7 @@ end
 ```
 
 As `only_if` guard clauses (and `lazy` property values and the block on
-`ruby_block`) is run during the converge phase, this will more often behave as
+`ruby_block`) are run during the converge phase, this will more often behave as
 the author expects.
 
 # <a class="no-underline" href="#tldr" name="tldr">tl;dr</a>
