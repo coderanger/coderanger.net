@@ -4,7 +4,7 @@ date: 2015-10-09
 hire_me: Like this Chef tip? Hiring Chef engineers or tool developers? I'm looking for a new team! Check out my <a href="/looking-for-group/">Looking for Group</a> post for details.
 ---
 
-A common source of bugs in Chef code for new and experience users alike is Chef's
+A common source of bugs in Chef code for new and experienced users alike is Chef's
 two-pass (or two-phase) execution model. I would like to provide a quick overview
 of this system and how it can impact your code.
 
