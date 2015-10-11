@@ -1,7 +1,7 @@
 ---
 title: Secrets Management and Chef
 date: 2014-08-08
-hire_me: Looking for help getting the most out of Chef? Check out my <a href="/training/">training</a> and <a href="/consulting/">consulting</a> services.
+hire_me: Like this Chef tip? Hiring Chef engineers or tool developers? I'm looking for a new team! Check out my <a href="/looking-for-group/">Looking for Group</a> post for details.
 ---
 
 Everyone has secrets. Database passwords, API credentials, recovery questions.
