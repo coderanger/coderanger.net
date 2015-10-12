@@ -4,6 +4,14 @@ date: 2014-07-15
 hire_me: Looking for help getting the most out of Chef? Check out my <a href="/training/">training</a> and <a href="/consulting/">consulting</a> services.
 ---
 
+**THIS IS DEPRECATED.**
+
+Chef Software now publishes releases via PackageCloud, which supports more
+direct usage as an apt (and yum) repository. See [https://packagecloud.io/chef/stable/install](https://packagecloud.io/chef/stable/install)
+for instructions on configuring the PackageCloud repositories.
+
+**/DEPRECATION WARNING**
+
 Do you love Chef? Do you hate `curl | bash` installations? Good news!
 
 ```bash
