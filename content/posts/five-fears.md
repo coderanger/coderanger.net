@@ -6,7 +6,7 @@ hire_me: Hiring Chef engineers or tool developers? I'm looking for a new team! C
 
 The world of computers is full of many dangerous nooks and crannies. Hackers,
 viruses, and scammers all sit as the boogeymen of the modern age. Some threats
-are less well known though, even amongst the keepers of gates. This is my
+are less well known though, even amongst the keepers of the gates. This is my
 personal list of the five worst things floating around the chips and waves,
 based on notability, danger, and most of all the lack of mitigation strategies.
 
