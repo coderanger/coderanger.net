@@ -49,7 +49,7 @@ pattern here today, just hope nothing goes wrong really really hard.
 
 # RowHammer
 
-In 1936 Alan Turing laid out the structure for what is now known as a Turning
+In 1936 Alan Turing laid out the structure for what is now known as a Turing
 Machine. The ensuring 79 years have brought almost unfathomable advances to
 computer technology, but deep down in the model is the idea of a tape (RAM)
 which programs can read from and write to. An almost unspoken assumption in this
