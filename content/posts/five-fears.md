@@ -167,7 +167,7 @@ trillion terabytes.
 
 Fortunately this is also the easiest thing on this list to defend against.
 Modern TLS implementations support an increasing number of cryptographic options
-that aren't based on prime numbers. While isn't inconceivable that a quantum
+that aren't based on prime numbers. While it isn't inconceivable that a quantum
 algorithm to solve elliptic curve problems will be developed, it is at least
 better than a system that we already know how to break. Keep up with modern
 TLS best practices and your biggest fears will have to be whatever encrypted
