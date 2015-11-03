@@ -195,7 +195,7 @@ I think Discourse can absolutely improve that over the old system, but I am
 angry at level of disarray things were in. We need to ensure our community
 protects our most vulnerable, and often that is people looking for help.
 
-# The Future?
+# The Future
 
 As stated before, everything I've done so far has been unpaid labor out of a
 sense of obligation to the Chef community. I've mostly run out of energy to
@@ -203,7 +203,7 @@ help further. I trust the Chef Software community team
 will continue improving the site. I think things are pretty stable overall, the
 site isn't everything I would have wanted, but it is in a position for the community
 to move forward. I'll keep a close eye on things
-as is my usual modus operandi, and am happy to help where I can.
+as is my usual modus operandi, and am happy to do what I can with my remaining spoons.
 
 # Questions?
 
