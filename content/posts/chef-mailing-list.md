@@ -59,7 +59,7 @@ updated to reflect the second attempt which used Discourse.
 
 In February 2015 the first major attempt to migrate the list happened. It was
 well announced in advance, many conversion test runs had happened, and the
-process for the swap-over was clear. The goal was to get everything moved over
+process for the swap-over was clear to the whole community. The goal was to get everything moved over
 to Google Groups within a three hour window. Specifically this was going to use
 the Groups feature within Google Apps For Your Domain so that the mailing list
 addresses could stay the same. The migration was initially successful, with
@@ -67,13 +67,14 @@ everything copied over and ready to go. Then some issues were found. The Apps
 mailing quota was counting every outbound copy of every message, so after only
 a few emails we had hit the daily maximum and Google was holding all further
 messages until the next quota reset. This was obviously going to be a problem,
-so the decision was made (I think by Nathen but I don't know that for sure) to
+so the decision was made to
 roll back completely. MX records were updated back and we all continued on
-Sympa.
+Sympa. the rollback was handled smoothly and communicated well as to it happening,
+if not exactly why.
 
-After the rollback, there was little public discussion other than some general
-comments that Chef Software was going to investigate other options with Discourse
-as a leading contender.
+After the rollback, there was more discussion in the weekly community meetings,
+and Discourse was pointed out as another possible migration target. The RFC
+was updated to reflect this.
 
 # The Second Migration
 
@@ -82,18 +83,18 @@ This heralded a complete migration to a hosted Discourse instance,
 `discourse.chef.io`. I can only relate second-hand as to the internal process
 within Chef Software, but from discussions with Nathen my understanding is that
 this was not announced within Chef Software either, and was being run as a
-personal project between Nathen and the Discourse team directly. I will point out this was also
-the day before the Chef Community Summit in Seattle, during which many people were away from their laptops for conference sessions or socializing with friends. I actually found out about
-the migration while on a train from Seattle airport to the Chef offices. From what I can tell
+personal project between Nathen and the Discourse team directly. This was also
+the day before the Chef Community Summit in Seattle, during which many people were away from their laptops for conference sessions or socializing with friends.  From what I can tell
 reconstructing the history, the migration was almost entirely handled by the
 Discourse staff team, not Chef Software. Things had been in motion for some time,
-so the change on the 13th was Nathen requesting everyone pull their various
+so the change on the 13th was requesting everyone pull their various
 triggers to finalize the migration.
 
 As to why the decision was made to go forward with Discourse, I can't say. It
 had been pointed out as a potential option after the previous migration, but
 it is unclear to what degree other options were considered and what the
-process was.
+process was. I'm hopeful the forthcoming Chef Software blog post will have
+more information on this front.
 
 # What Went Wrong
 
@@ -115,22 +116,17 @@ subscription list from Sympa and re-enabled email delivery for anyone that had
 actually been subscribed to Sympa at the time of the migration.
 
 This still left anyone that had been subscribed but never participated in the
-list in limbo; this was addressed later by Nathen sending all such users an
+list in limbo; this was addressed later by Chef Software sending all such users an
 email with information on how to sign up for Discourse. It also means that
 anyone who was subscribed to only one of `chef` or `chef-dev` is now
-subscribed to both (and the new Feedback category). I have suggested a way to
-fix this to Nathen and the Discourse team, and I think it is in-progress but
-I don't know any details.
+subscribed to both (and the new Feedback category). I think a fix for this is
+in progress but I don't know any details.
 
 Initial confusion was magnified by the total lack of any announcements beforehand,
 and the fact that getting access to one's Discourse account was somewhat
 non-trivial in terms of complexity. This, combined with the various subscription
 issues and general dislike of change by the Internet, led to an burst of
-unhappy emails to the list(s). As a sidebar, I found it very frustrating the
-degree to which Chef Software staff wrote these off as "haters gonna hate".
-While that is true, and complaining about new things just because they are
-different is a thing the internet does a lot of, it led to several legitimate
-issues like the subscription problems being overlooked initially.
+unhappy emails to the list(s).
 
 Beyond those issues, many configuration problems were present in the initial
 Discourse instance. While on my train from the airport I quickly asked Nathen
@@ -177,13 +173,33 @@ call things stable for now. I've created an [FAQ thread](https://discourse.chef.
 on Discourse to help explain things for new users, and will hopefully be able
 to update that as new issues arise.
 
+# How I Feel
+
+I'm mad. I see this as a multi-faceted failure of the community. Communication
+about this migration, before and after, faltered. This is doubly frustrating
+given the excellent communication around the first migration attempt, showing
+that it could have much so much smoother. After the initial wave of frustration
+from users, there was a definite sentiment from some of "haters gonna hate",
+which I feel masked legitimate issues in a way that was unnecessary. I feel like
+the migration was rushed and many issues could have been resolved before the migration had there been
+some kind of public beta test to gather UX feedback.
+
+A mailing list is a resource often used as a last resort when a user is already
+feeling frustrated, lost, or confused. It is absolutely vital that these kinds
+of support channels (along with IRC, StackOverflow, etc) be welcoming and smooth.
+I think Discourse can absolutely improve that over the old system, but I am
+angry at level of disarray things were in. We need to ensure our community
+protects our most vulnerable, and often that is people looking for help.
+
 # The Future?
 
 As stated before, everything I've done so far has been unpaid labor out of a
-sense of obligation to the Chef community. I've mostly run out of spoons to
+sense of obligation to the Chef community. I've mostly run out of energy to
 help further. I trust the Chef Software community team
-will step in to continue improving the site. I'll keep a close eye on things,
-as is my usual modus operandi.
+will continue improving the site. I think things are pretty stable overall, the
+site isn't everything I would have wanted, but it is in a position for the community
+to move forward. I'll keep a close eye on things,
+as is my usual modus operandi, and am happy to help where I can.
 
 # Questions?
 
