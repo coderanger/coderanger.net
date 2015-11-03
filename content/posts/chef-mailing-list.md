@@ -6,16 +6,16 @@ published: false
 ---
 
 Recently the Chef community mailing list was migrated to Discourse. This caused
-some confusion and unhappiness in the community so I just want to write up a
-quick overview of the situation.
+some confusion and unhappiness in the community so I wanted to write up a
+quick overview of the situation as I know it.
 
 # Disclaimer
 
 I do not work for Chef Software, nor was involved in most of the planning
 stages for this migration. I do not represent the views of Chef Software and
 am happy to correct any inaccuracies. Everything I did personally related to
-this migration (including writing this) was unpaid labor and it seems like Chef
-Software would prefer to keep it that way. Nathen Harvey is, I think, still
+this migration (including writing this) has been unpaid labor and was not
+specifically requested by Chef Software. Nathen Harvey is, I think, still
 working on a blog post for Chef Software but I didn't want to make the community
 wait for that given how long it has been.
 
@@ -102,7 +102,7 @@ Discourse is first and foremost a discussion forum, but they do have enough
 email integration to work as a mailing list too. However they have much less
 experience with this use-case so I want to be clear that I do not hold them at
 fault for the majority of these issues. The Discourse team has, in my opinion,
-gone above and beyond in trying to dig this debacle out and have happily run
+gone above and beyond in trying to help out and have happily run
 with suggestions once they understood the use cases better.
 
 The first and most notable problem was that when Discourse imported the Sympa
@@ -168,6 +168,10 @@ on such patches. There is some contention [about if keeping list-y behavior is
 even desirable](https://github.com/chef/mailing-list/issues/6), though I am firmly
 in the camp that says it is.
 
+The old archive has been restored for now, though long term I think the plan is
+to work out a better way to redirect the archive links to the migrated Discourse
+threads so we can actually decommission Sympa.
+
 Users seem to be successfully using the list at this point, so I am happy to
 call things stable for now. I've created an [FAQ thread](https://discourse.chef.io/t/welcome-to-the-chef-mailing-list/7070)
 on Discourse to help explain things for new users, and will hopefully be able
@@ -198,7 +202,7 @@ sense of obligation to the Chef community. I've mostly run out of energy to
 help further. I trust the Chef Software community team
 will continue improving the site. I think things are pretty stable overall, the
 site isn't everything I would have wanted, but it is in a position for the community
-to move forward. I'll keep a close eye on things,
+to move forward. I'll keep a close eye on things
 as is my usual modus operandi, and am happy to help where I can.
 
 # Questions?
