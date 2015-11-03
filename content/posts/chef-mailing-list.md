@@ -2,7 +2,6 @@
 title: The Chef Mailing List
 date: 2015-11-03
 hire_me: Hiring Chef engineers or tool developers? I'm looking for a new team! Check out my <a href="/looking-for-group/">Looking for Group</a> post for details.
-published: false
 ---
 
 Recently the Chef community mailing list was migrated to Discourse. This caused
