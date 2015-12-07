@@ -72,7 +72,7 @@ packet. This allows things like transparent interception by Squid and other
 proxy tools, but we could use it to find the packets containing the DV request
 and quietly move them to another port to talk to a service we control. This
 would be entirely Linux-specific, but at this point I'm okay with that as
-we would need option #1 above to have a cross-platform solution.
+we would need alternate ports as described above to have a cross-platform solution.
 
 The trouble is in only redirecting the DV traffic. The simplest way to do this
 would be to use the source IPs that correspond to Let's Encrypt in the iptables
@@ -158,5 +158,7 @@ document the restriction and offer the ability to configure forwarding headers.
 The second could be truly transparent but requires a lot of complex
 *::jazzhands::* software.
 
-Which would you rather see if you were a user of this cookbook?
+Which would you rather see if you were a user of this cookbook? You can let me
+know on [Twitter](https://twitter.com/intent/tweet?screen_name=kantrn) or by
+[email](&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#110;&#111;&#x61;&#104;&#x40;&#x63;&#x6f;&#x64;&#101;&#114;&#x61;&#110;&#103;&#101;&#x72;&#46;&#110;&#x65;&#x74;).
 
