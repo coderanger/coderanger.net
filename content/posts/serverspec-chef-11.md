@@ -5,7 +5,7 @@ date: 2015-12-21
 
 [Serverspec](http://serverspec.org/) is a server testing library used often
 with Test-Kitchen, through the [busser-serverspec](https://github.com/test-kitchen/busser-serverspec)
-plugin. Serverspec uses and internal helper gem called `specinfra` that
+plugin. Serverspec uses an internal helper gem called `specinfra` that
 implements much of the heavy lifting of the different types of checks that
 Serverspec offers. While Test-Kitchen uses Serverspec in `exec` mode for local
 execution, it also supports an SSH-based remote execution mode using Ruby's
