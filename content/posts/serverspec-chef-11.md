@@ -20,7 +20,7 @@ Ruby 1.9.
 
 # tl;dr
 
-Create `test/integration/helpers/Gemfile` with:
+Create `test/integration/helpers/serverspec/Gemfile` with:
 
 ```ruby
 source 'https://rubygems.org'
