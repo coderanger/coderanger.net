@@ -29,5 +29,6 @@ gem 'serverspec', '2.24.3'
 ```
 
 This will force the versions of both gems back to things compatible with Ruby 1.9
-and thus Chef 11. Make sure you remember to remove this file when you upgrade to
-Chef 12.
+and thus Chef 11. You'll see a warning about the gems not being found the first
+time you run `kitchen verify` on a new instance, but it will work fine after that.
+Make sure you remember to remove this file when you upgrade to Chef 12.
