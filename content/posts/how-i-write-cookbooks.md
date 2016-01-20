@@ -440,8 +440,8 @@ automatically by the helper.
 
 ```yaml
 ---
-#<% require 'poise_boiler' %>
-<%= PoiseBoiler.kitchen(platforms: 'linux') %>
+#<%% require 'poise_boiler' %>
+<%%= PoiseBoiler.kitchen(platforms: 'linux') %>
 
 suites:
 - name: default
@@ -498,7 +498,7 @@ The license is Apache 2.0, and the code of conduct is [Contributor Covenant](htt
 For the README in particular, I have a fairly standardized format. The badge
 section at the top can be generated via `rake badges`.
 
-```markdown
+```
 # Poise-Thing Cookbook
 
 ![Build Status](https://img.shields.io/travis/poise/poise-thing.svg)](https://travis-ci.org/poise/poise-thing)
@@ -514,11 +514,11 @@ A [Chef](https://www.chef.io/) cookbook to manage [a thing](https://example.com/
 
 To create a thing:
 
-​​​```ruby
+​​``ruby
 thing '/opt/thing' do
   name 'Thing Name'
 end
-​```
+``
 
 ## Resources
 
@@ -526,11 +526,11 @@ end
 
 The `thing` resource manages a thing.
 
-​```ruby
+``ruby
 thing '/opt/thing' do
   name 'Thing Name'
 end
-​```
+``
 
 #### Actions
 
@@ -557,7 +557,6 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-
 ```
 
 
@@ -650,3 +649,77 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'poise-boiler', '~> 1.0'
 end
 ```
+
+# Testing the Code
+
+In the last section we talked a bit about the testing set up in the various
+files, now let's look at how to use it.
+
+`poise-boiler` includes a Rake task to run the unit tests: `rake spec`. This
+works like the `spec` task in most Ruby projects. You can also run
+`rake debug spec` to run the tests with debugging output. By default the test
+order is randomized. You can lock the order with an environment variable:
+`SEED=123 rake spec`.
+
+Integration tests are generally run locally via normal `kitchen` commands.
+`rake chef:foodcritic` runs Foodcritic on the converted cookbook and
+`rake chef:kitchen` will run `kitchen test -d always`. To run all test-related
+tasks, there is a `rake test`, but generally this is used via the Travis wrappers.
+
+The Test Kitchen configuration is set up to try and cut the overhead of the
+testing system and generally get the fastest tests possible. It uses
+`kitchen-docker` if the Docker authentication keys are available. It uses
+a custom Dockerfile template and some `provision_commands` to cache Chef, the
+busser gems, and some other support files in the Docker image. This allows
+launching a test container with only a few seconds of work. To speed up
+transferring the cookbook files, I use [`kitchen-sync`](https://github.com/coderanger/kitchen-sync).
+
+# Travis CI
+
+I use Travis CI to run tests on each change and on pull requests. Unfortunately
+pull requests can't run integration tests for security reasons, but it's still
+better than nothing. I control the version of Chef being used through Bundler,
+so I don't install via ChefDK at this time. I will state for the record that
+use Berkshelf (even indirectly via Test Kitchen) outside of ChefDK is unsupported
+and please please don't bother their development team if and when it breaks in
+weird ways (notably when they upgrade the default Travis image this is going
+break horribly).
+
+The Travis configuration is set to use their container infrastructure, this
+allows faster test startup times but means you can't run commands as root.
+That is why I run Docker against a remote host instead of locally, though as a
+positive side effect I can put a lot more horsepower behind Docker than a
+Travis test VM. It uses the new addons system to install the `libgecode` packages,
+which will be used later when installing the `depsolver` gem.
+
+Travis uses the Gemfile path as part of the cache key, so each build in the
+matrix gets its own gem cache. The Bundler-installed Rake then kicks off the
+`travis` task. This handles downloading the latest `docker` binary, decrypting
+the private key, and running the test tasks as needed.
+
+# Making a Release
+
+Most of the release logic is wrapped up in three similar tasks: `rake release`,
+`rake release:minor`, and `rake release:major`. All follow the same process,
+first the `version.rb` file is bumped to the next patch/minor/major version,
+then a tag is created, the new release is pushed to both RubyGems and Supermarket,
+and the version is bumped to the new patch prerelease.
+
+This has a few more "oops" checks than the default Bundler release task, like
+ensuring the changelog has been updated and using GPG signed tags if possible.
+
+# External Services
+
+I use a number of hosted services as part of my workflow. Most are free, though
+Rackspace has been kind enough to donate the use of their cloud services to
+cover the rest. [Travis CI](https://travis-ci.org/), as previously mentioned,
+runs all my builds. [Nightlies](https://nightli.es/), runs nightly rebuilds
+automatically to catch upstream breakages. [CodeCov](https://codecov.io/)
+archives my code coverage reports and provides coverage diffs on pull requests.
+[CodeClimate](https://codeclimate.com/) runs static analysis, though I haven't
+tuned my configs with them so the data isn't as valuable as it could be.
+[Gemnasium](https://gemnasium.com/) analyzes gem dependencies and lets me know
+when things get updated or are out of date. I've got a dashboard for all of
+these data services at https://dash.poise.io/, but it needs some love to be more
+useful. It almost goes without saying, but all my projects are hosted at
+[GitHub](https://github.com/) and I use their Issues tool for basic to-do tracking.
