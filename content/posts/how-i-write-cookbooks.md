@@ -424,7 +424,8 @@ end
 ## Root Files
 
 In the root of the gem's repository we have some general configuration and
-documentation files. The first is a basic `.gitignore`.
+documentation files. The first is a basic `.gitignore`. Notably I ignore the
+lockfiles for Berkshelf and Bundler, [because reusable cookbooks are libraries](http://yehudakatz.com/2010/12/16/clarifying-the-roles-of-the-gemspec-and-gemfile/).
 
 ```
 Berksfile.lock
