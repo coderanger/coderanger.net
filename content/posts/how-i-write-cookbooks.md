@@ -1,7 +1,7 @@
 ---
 title: How I Write Cookbooks
-date: 2016-01-19
 published: false
+date: 2016-01-20
 ---
 
 # Disclaimer
@@ -67,6 +67,7 @@ poise-thing/
   .yardopts
   Berksfile
   CHANGELOG.md
+  CODE_OF_CONDUCT.md
   Gemfile
   LICENSE
   poise-thing.gemspec
@@ -401,15 +402,251 @@ describe PoiseThing::Resources::Thing do
     it { is_expected.to render_file('/opt/thing').with_content('My Name') }
   end # /context action :create
 
-  context 'action :delete' do
+  context 'action :remove' do
     recipe do
       thing '/opt/thing' do
-        action :delete
+        action :remove
       end
     end
 
     it { is_expected.to delete_file('/opt/thing') }
-  end # /context action :delete
+  end # /context action :remove
 end
 ```
 
+## Root Files
+
+In the root of the gem's repository we have some general configuration and
+documentation files. The first is a basic `.gitignore`.
+
+```
+Berksfile.lock
+Gemfile.lock
+test/gemfiles/*.lock
+.kitchen/
+.kitchen.local.yml
+test/docker/
+coverage/
+pkg/
+.yardoc/
+doc/
+```
+
+Then I have my `.kitchen.yml` config. Like with the spec helper, it mostly lives
+in `poise-boiler`. The only data still managed directly in the file is the
+suite configuration and even that is probably not long for this world. The
+driver, provisioner, transport, and platform configuration is all handled
+automatically by the helper.
+
+```yaml
+---
+#<% require 'poise_boiler' %>
+<%= PoiseBoiler.kitchen(platforms: 'linux') %>
+
+suites:
+- name: default
+  run_list:
+  - recipe[poise-thing_test]
+```
+
+I'll cover the overall structure of my CI setup later on, but the Travis
+configuration for all cookbooks looks almost identical. The only thing that
+changes is the `secure` key (which is trimmed for brevity), which contains the
+passphrase to decrypt the Docker private key. The bulk of the logic for testing
+lives inside the `rake travis` task, which comes from `poise-boiler`.
+
+```yaml
+---
+sudo: false
+cache: bundler
+language: ruby
+rvm:
+- '2.2'
+addons:
+  apt:
+    packages:
+    - libgecode-dev
+env:
+  global:
+  - USE_SYSTEM_GECODE=true
+  - secure: l7GLeLWfqrrkxpc1R9gLasQ...7tyJ8nBix9WKnFZbowmHB3Q=
+bundler_args: "--binstubs=$PWD/bin --jobs 3 --retry 3"
+script:
+- "./bin/rake travis"
+gemfile:
+- test/gemfiles/chef-12.gemfile
+- test/gemfiles/master.gemfile
+```
+
+And as a final dotfile, my `.yardopts` for YARD documentation builds. I've not
+really kept up with the documentation side of things, but this is at least
+passable for most purposes.
+
+```
+--plugin classmethods
+--embed-mixin ClassMethods
+--hide-api private
+--markup markdown
+--hide-void-return
+--tag provides:Provides
+--tag action:Actions
+```
+
+Next we have some other documentation files. `README.md`, `CHANGELOG.md`,
+`LICENSE`, and `CODE_OF_CONDUCT.md`. The first two are what you would expect.
+The license is Apache 2.0, and the code of conduct is [Contributor Covenant](http://contributor-covenant.org/).
+For the README in particular, I have a fairly standardized format. The badge
+section at the top can be generated via `rake badges`.
+
+```markdown
+# Poise-Thing Cookbook
+
+![Build Status](https://img.shields.io/travis/poise/poise-thing.svg)](https://travis-ci.org/poise/poise-thing)
+[![Gem Version](https://img.shields.io/gem/v/poise-thing.svg)](https://rubygems.org/gems/poise-thing)
+[![Cookbook Version](https://img.shields.io/cookbook/v/poise-thing.svg)](https://supermarket.chef.io/cookbooks/poise-thing)
+[![Coverage](https://img.shields.io/codecov/c/github/poise/poise-thing.svg)](https://codecov.io/github/poise/poise-thing)
+[![Gemnasium](https://img.shields.io/gemnasium/poise/poise-thing.svg)](https://gemnasium.com/poise/poise-thing)
+[![License](https://img.shields.io/badge/license-Apache_2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+
+A [Chef](https://www.chef.io/) cookbook to manage [a thing](https://example.com/).
+
+## Quick Start
+
+To create a thing:
+
+​​​```ruby
+thing '/opt/thing' do
+  name 'Thing Name'
+end
+​```
+
+## Resources
+
+### `thing`
+
+The `thing` resource manages a thing.
+
+​```ruby
+thing '/opt/thing' do
+  name 'Thing Name'
+end
+​```
+
+#### Actions
+
+* `:create` – Create the thing. *(default)*
+* `:remove` – Remove the thing.
+
+#### Properties
+
+* `path` – Path to the thing. *(name property)*
+* `name` – Name of the thing. *(required)*
+
+## License
+
+Copyright 2016, Your Name
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+```
+
+
+There are a few more sections that I add as needed, but that's the overall
+structure. As a warning for those trying to copy-pasta, there are hidden zero
+width spaces in front the code fence markers in that block to make them not
+terminate the outer block.
+
+After documentation we get to the `*files`. The `Berksfile` is used to integrate
+the Halite conversion process in to Test Kitchen. In the future this might be
+replaced with a dedicated provisioning hook, but for now it gets the job done.
+The Berksfile sets the normal default source, enables the Halite extension,
+configures gem conversion for the cookbook and every cookbook it depends on so
+they are rebuilt on every test run in case a local dependency is changed, and
+then a test group with the fixture cookbook and the apt cookbook, which is used
+by default on Ubuntu platforms.
+
+```ruby
+source 'https://supermarket.chef.io/'
+extension 'halite'
+
+# Force the rebuild every time for development.
+cookbook 'poise', gem: 'poise'
+cookbook 'poise-thing', gem: 'poise-thing'
+
+group :test do
+  cookbook 'poise-thing_test', path: 'test/cookbooks/poise-thing_test'
+  cookbook 'apt'
+end
+```
+
+The `Rakefile` pulls in tasks from `poise-boiler`.
+
+```ruby
+require 'poise_boiler/rakefile'
+```
+
+And then the `Gemfile` handles dispatching to local development copies of the
+dependent gems. The `dev_gem` helper method checks for a local version of
+code, then optionally a version from GitHub.
+
+```ruby
+source 'https://rubygems.org/'
+
+gemspec path: File.expand_path('..', __FILE__)
+
+def dev_gem(name, path: File.join('..', name), github: nil)
+  path = File.expand_path(File.join('..', path), __FILE__)
+  if File.exist?(path)
+    gem name, path: path
+  elsif github
+    gem name, github: github
+  end
+end
+
+dev_gem 'halite'
+dev_gem 'poise'
+dev_gem 'poise-boiler'
+```
+
+And finally we have the gemspec, `poise-thing.gemspec`. This fills in all the
+normal gemspec metadata fields which Halite uses to generate the cookbook
+metadata. It has runtime dependencies on `poise` and `halite`, and a development
+dependency on `poise-boiler`. Any runtime dependency other than `halite` gets
+converted into a cookbook dependency.
+
+```ruby
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'poise_thing/version'
+
+Gem::Specification.new do |spec|
+  spec.name = 'poise-thing'
+  spec.version = PoiseThing::VERSION
+  spec.authors = ['Noah Kantrowitz']
+  spec.email = %w{noah@coderanger.net}
+  spec.description = 'A Chef cookbook for managing a thing.'
+  spec.summary = spec.description
+  spec.homepage = 'https://github.com/poise/poise-thing'
+  spec.license = 'Apache 2.0'
+
+  spec.files = `git ls-files`.split($/)
+  spec.executables = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  spec.test_files = spec.files.grep(%r{^(test|spec|features)/})
+  spec.require_paths = %w{lib}
+
+  spec.add_dependency 'halite', '~> 1.1'
+  spec.add_dependency 'poise', '~> 2.5'
+
+  spec.add_development_dependency 'poise-boiler', '~> 1.0'
+end
+```
