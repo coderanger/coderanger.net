@@ -4,6 +4,10 @@ published: false
 date: 2016-01-20
 ---
 
+<style type="text/css">
+pre { background-color: #EEE; padding-left: 5px; }
+</style>
+
 # Disclaimer
 
 This workflow works for me. I do not warrant its fitness for anyone else at this
