@@ -442,7 +442,7 @@ doc/
 Then I have my `.kitchen.yml` config. Like with the spec helper, it mostly lives
 in `poise-boiler`. The only data still managed directly in the file is the
 suite configuration and even that is probably not long for this world. The
-driver, provisioner, transport, and platform configuration is all handled
+driver, provisioner, transport, and platform configurations are all handled
 automatically by the helper.
 
 ```yaml
