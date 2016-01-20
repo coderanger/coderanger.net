@@ -505,7 +505,7 @@ section at the top can be generated via `rake badges`.
 ```
 # Poise-Thing Cookbook
 
-![Build Status](https://img.shields.io/travis/poise/poise-thing.svg)](https://travis-ci.org/poise/poise-thing)
+[![Build Status](https://img.shields.io/travis/poise/poise-thing.svg)](https://travis-ci.org/poise/poise-thing)
 [![Gem Version](https://img.shields.io/gem/v/poise-thing.svg)](https://rubygems.org/gems/poise-thing)
 [![Cookbook Version](https://img.shields.io/cookbook/v/poise-thing.svg)](https://supermarket.chef.io/cookbooks/poise-thing)
 [![Coverage](https://img.shields.io/codecov/c/github/poise/poise-thing.svg)](https://codecov.io/github/poise/poise-thing)
