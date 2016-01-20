@@ -151,7 +151,7 @@ and the first `module` line, which I traditionally put after the block of
 require 'poise_thing/resources/thing'
 
 
-module PoiseMonit
+module PoiseThing
   # Chef resources and providers for poise-thing.
   #
   # @since 1.0.0
