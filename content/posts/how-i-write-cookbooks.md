@@ -143,8 +143,9 @@ require 'poise_thing/resources'
 ```
 
 The `resources.rb` loads everything under the `resources/` folder. Remember that
-YARD requires two blank lines between the license header and the first `module`
-line, which I traditionally put after the block of `require`s.
+[YARD](http://yardoc.org/) requires two blank lines between the license header
+and the first `module` line, which I traditionally put after the block of
+`require`s.
 
 ```ruby
 require 'poise_thing/resources/thing'
@@ -484,9 +485,9 @@ gemfile:
 - test/gemfiles/master.gemfile
 ```
 
-And as a final dotfile, my `.yardopts` for YARD documentation builds. I've not
-really kept up with the documentation side of things, but this is at least
-passable for most purposes.
+And as a final dotfile, my `.yardopts` for [YARD](http://yardoc.org/)
+documentation builds. I've not really kept up with the documentation side of
+things, but this is at least passable for most purposes.
 
 ```
 --plugin classmethods
