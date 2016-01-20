@@ -729,5 +729,5 @@ cover the rest. In no particular order:
   when things get updated or are out of date.
 * [GitHub](https://github.com/) to host my code and issue tickets.
 
-I've got a dashboard for all of these data services at https://dash.poise.io/,
+I've got a dashboard for all of these data services at [dash.poise.io](https://dash.poise.io/),
 but it needs some love to be more useful.
