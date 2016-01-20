@@ -759,3 +759,12 @@ cover the rest. In no particular order:
 
 I've got a dashboard for all of these data services at [dash.poise.io](https://dash.poise.io/),
 but it needs some love to be more useful.
+
+# In Summary
+
+I have been using this flow and style for about a year now, with constant
+improvements throughout. As I said before, I don't think this is the right
+style for everybody, but hopefully you get some value out of a piece here or
+there. If you have any questions about any of this, please don't hesitate to
+ask me via <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#110;&#111;&#x61;&#104;&#x40;&#x63;&#x6f;&#x64;&#101;&#114;&#x61;&#110;&#103;&#101;&#x72;&#46;&#110;&#x65;&#x74;">email</a>,
+IRC, or [Twitter](https://twitter.com/kantrn).
