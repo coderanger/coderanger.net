@@ -716,14 +716,19 @@ ensuring the changelog has been updated and using GPG signed tags if possible.
 
 I use a number of hosted services as part of my workflow. Most are free, though
 Rackspace has been kind enough to donate the use of their cloud services to
-cover the rest. [Travis CI](https://travis-ci.org/), as previously mentioned,
-runs all my builds. [Nightlies](https://nightli.es/), runs nightly rebuilds
-automatically to catch upstream breakages. [CodeCov](https://codecov.io/)
-archives my code coverage reports and provides coverage diffs on pull requests.
-[CodeClimate](https://codeclimate.com/) runs static analysis, though I haven't
-tuned my configs with them so the data isn't as valuable as it could be.
-[Gemnasium](https://gemnasium.com/) analyzes gem dependencies and lets me know
-when things get updated or are out of date. I've got a dashboard for all of
-these data services at https://dash.poise.io/, but it needs some love to be more
-useful. It almost goes without saying, but all my projects are hosted at
-[GitHub](https://github.com/) and I use their Issues tool for basic to-do tracking.
+cover the rest. In no particular order:
+
+* [Travis CI](https://travis-ci.org/) runs all my builds. I couldn't function
+  without it.
+* [Nightlies](https://nightli.es/) runs nightly rebuilds automatically to catch
+  upstream breakages.
+* [CodeCov](https://codecov.io/) archives my code coverage reports and provides
+  coverage diffs on pull requests.
+* [CodeClimate](https://codeclimate.com/) runs static analysis, though I haven't
+  tuned my configs with them so the data isn't as valuable as it could be.
+* [Gemnasium](https://gemnasium.com/) analyzes gem dependencies and lets me know
+  when things get updated or are out of date.
+* [GitHub](https://github.com/) to host my code and issue tickets.
+
+I've got a dashboard for all of these data services at https://dash.poise.io/,
+but it needs some love to be more useful.
