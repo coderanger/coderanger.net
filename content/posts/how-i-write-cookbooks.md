@@ -686,7 +686,7 @@ I use Travis CI to run tests on each change and on pull requests. Unfortunately
 pull requests can't run integration tests for security reasons, but it's still
 better than nothing. I control the version of Chef being used through Bundler,
 so I don't install via ChefDK at this time. I will state for the record that
-use Berkshelf (even indirectly via Test Kitchen) outside of ChefDK is unsupported
+using Berkshelf (even indirectly via Test Kitchen) outside of ChefDK is unsupported
 and please please don't bother their development team if and when it breaks in
 weird ways (notably when they upgrade the default Travis image this is going
 break horribly).
