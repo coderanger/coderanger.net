@@ -426,6 +426,9 @@ end
 In the root of the gem's repository we have some general configuration and
 documentation files. The first is a basic `.gitignore`. Notably I ignore the
 lockfiles for Berkshelf and Bundler, [because reusable cookbooks are libraries](http://yehudakatz.com/2010/12/16/clarifying-the-roles-of-the-gemspec-and-gemfile/).
+Everything under `test/docker/` is ignored for safely, but this does mean the
+two keys in there that should be under Git have to be added with `git add -f`.
+This helps make sure I don't accidentally commit the unencrypted private key.
 
 ```
 Berksfile.lock
