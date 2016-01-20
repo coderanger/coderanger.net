@@ -718,6 +718,25 @@ then a tag is created, the new release is pushed to both RubyGems and Supermarke
 This has a few more "oops" checks than the default Bundler release task, like
 ensuring the changelog has been updated and using GPG signed tags if possible.
 
+# Rake Tasks
+
+A lot of the repetitive tasks of this workflow are bundled up inside Rake tasks.
+You can always see all the tasks via `rake -T` but to cover the major ones:
+
+* `badges` – Generate README badges for the project.
+* `build` – Create a `.gem` package and convert the gem to a cookbook. Useful
+  for debugging Halite conversion issues.
+* `check` – Display a summary of the current project, all changed files and all
+  commits since the last release.
+* `checkall` – Display a summary of all my projects.
+* `chef:foodcritic` – Run the Foodcritic linter on the cookbook.
+* `release`, `release:minor`, `release:major` – Create a new patch/minor/major
+  release.
+* `release:bump`, `release:bump:minor`, `release:bump:major` – Run just the
+  version bump for a patch/minor/major.
+* `spec` – Run unit tests.
+* `travis` – Run CI processing.
+
 # External Services
 
 I use a number of hosted services as part of my workflow. Most are free, though
