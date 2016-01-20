@@ -1,6 +1,5 @@
 ---
 title: How I Write Cookbooks
-published: false
 date: 2016-01-20
 ---
 
