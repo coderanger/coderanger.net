@@ -565,9 +565,8 @@ limitations under the License.
 
 
 There are a few more sections that I add as needed, but that's the overall
-structure. As a warning for those trying to copy-pasta, there are hidden zero
-width spaces in front the code fence markers in that block to make them not
-terminate the outer block.
+structure. As a warning for those trying to copy-pasta, I trimmed the code fence
+markers in that block to make them not terminate the outer block.
 
 After documentation we get to the `*files`. The `Berksfile` is used to integrate
 the Halite conversion process in to Test Kitchen. In the future this might be
