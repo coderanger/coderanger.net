@@ -706,8 +706,8 @@ the private key, and running the test tasks as needed.
 Most of the release logic is wrapped up in three similar tasks: `rake release`,
 `rake release:minor`, and `rake release:major`. All follow the same process,
 first the `version.rb` file is bumped to the next patch/minor/major version,
-then a tag is created, the new release is pushed to both RubyGems and Supermarket,
-and the version is bumped to the new patch prerelease.
+then a tag is created, the new release is pushed to both RubyGems and Supermarket
+(using Stove), and the version is bumped to the new patch prerelease.
 
 This has a few more "oops" checks than the default Bundler release task, like
 ensuring the changelog has been updated and using GPG signed tags if possible.
