@@ -84,9 +84,9 @@ poise-thing/
 ```
 
 Starting from the top, everything goes in a folder. For branding and namespacing
-on Supermarket I put all my cookbooks under `poise-` prefix. I would highly
-recommend others to stake out a similar prefix as the discussion around namespaces
-in Chef has reached a likely-permanent standstill.
+on Supermarket I put all my cookbooks under `poise-` prefix. As an aside, I
+would highly recommend others to stake out a similar prefix as the discussion
+around namespaces in Chef has reached a likely-permanent standstill.
 
 Inside that I have three top-level directories: `chef/`, `lib/`, and `test/`. As
 one might expect, `chef/` holds Chef-specific files that Halite can't generate
@@ -146,8 +146,7 @@ require 'poise_thing/resources'
 
 The `resources.rb` loads everything under the `resources/` folder. Remember that
 [YARD](http://yardoc.org/) requires two blank lines between the license header
-and the first `module` line, which I traditionally put after the block of
-`require`s.
+and the first `module` line, which I traditionally put after the `require`s.
 
 ```ruby
 require 'poise_thing/resources/thing'
@@ -318,7 +317,7 @@ Moving along down the folder list we have `test/docker/`. In this folder you'll
 find `docker.ca` and `docker.pem`. The first is a the public CA certificate for
 my Docker server, and the second is both the certificate and encrypted private
 key for Docker TLS authentication. These are used by Travis CI to run my
-integration tests. I currently generate these with a gross knife plugin, but
+integration tests. I currently generate these with a [gross knife plugin I wrote](https://gist.github.com/coderanger/d5d762e99bba9c691099), but
 the [Docker documentation](https://docs.docker.com/engine/articles/https/)
 covers the basics. I'll expand on my CI setup later on.
 
@@ -607,7 +606,7 @@ require 'poise_boiler/rakefile'
 ```
 
 And then the `Gemfile` handles dispatching to local development copies of the
-dependent gems. The `dev_gem` helper method checks for a local version of
+dependent gems. The `dev_gem` helper method checks for a local version of the
 code, then optionally a version from GitHub.
 
 ```ruby
@@ -689,20 +688,21 @@ transferring the cookbook files, I use [`kitchen-sync`](https://github.com/coder
 # Travis CI
 
 I use Travis CI to run tests on each change and on pull requests. Unfortunately
-pull requests can't run integration tests for security reasons, but it's still
-better than nothing. I control the version of Chef being used through Bundler,
-so I don't install via ChefDK at this time. I will state for the record that
-using Berkshelf (even indirectly via Test Kitchen) outside of ChefDK is unsupported
-and please please don't bother their development team if and when it breaks in
-weird ways (notably when they upgrade the default Travis image this is going
-break horribly).
+pull requests can't run integration tests for security reasons (Travis doesn't
+expose encrypted project variables to PR tests because the PR might print or
+otherwise compromise them), but it's still better than nothing. I control the
+version of Chef being used through Bundler, so I don't install via ChefDK at
+this time. I will state for the record that using Berkshelf (even indirectly via
+Test Kitchen) outside of ChefDK is unsupported and please please don't bother
+their development team if and when it breaks in weird ways (notably when they
+upgrade the default Travis image this is going break horribly).
 
 The Travis configuration is set to use their container infrastructure, this
 allows faster test startup times but means you can't run commands as root.
 That is why I run Docker against a remote host instead of locally, though as a
 positive side effect I can put a lot more horsepower behind Docker than a
 Travis test VM. It uses the new addons system to install the `libgecode` packages,
-which will be used later when installing the `depsolver` gem.
+which will be used later when [installing the `dep-selector` gem](https://github.com/chef/dep-selector-libgecode#using-a-system-gecode-instead).
 
 Travis uses the Gemfile path as part of the cache key, so each build in the
 matrix gets its own gem cache. The Bundler-installed Rake then kicks off the
