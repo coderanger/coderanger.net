@@ -130,7 +130,7 @@ module PoiseThing
 end
 ```
 
-After that we have `cheftie.rb`. Current this is part of how Halite loads
+After that we have `cheftie.rb`. Currently this is part of how Halite loads
 code from inside the Chef run, but the plan is to replace it with a more
 Bundler-style mechanism after [Chef RFC060](https://github.com/chef/chef-rfc/blob/master/rfc060-metadata-gem-installation.md)
 is implemented. As it stands, `cheftie.rb` acts as an "entry point" which is
