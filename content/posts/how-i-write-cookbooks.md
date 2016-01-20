@@ -18,7 +18,7 @@ should they. Caveat emptor.
 # The Broad Strokes (*tl;dr*)
 
 I write my projects as Ruby gems, using [Halite](https://github.com/poise/halite)
-to convert to cookbooks for testing and on release. My gem code is mostly divided
+to convert to cookbooks for testing and release. My gem code is mostly divided
 into resources (and their providers), mixins, and inversion providers. I test
 locally using ChefSpec with a lot of custom helpers to allow for things like
 testing in-line blocks of recipe code, and with Test Kitchen on top of Docker
@@ -117,7 +117,7 @@ module PoiseThing
 end
 ```
 
-The simplest second-level file is `verison.rb`, which just contains the gem
+The simplest second-level file is `version.rb`, which just contains the gem
 version. During development this is set to something like `'1.0.0.pre'`. This
 file is managed automatically by my `release:bump` Rake tasks which we'll get to
 later.
@@ -288,7 +288,7 @@ exposed via a default recipe on the cookbook (which is usually most of it).
 Again, for reasons forgotten even to me, I put this under `test/cookbooks/poise-thing_test`.
 Given that I really really rarely have more than one, I should probably
 collapse that down but for now this is what we have. Inside that is a cookbook
-with a minimal `metdata.rb`.
+with a minimal `metadata.rb`.
 
 ```ruby
 name 'poise-thing_test'
