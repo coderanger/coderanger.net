@@ -13,7 +13,9 @@ pre { background-color: #EEE; padding-left: 5px; }
 This workflow works for me. I do not warrant its fitness for anyone else at this
 point, at least not as a whole. My use case of working almost exclusively on
 highly reusable community cookbooks is not something most people share, nor
-should they. Caveat emptor.
+should they. By the nature of this workflow, I talk about some
+intermediate-to-advanced Ruby concepts, though you can probably just keep going
+if you run into things you don't know. Caveat emptor.
 
 # The Broad Strokes (*tl;dr*)
 
