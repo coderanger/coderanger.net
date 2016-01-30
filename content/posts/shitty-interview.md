@@ -1,5 +1,5 @@
 ---
-title: Shitty Interviews Processes
+title: Shitty Interview Processes
 date: 2016-01-29
 ---
 
