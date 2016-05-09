@@ -1,6 +1,7 @@
 ---
 title: The State of Chef Provisioning
 date: 2016-05-09
+hire_me: Thanks to Charles Johnson of Chef Software for reviewing drafts of this post.
 ---
 
 Chef Provisioning (originally Chef Metal) is a collection of libraries and helpers to
