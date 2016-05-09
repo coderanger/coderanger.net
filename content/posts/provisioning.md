@@ -13,7 +13,7 @@ that up to the whole infrastructure.
 Let me start out talking about the current state of Chef Provisioning by making
 one thing really clear:
 
-### Chef Provisioning Is Not Deprecated
+**Chef Provisioning Is Not Deprecated.**
 
 That said, there has been significant change to the planned scope for it. The
 original project was pitched, internally and externally, as a tool with a similar
