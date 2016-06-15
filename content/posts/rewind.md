@@ -116,7 +116,7 @@ a bit nicer arguments and clearer to read.
 
 ## `declare_resource`
 
-The `declare_resource` helper extends `build_resource` to create the new
+The `declare_resource` helper is the core of the resource DSL. It creates the new
 resource object and then add it to the current resource collection. This can be
 useful when you want to create a resource where the type is variable somehow.
 
