@@ -114,22 +114,22 @@ If no block is given, this will return `nil`. A `find_resource!` variant is
 available as well, which is equivalent to the older `resources()` helper, though
 a bit nicer arguments and clearer to read.
 
-## `build_resource`
-
-The `build_resource` helper encapsulates all the logic for creating a new
-resource object without adding it to the collection.
-
-```ruby
-res = build_resource(:template, '/etc/myapp.conf') do
-  source 'myapp.erb'
-end
-```
-
 ## `declare_resource`
 
 The `declare_resource` helper extends `build_resource` to create the new
 resource object and then add it to the current resource collection. This can be
 useful when you want to create a resource where the type is variable somehow.
+
+```ruby
+declare_resource(:template, '/etc/myapp.conf') do
+  source 'myapp.erb'
+end
+
+type = value_for_platform_family(debian: :deb, rhel: :rpm)
+declare_resource(:"#{type}_package", 'myapp') do
+  source "/myapp.#{type}"
+end
+```
 
 ## `with_run_context`
 
@@ -137,7 +137,8 @@ Possibly the most niche of these extra APIs, `with_run_context` allows swapping
 the "current" run context for the scope of a block. You can pass it `:root` to
 get the top-level run context, `:parent` to get the parent of the current
 context, or a `Chef::RunContext` object. This should probably never be used from
-anything except very intricate meta-code but it is available.
+anything except very intricate meta-code but it is available. Some examples of
+potential use cases include global accumulators or definition-like macro resources.
 
 # tl;dr
 
