@@ -284,7 +284,7 @@ level but my standard template doesn't include any.
 
 The `test/` directory holds my fixture cookbook, Docker authentication keys,
 Gemfiles for Travis, and both unit and integration tests. Some people prefer
-putting unit tests under a top-leve `spec/` folder but that makes me cranky.
+putting unit tests under a top-level `spec/` folder but that makes me cranky.
 
 The fixture cookbook is used by the integration tests to run anything that isn't
 exposed via a default recipe on the cookbook (which is usually most of it).
