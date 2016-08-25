@@ -1,6 +1,7 @@
 ---
 title: Using Chef with Hashicorp Vault
 date: 2016-08-24
+published: false
 ---
 
 # The Goal
@@ -19,9 +20,6 @@ transparently access the Hashicorp Vault (hereafter just Vault) server.
 
 # The Main Problems
 
-#### Policy mapping, Secure Introduction/identity root. Structure issues only, this
-doesn't cover Chef DSL additions or similar, which would be done in parallel.
-
 The two main obstacles to this are figuring out what secrets each Chef client
 should access to (authorization) and figuring out how to get access credentials
 for both Chef Server and Vault (authentication). This proposal doesn't look at
@@ -31,32 +29,82 @@ structural complications.
 
 # Using Node Data For Policy Mapping
 
-Describe the problem, self-mutable node data. Using node data (policy name,
-roles, etc) is very attractive as it means only defining what a node is in one
-place.
+Looking at authorization first, Vault already has a powerful ACL and policies
+system for controlling access to secrets. The part we need in the middle is to
+map each Chef node/client to one or more Vault polices. Fortunately what secrets
+a Chef client needs is generally related to what kind of server it is on. We
+already have this data in the form of either Chef policy names (if using the
+new Policyfile system) or roles/role cookbooks in the node's run list. Using
+this data to gate access to secrets feels very natural, has minimal impact on
+existing Chef workflows, and allows for flexible ACL targeting. The downside is
+that doing so today is grossly insecure.
+
+As things stand today, every Chef client has permissions to update its own node
+object. This is how the node attribute data gets saved back up to the Chef
+Server at the end of every converge. Because Chef's API operates at the
+granularity of whole objects, this also means every client can update their own
+policy name or run list. If we used this data for security purposes (e.g.
+chef-vaults `-S` search mode), any compromised node could potentially modify
+its own run list and thus escalate its privileges in the infrastructure. While
+this would require a root-level vulnerability to exploit, those are not unheard
+and this is a rather frustrating security hole.
+
+There are a few options to fix this, all revolving around allowing a node to
+continue updating its attribute data, but blocking updates to things like the
+run list.
 
 ## External Fix: Security Proxy
 
-Proxy service in front of Chef Server, performance impact is higher but quicker
-turn around. Might have to do signature and ACL checks or risk leaking information
-about node data which removes much of the simplicity.
+The least intrusive way to fix this issue is to use something outside of Chef
+Server. This would be a proxy that sits right in front of Chef Server and
+intercepts `PUT /nodes/foo` requests and checks them. The downside is that this
+proxy would have to replicate a lot of the logic that already exists inside Chef
+Server for decoding requests, checking organization permissions, verifying
+request signatures, and applying object ACLs. Some of those steps could be
+skipped, drastically simplifying the proxy code, but at the risk of potentially
+disclosing some node data to an attacker (i.e. they could spam the proxy with
+requests and see which are rejected, and thus deduce the state of the run list
+et al). There is also likely to be a higher performance impact as every request
+needs to go through two levels of verification. Doing the actual verification
+would require getting the current node object from the Chef Server and diffing
+against the request content to see if a "protected" field is being changed, and
+then checking which client/user initiated the request. That said, even
+duplicating features of Chef Server, this  is is likely to be the quickest
+turnaround time as it can be built and tested independently.
 
 ## Internal Fix: New ACLs
 
-Describe node_admin ACL stuffs, all node save operations would have to get the
-current object from the DB and diff "protected" fields, if they differ, check
-both the node object ACLs and a new node_admin object of the same name. Similar
-to policy vs. policy_group already in the code.
+If we want to re-use the existing Chef Server code for things like ACL and
+organization checks, the most logical place for this to live is inside Chef
+Server itself. The verification logic would look similar to the proxy above,
+getting the existing node object from the database and diffing against the new
+content. If a "protected" field is being changed, an extra ACL could be checked
+(e.g. `nodes_admin`). This would mean having update permissions on the node
+object would let you change normal fields, but changing a "protected" field
+would require update on both the normal node ACL object and a new `node_admin`
+ACL object of the same name. This is structurally similar to how some Chef
+policy API calls require both `policy` and `policy_group` permissions.
+
+The downside here is mostly that few people know the Erchef codebase well enough
+to add this feature, and those that do are very busy. Adding this feature could
+take a lot of back and forth and as it's a security-relevant issue, shortcuts
+are generally not an option. Overall this seems like the best short-term option
+though, even with the development challenges.
 
 ## Future Fix: Splitting Up the Node
 
-Optimal solution for the future is to split apart the node data. Currently the
-server-side node object contains both proscriptive (what the node wants to
-be, policy name, run list, environment) and descriptive (what the node is
-currently, attribute data from the last run). The node needs write access to
-itself in order to update the descriptive data, but there is reason those two
-things need to live in a single server-side object. If we split them apart more
-fully, it would make having differing ACLs more natural and efficient.
+Looking out towards the future, the even more optimal solution is to split apart
+the node data. Currently the server-side node object contains both proscriptive
+(what the node wants to be, policy name, run list, environment) and descriptive
+(what the node is currently, attribute data from the last run). The node needs
+write access to itself in order to update the descriptive data, but there is
+reason those two things need to live in a single server-side object. If we split
+them apart more fully, it would make having differing ACLs more natural and
+efficient. This has been discussed for a long time in the Chef community, but
+any movement is probably on hold until we get a chance to revise node attributes
+as that would have a big impact on the API design. It would also be relatively
+disruptive so we're looking at a multi-year deprecation cycle most likely.
+Still, some day this will hopefully be an option.
 
 # Identity Management
 
