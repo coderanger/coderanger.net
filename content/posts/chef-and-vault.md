@@ -1,7 +1,6 @@
 ---
 title: Using Chef with Hashicorp Vault
-date: 2016-08-24
-published: false
+date: 2016-08-26
 ---
 
 # The Goal
