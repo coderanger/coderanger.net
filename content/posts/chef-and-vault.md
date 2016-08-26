@@ -104,6 +104,8 @@ efficient. This has been discussed for a long time in the Chef community, but
 any movement is probably on hold until we get a chance to revise node attributes
 as that would have a big impact on the API design. It would also be relatively
 disruptive so we're looking at a multi-year deprecation cycle most likely.
+The community has accepted a version of this plan as [RFC 45](https://github.com/chef/chef-rfc/blob/master/rfc045-node_state_separation.md),
+though I'm not aware of any specific work towards implementing it lately.
 Still, some day this will hopefully be an option.
 
 # Identity Management
