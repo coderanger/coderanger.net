@@ -23,7 +23,7 @@ transparently access the Hashicorp Vault (hereafter just Vault) server.
 The two main obstacles to this are figuring out what secrets each Chef client
 should access to (authorization) and figuring out how to get access credentials
 for both Chef Server and Vault (authentication). This proposal doesn't look at
-the Chef DSL side, which will require some additional complexity for things like
+the Chef DSL side, which will need some extra complexity for things like
 configuring the Vault server hostname, for now let's just look at the
 structural complications.
 
@@ -35,7 +35,7 @@ map each Chef node/client to one or more Vault polices. Fortunately what secrets
 a Chef client needs is generally related to what kind of server it is on. We
 already have this data in the form of either Chef policy names (if using the
 new Policyfile system) or roles/role cookbooks in the node's run list. Using
-this data to gate access to secrets feels very natural, has minimal impact on
+this data to gate access to secrets feels natural, has minimal impact on
 existing Chef workflows, and allows for flexible ACL targeting. The downside is
 that doing so today is grossly insecure.
 
@@ -214,7 +214,7 @@ re-keying of Chef clients and more secure bootstrap, but might be a bridge too
 far for now. It would require a "Chef Key" secrets plugin for Vault with all the
 same issues as before about how Vault plugins require effectively forking the
 project for a short time at least. This does seem like it might be more
-interesting to the Hashicorp team to accept upstream though. Overall a cool
+interesting to the Hashicorp team to accept upstream though. A cool
 idea but maybe not something to move forward with until Chef and Hashicorp are
 both at least somewhat on board.
 
@@ -222,9 +222,9 @@ both at least somewhat on board.
 
 While much of this proposal has been aimed accessing Vault data from within Chef
 recipe code, sometimes Consul Templates might be a better solution for the last
-mile of templating. That said, basically all of the same discussion applies
+mile of templating. That said, all the same discussion applies
 there too. The main change would be rather than generating a token for each
-converge with a relatively short (30-60 minute) TTL we would set the TTL a bit
+converge with a short TTL we would set the TTL a bit
 longer and write it to disk for Consul Templates to use when connecting to
 Vault. The hard problems remain getting that token and attaching the correct
 Vault policies to it.
