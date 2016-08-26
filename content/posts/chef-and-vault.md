@@ -188,13 +188,16 @@ we would basically be operating a friendly fork with all the work that implies.
 ### Built-In To Chef Server
 
 Similarly to building the token issuer in to Vault, we could do the same on the
-other side and build it in to Chef Server. This makes me more nervous though,
-while the token issuer requires fairly broad permissions on the Vault side, it
+other side and build it in to Chef Server. This makes me more nervous though.
+While the token issuer requires fairly broad permissions on the Vault side, it
 needs very few Chef permissions. Putting things in the Chef Server means that
-now the whole Chef Server is effectively allowed to create any Vault token for
-a node policy. This is a much larger threat surface and sets off my security
-engineer mental alarms. There is also the problem that Chef Server has no
-plugin structure so this would be a one-off for Vault which feels weird.
+now the whole Chef Server is effectively allowed to create any Vault token for a
+node policy. This is a much larger threat surface and sets off my security
+engineer mental alarms. Until we implement cookbook signing, there is no actual
+security issue with this solution though, so for now it's not completely
+unreasonable, just in the "makes me nervous" category. There is also the problem
+that Chef Server has no plugin structure so this would be a one-off for Vault
+which feels weird.
 
 ## Vault as the Identity Root
 
@@ -212,4 +215,4 @@ same issues as before about how Vault plugins require effectively forking the
 project for a short time at least. This does seem like it might be more
 interesting to the Hashicorp team to accept upstream though. Overall a cool
 idea but maybe not something to move forward with until Chef and Hashicorp are
-both at least somewhat on-board.
+both at least somewhat on board.
