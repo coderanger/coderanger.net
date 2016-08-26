@@ -79,9 +79,9 @@ organization checks, the most logical place for this to live is inside Chef
 Server itself. The verification logic would look similar to the proxy above,
 getting the existing node object from the database and diffing against the new
 content. If a "protected" field is being changed, an extra ACL could be checked
-(e.g. `nodes_admin`). This would mean having update permissions on the node
+(e.g. `node_desired`). This would mean having update permissions on the node
 object would let you change normal fields, but changing a "protected" field
-would require update on both the normal node object and a new `node_admin`
+would require update on both the normal node object and a new `node_desired`
 ACL of the same name. This is structurally similar to how some Chef
 policy API calls require both `policy` and `policy_group` permissions.
 
