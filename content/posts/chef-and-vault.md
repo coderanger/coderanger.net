@@ -123,12 +123,13 @@ model as an attacker could possess the private key which defines the identity.
 
 Vault has a lot of authentication options and so is more flexible when it comes
 to bootstrapping, but the final bit of the process is similar. A token of some
-kind (usually a one-time-use token used to access a SecretID) is sent over to
+kind (usually a one-time-use token used to access a
+[SecretID](https://www.vaultproject.io/docs/auth/approle.html)) is sent over to
 the target machine over SSH or WinRM which is eventually redeemed for a more
 durable token. That durable token is then written to disk and is the basis for
-that server's identity going forward. This shares some of the problems with Chef's
-bootstrap model, but you can at least detect when an attack is happening through
-response wrapping.
+that server's identity going forward. This shares some of the problems with
+Chef's bootstrap model, but you can at least detect when an attack is happening
+through response wrapping.
 
 In order to use Chef Server data for mapping Vault policies, we need to link
 Chef and Vault identities. The two most obvious ways to do this would be to
