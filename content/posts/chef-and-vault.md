@@ -198,9 +198,18 @@ plugin structure so this would be a one-off for Vault which feels weird.
 
 ## Vault as the Identity Root
 
-Using vault to issue Chef client keys. Integrated at the level of the Chef
-configuration, when a converge starts it would use the server's Vault token
-to request a new Chef client key and a short-lived Vault token to use for
-secrets access during that converge. As noted above, Vault doesn't support
-loading plugins at runtime so this would have to be with the buy-in of Hashicorp
-as a feature they would be interested in upstream.
+Another option is to use the Vault identity as the root of the system. This
+would mean changing our bootstrapping tools, but Vault does offer more secure
+bootstrap options such as response wrapping and short-lived tokens. In this
+model we would create a long-lived token during machine bootstrap that has no
+access policies attached to it, just some metadata associating it with a given
+Chef client/node name. On every converge we would use this token to first attach
+a new Chef client key and then generate a token for the converge as with the
+previous examples. This provides some compelling advantages around continuous
+re-keying of Chef clients and more secure bootstrap, but might be a bridge too
+far for now. It would require a "Chef Key" secrets plugin for Vault with all the
+same issues as before about how Vault plugins require effectively forking the
+project for a short time at least. This does seem like it might be more
+interesting to the Hashicorp team to accept upstream though. Overall a cool
+idea but maybe not something to move forward with until Chef and Hashicorp are
+both at least somewhat on-board.
