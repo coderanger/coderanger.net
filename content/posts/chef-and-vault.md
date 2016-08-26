@@ -128,7 +128,7 @@ that server's identity going forward.
 
 In order to use Chef Server data for mapping Vault policies, we need to link
 Chef and Vault identities. The two most obvious ways to do this would be to
-base Vault identity on Chef's or vice versa.
+base Vault's identity on Chef's or vice versa.
 
 ## Chef as the Identity Root
 
@@ -136,23 +136,65 @@ Use Chef client keys to generate a Vault token as needed. Short vs long lived,
 short is better. Policy mapping happens when requesting a new token, it will
 be attached to the policies based on node data from Chef Server.
 
+The most straightforward way to do this is to use the Chef identity as the "one
+true identity" for the server. If an infrastructure is coming to this from the
+side of being an existing Chef user and wanted to deploy Vault, they would
+already have the Chef key files in place and probably have some kind of
+bootstrap system (e.g. `knife bootstrap`) for generating new identities and
+distributing them. What this means in real terms is that we want to use our
+Chef client key pair to request a Vault token. The thing answering this request
+can verify the request signature just like on any other Chef API request. With
+a verified client name in hand, we can use that to look up the node object and
+do whatever policy mapping we want to before handing back a Vault token.
+
+We do have a few options for strategies when generating the Vault token. The
+simplest would be to do this once during system bootstrap and write the Vault
+token next to the Chef key files in `/etc/chef` or similar. The downside of this
+is that future changes in the node's run list et al would not result in a new
+policy being applied to the existing token. A better approach would be to
+request a new token at the start of each Chef converge and store it in memory.
+Each time we request a new token, the thing generating them will see the updated
+node data and issue the token's policy accordingly.
+
+The next hard part is to figure out what actually does the token creation.
+
 ### Vault Token Service
 
-Little REST service running alongside Vault. Has a high-permission (i.e. can
-create tokens for any policy) identity itself as well as Chef API credentials.
-Chef recipe code would use existing Chef API authentication protocols to sign
-a nonce/timestamp and send it to the Token Service, which would verify the
-signature, grab the relevant node data, and then create a new Vault token with
-the correct policy. The Chef recipe code would then cache that token in memory
-and use it for the rest of the current converge.
+As before, the simplest solution is to build a new tiny REST service that runs
+alongside Vault. This would get an API request from the Chef client, verify it
+in a similar fashion to Chef Server (though we don't need ACL checks so this
+would involve less feature duplication than the proxy service discussed before),
+do the policy mapping, and then issue a new Vault token. There are already a few
+projects out there that do similar things, but none with any significant
+community backing at this time.
+
+The downside here is that its another service to operate and manage, but in the
+grand scheme of things that doesn't seem so bad. This new service would need to
+be handled carefully as it would have to be authorized to create tokens for any
+Vault policy that a node can request.
 
 ### Vault Auth Plugin
 
-All of the above but inside Vault as an auth plugin. Reduces operational
-complexity by having one fewer microservice to run, but Vault doesn't support
-loading plugins at runtime currently so this would have to done as a custom
-compiled binary for now. If this would be accepted upstream it would be more
-reasonable a short term mini-fork.
+As mentioned, Vault does already support a modular plugin-based authentication
+system. The same logic mentioned above could be run directly as a Vault plugin.
+This would remove the downside of having another little service to secure and
+whatnot. Unfortunately Vault plugins currently have to be compiled in to the
+executable directly. Support for loading plugins at runtime is planned, but not
+in the near future that I'm aware of. This would mean building our own Vault
+binaries for at least a while. If Hashicorp is interested in accepting the
+feature upstream we would eventually merge them back together, but until then
+we would basically be operating a friendly fork with all the work that implies.
+
+### Built-In To Chef Server
+
+Similarly to building the token issuer in to Vault, we could do the same on the
+other side and build it in to Chef Server. This makes me more nervous though,
+while the token issuer requires fairly broad permissions on the Vault side, it
+needs very few Chef permissions. Putting things in the Chef Server means that
+now the whole Chef Server is effectively allowed to create any Vault token for
+a node policy. This is a much larger threat surface and sets off my security
+engineer mental alarms. There is also the problem that Chef Server has no
+plugin structure so this would be a one-off for Vault which feels weird.
 
 ## Vault as the Identity Root
 
