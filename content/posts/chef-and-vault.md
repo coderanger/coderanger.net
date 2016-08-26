@@ -216,3 +216,14 @@ project for a short time at least. This does seem like it might be more
 interesting to the Hashicorp team to accept upstream though. Overall a cool
 idea but maybe not something to move forward with until Chef and Hashicorp are
 both at least somewhat on board.
+
+# Use with Consul Templates
+
+While much of this proposal has been aimed accessing Vault data from within Chef
+recipe code, sometimes Consul Templates might be a better solution for the last
+mile of templating. That said, basically all of the same discussion applies
+there too. The main change would be rather than generating a token for each
+converge with a relatively short (30-60 minute) TTL we would set the TTL a bit
+longer and write it to disk for Consul Templates to use when connecting to
+Vault. The hard problems remain getting that token and attaching the correct
+Vault policies to it.
