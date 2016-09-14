@@ -1,7 +1,6 @@
 ---
 title: The Dangers of Overtesting
 date: 2016-09-14
-published: false
 ---
 
 Tests are awesome. A huge part of the benefit of the "infrastructure as code"
