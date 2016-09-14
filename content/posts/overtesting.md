@@ -190,7 +190,7 @@ integration tests and then real usage after that.
 
 # tl;dr
 
-* Only write unit tests when your recipe or resource contains actual logic to test.
-* Don't write tests that are only checking Ruby syntax or that Chef isn't broken.
+* Only write unit tests when your recipe/resource has actual logic to test.
+* Don't write tests for checking Ruby syntax or checking that Chef works.
 * Write tests that check only your declared interface.
 * Be aware of the RoI of writing tests and don't use them as a magic bullet.
