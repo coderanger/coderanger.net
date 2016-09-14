@@ -8,6 +8,11 @@ Everyone has secrets. Database passwords, API credentials, recovery questions.
 These secrets need to be stored somewhere, and then made available to servers
 that use them.
 
+# **Update**
+
+This post has now been expanded into a conference talk, with updated information
+and more detail. You can check it out [over on my Talks page](/talks/secrets/).
+
 # Requirements
 
 When working with secrets we have a few needs above and beyond that of "normal"
