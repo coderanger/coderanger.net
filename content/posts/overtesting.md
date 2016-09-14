@@ -5,8 +5,8 @@ published: false
 ---
 
 Tests are awesome. A huge part of the benefit of the "infrastructure as code"
-movement has been that as things move into more formalized code frameworks, we
-can write automated tests just like we do for all other flavors of code. I would
+movement has been that as things move into formalized code frameworks, we
+can write automated tests just like for all other flavors of code. I would
 be absolutely lost on a daily basis without my massive Travis-CI build matrix.
 
 With all that said so you don't think I'm some kind of lunatic:
@@ -35,9 +35,9 @@ unit". This term is intentionally a bit vague as what forms a unit can
 vary between domains and projects. For Chef generally we consider recipes and
 custom resources to be units for the purposes of testing. For a unit of code to
 actually be useful it has to take some inputs, do _something_, and then produce
-outputs. With recipes, the inputs are generally things like node attributes,
+outputs. With recipes, the inputs are things like node attributes,
 data bags, and search queries. With custom resources, the inputs are hopefully
-limited to the resource's properties. In both cases the outputs we generally
+limited to the resource's properties. In both cases the outputs we
 care about are changes to the state of the system Chef is running on.
 
 ## Writing a Unit Test
@@ -48,7 +48,7 @@ changes should be made to the system. In production, those input node attributes
 might come from a role or a policy, but both of those would be outside of the
 "unit boundary". The idea of a unit test is to test _just_ the code unit under
 consideration and nothing else. If you imagine a wall around your recipe code,
-everything has to be either inside the unit or outside it. For a unit test we
+everything has to be either inside or outside. For a unit test we
 want to fake as much as possible outside the unit's wall so that bugs in that
 code don't affect the test. This fakery takes two
 main forms: fixture data and stubs. Fixtures allow inserting known, canned data
@@ -74,21 +74,21 @@ isolated as possible, and compared the outputs from known inputs.
 
 With unit tests in the bag, next up are integration tests. Test Kitchen is the
 nexus point here but this involves a lot of tools. These days the actual
-tests will be in either Serverspec or InSpec, but Test Kitchen acts as the
+test code will be in either Serverspec or InSpec, but Test Kitchen acts as the
 control system for managing all the various steps so it's what most people think
 of.
 
 Integration tests are where we throw unit boundaries under the bus. Here we
 _want_ our tests to cross unit boundaries, so we can make sure that a given unit
-correctly integrates with all the other units that it uses internally. We do
-still have a boundary of sorts though, in that a good recipe should represent
+correctly integrates with all the other units it uses internally. We do
+still have a boundary of sorts though, a good recipe should represent
 a "thing" of some kind. The ontology of configuration management is a whole different
 post, but in short a recipe is a promise that when the recipe finishes running,
 some kind of thing (service, CLI tool, bunch of files, whatever) will be available.
 Normally this is the thing we name the cookbook/recipe after. Taking a recipe
 named `apache2::default`, you can probably assume that when this recipe runs
 there will be an Apache web server listening on a port. This promise
-is the recipe's interface to the world, and so that is the integration test
+is the recipe's interface to the world, the integration test
 equivalent to a unit boundary.
 
 So to get back to writing our test, we make a `.kitchen.yml` file which tells
@@ -163,7 +163,7 @@ test code. In both unit and integration tests, the tests should be checking only
 the things we promised as the interface to the outside world. Put another way,
 test code should care about results, not how you got them. Going back to our
 `apache2` recipe, we don't want to do things like check if a certain package
-is installed or certain process is running. If the interface we promised is, say,
+is installed or certain process is running. If the interface we promised is
 "this recipe will result in an Apache server listening on localhost:80" then
 just about the only thing we should be testing is `command("curl localhost")`
 and leave it at that. Sometimes you'll want a few other things like checking
@@ -192,6 +192,7 @@ integration tests and then real usage after that.
 
 # tl;dr
 
+* Start with integration tests and Test Kitchen.
 * Only write unit tests when your recipe/resource has actual logic to test.
 * Don't write tests for checking Ruby syntax or checking that Chef works.
 * Write tests that check only your declared interface.
