@@ -4,6 +4,10 @@ date: 2014-08-25
 hire_me: Like this Chef tip? Hiring Chef engineers or tool developers? I'm looking for a new team! Check out my <a href="/looking-for-group/">Looking for Group</a> post for details.
 ---
 
+# **Update**
+
+I've written a helper cookbook to make this much easier. Check it out [on GitHub](https://github.com/poise/poise-derived).
+
 As the Chef community has moved more and more towards wrapper cookbooks,
 derived attributes have become a persistent thorn in the side of recipe
 authors.
@@ -82,3 +86,5 @@ all the wrapper cookbook attributes to have been evaluated.
 # tl;dr
 
 Don't use `"#{}"` in cookbook attributes, use `"%{}"` instead.
+
+*UPDATE:* I've written a helper cookbook to make this much easier. Check it out [on GitHub](https://github.com/poise/poise-derived).
