@@ -1,11 +1,10 @@
 ---
 title: Thinking Like A Chef
 date: 2016-10-13
-published: false
 ---
 
 One of the first major stumbling blocks I see with new users in the Chef
-community is learning to think in the same way as Chef does.
+community is learning to think the same way as Chef.
 
 # Procedural Code
 
