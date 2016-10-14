@@ -244,9 +244,9 @@ sequence to come clean on all the little bits they fudged) but it gives the
 historical events a real feeling of emotional connection that is easy to miss
 in the dry, dates-and-places approach many of us grew up with.
 
-## [CGPGray](https://youtube.com/user/CGPGrey)
+## [CGPGrey](https://youtube.com/user/CGPGrey)
 
-Gray is hard to describe, but basically he explains things. Usually slightly
+Grey is hard to describe, but basically he explains things. Usually slightly
 weird topics like "What is Holland?" or "Why do we have traffic jams?", but always
 fun to watch. Not much to say really other than go subscribe, and then be sad he
 only puts out a video every month or two.
@@ -466,11 +466,11 @@ and Train Hot Dog (part of Jim's ARG for the run up to Frog Fractions 2).
 
 ## [Hello Internet](http://www.hellointernet.fm/)
 
-Another "I liked their other work" podcast, this time from CGPGray and (Dr.) Brady
+Another "I liked their other work" podcast, this time from CGPGrey and (Dr.) Brady
 Haran. It isn't really _about_ anything, just two friends talking about whatever
 catches their fancy. Usually fun listening though.
 
-Gray also does another podcast called [Cortex](https://www.relay.fm/cortex) but
+Grey also does another podcast called [Cortex](https://www.relay.fm/cortex) but
 I bounced off that one.
 
 ## [Radiolab](http://www.radiolab.org/series/podcasts/)
