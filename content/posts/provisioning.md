@@ -49,7 +49,7 @@ Chef Provisioning was pushed as a Big Thing™ for a while over the past year-is
 Many people inside and outside the company saw it as the next logical step in
 code-driven operations, and it felt like a great space to expand in to. I think
 the main downfall of Provisioning was that building a generic infrastructure
-management tool is really, really hard. Much harder than anyone though going in.
+management tool is really, really hard. Much harder than anyone thought going in.
 The core `machine` resource has been problematic enough on its own, when you
 factor in the long tail of the different "value-add" services each cloud
 provider offers (and the fact that none of them can agree on how to do anything)
