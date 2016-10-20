@@ -10,6 +10,23 @@ Passionate programmer perpetually pursuing pragmatic perfection.
 
 Experience
 ==========
+
+
+Chef Consultant, Bloomberg L.P.; San Francisco, CA - 2015-2016
+--------------------------------------------------------------
+Supported internal Chef users within Bloomberg with training, guidance, and
+custom cookbook development. Also helped manage the broader Chef open source
+community and ecosystem through updates to Chef itself, assisting new users on
+IRC, Slack, and StackOverflow, and continued maintenance of my open-source
+projects.
+
+Kickstarter, Delightful Application Deployment with Chef - 2014-2015
+--------------------------------------------------------------------
+Developed Chef cookbooks to ease web application deployment for Python, Ruby,
+and Node.js. Built tools and workflows to ensure code quality. Improved Poise
+helpers library and core Chef APIs for developing new resources.
+
+
 Master Chef, Balanced Payments; San Francisco, CA - 2013-2014
 ---------------------------------------------------------------------
 Improved Chef usage and trained the engineering team in Chef tools and
@@ -37,9 +54,9 @@ development tools.
 
 Open Source Developer; The Internet - 2006-Present
 --------------------------------------------------------
-Operations Lead for the Python Software Foundation, supporting all PSF services
-and running the Infrastructure Staff team. Also active in the Chef, JavaScript,
-and Python web communities.
+Operations team member for the Python Software Foundation, supporting all PSF
+services and running the Infrastructure Staff team. Also active in the Chef and
+Python communities.
 
 Education
 =========
