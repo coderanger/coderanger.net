@@ -56,7 +56,7 @@ which programs can read from and write to. An almost unspoken assumption in this
 model is that if a memory cell is written to, it will contain the same value
 later on when we read from it. RowHammer smashed this assumption.
 
-As RAM storage sizes have skyrocketed with physical chip sizes sink, individual
+As RAM storage sizes have skyrocketed, physical chip sizes sink. Individual
 memory cells have gotten smaller and packed more and more densely. RowHammer
 exploits this by using electrical interference from neighboring cells to flip
 bits. By issuing hundreds of thousands of writes to nearby memory locations,
