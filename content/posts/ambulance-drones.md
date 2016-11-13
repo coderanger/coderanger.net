@@ -39,9 +39,11 @@ year.
 # Back To Drones
 
 So here the stage is set. On the table is saving an almost unthinkable number
-of lives using mostly existing tools and technology. An average consumer AED
+of lives using mostly existing tools and technologies. An average consumer AED
 today weighs about 3 kilograms. Current commercially-available heavy lift drones
-can carry 3-5 kilograms of supplies with a range of a few kilometers.
+can carry 3-5 kilograms of supplies with a range of a few kilometers. Purpose-built
+devices could likes extend this even further using shared batteries and lightweight
+components.
 
 Imagine if you will a set of drone stations on rooftops spaced throughout a city.
 Linked to 911 dispatch, and outfitted with an AED and instructions on how to
