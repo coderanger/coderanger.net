@@ -24,10 +24,10 @@ different light.
 Every year there are somewhere around [350,000 out-of-hospital heart attacks](https://www.heart.org/idc/groups/ahamah-public/@wcm/@sop/@smd/documents/downloadable/ucm_480086.pdf)
 in the US, of those only around 12-15% survive. That is roughly 300,000 deaths
 every year just from this single cause. In cases where there is a bystander to
-administer chest compressions (CPR), those survival rates can double, and in
+administer chest compressions (CPR), those [survival rates can double](https://www.ncbi.nlm.nih.gov/pubmed/26197186), and in
 cases where the bystander has access to an Automatic External Defibrillator
 (AED, one of those shock-y things with the paddles) they can almost triple, as
-high as 40% in some places.
+high as [40% in some places](http://jamanetwork.com/journals/jama/fullarticle/2397835).
 
 Just to emphasize this, that means that if even a relatively modest number of
 these out-of-hospital heart attacks had a bystander with access to the tools and
