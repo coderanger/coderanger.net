@@ -33,8 +33,8 @@ Just to emphasize this, that means that if even a relatively modest number of
 these out-of-hospital heart attacks had a bystander with access to the tools and
 information to administer basic life support we could save 100,000 lives every
 year. By comparison, road traffic accidents (something I hope will drop sharply
-as self-driving vehicles become more widespread) kill roughly 35,000 people per
-year.
+as self-driving vehicles become more widespread) kill [roughly 35,000](https://en.wikipedia.org/wiki/List_of_motor_vehicle_deaths_in_U.S._by_year)
+people per year.
 
 # Back To Drones
 
@@ -49,7 +49,7 @@ Imagine if you will a set of drone stations on rooftops spaced throughout a city
 Linked to 911 dispatch, and outfitted with an AED and instructions on how to
 administer basic life support until professionals arrive. If we wanted to dream
 a little bigger, add in a few other supplies that can make the difference between
-life and death in the minutes it takes for an ambulance to arrive like adrenaline
+life and death in the minutes it takes for an ambulance to arrive like [adrenaline](https://en.wikipedia.org/wiki/Epinephrine)
 for allergic reactions or bandages and clotting assists for accidents and
 puncture wounds.
 
