@@ -34,15 +34,15 @@ these out-of-hospital heart attacks had a bystander with access to the tools and
 information to administer basic life support we could save 100,000 lives every
 year. By comparison, road traffic accidents (something I hope will drop sharply
 as self-driving vehicles become more widespread) kill [roughly 35,000](https://en.wikipedia.org/wiki/List_of_motor_vehicle_deaths_in_U.S._by_year)
-people per year.
+people each year.
 
-# Back To Drones
+# Back To The Drones
 
 So here the stage is set. On the table is saving an almost unthinkable number
 of lives using mostly existing tools and technologies. An average consumer AED
 today weighs about 3 kilograms. Current commercially-available heavy lift drones
 can carry 3-5 kilograms of supplies with a range of a few kilometers. Purpose-built
-devices could likes extend this even further using shared batteries and lightweight
+devices could likely extend this even further using shared batteries and lightweight
 components.
 
 Imagine if you will a set of drone stations on rooftops spaced throughout a city.
@@ -55,13 +55,13 @@ puncture wounds.
 
 All together this could be an enormous shift in emergency medical care. And yet
 I've heard basically nothing about developments in this direction over the years.
-A few companies have issued press releases and CGI mockups, but little actual
+A few companies have issued press releases and CGI mock-ups, but little visible
 progress.
 
 Medicine has always been a careful balance of cutting edge technology and
 extremely slow evolution. We only have to look as far back as the [Therac-25](https://en.wikipedia.org/wiki/Therac-25)
 to see that this is often warranted and necessary to ensure patient safety. But
-with ambulance drones I think more rapid movement is called for given the few
+with ambulance drones I think more rapid movement is called for given the low
 risks and manifold rewards.
 
 I hope to see this vision realized, and I hope all you readers will join me in
