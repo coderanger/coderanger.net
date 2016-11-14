@@ -21,7 +21,7 @@ different light.
 # An Aside: Heart Attacks
 
 Every year there are somewhere around [350,000 out-of-hospital heart attacks](https://www.heart.org/idc/groups/ahamah-public/@wcm/@sop/@smd/documents/downloadable/ucm_480086.pdf)
-in the US, of those only around 12-15% survive. That is roughly 300,000 deaths
+in the US. Of those only around 12-15% survive. That is roughly 300,000 deaths
 every year just from this single cause. In cases where there is a bystander to
 administer chest compressions (CPR), those [survival rates can double](https://www.ncbi.nlm.nih.gov/pubmed/26197186), and in
 cases where the bystander has access to an Automatic External Defibrillator
