@@ -13,7 +13,7 @@ make their lives a tiny bit easier but overall unlikely to really change much.
 One project has made me reconsider this, to accept all the over-hyped
 consumerism in the field as eventually in service to a higher cause.
 
-In 2014, TU Deflt in cooperation with the University Hospital of Ghent developed
+In 2014, TU Delft in cooperation with the University Hospital of Ghent developed
 a [proposal for an ambulance drone](http://www.io.tudelft.nl/onderzoek/delft-design-labs/applied-labs/ambulance-drone/).
 As best I can tell it was only a design exercise as part of a graduate studies
 program, but this one idea is what made me look at all drone technology in a
