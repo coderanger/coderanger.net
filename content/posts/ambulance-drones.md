@@ -1,7 +1,6 @@
 ---
 title: Taking Drones Seriously
 date: 2016-11-14
-published: false
 ---
 
 Burrito-copters, Amazon delivery drones, FPV racing, consumer applications for
