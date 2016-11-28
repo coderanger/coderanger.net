@@ -1,60 +1,54 @@
+---
+title: My Todo List
+date: 2016-11-29
+published: false
+---
+
 With the US Thanksgiving holiday this past week, I decided to take some time and
 write down all the projects that are still on my overall todo list. To lead off
 with a disclaimer: this is not a promise I'll ever get to any of these or that
 they will happen in any particular order. This is mostly for my own benefit but
 hopefully it provides some value to others, if only documenting what still needs
 fixing. Also this is just my own list and does not reflect the opinions of Chef
-as a project or Chef Software as a company.
+as a project or Chef Software as a company, and is neither in a specific order
+nor exhaustive.
 
 If any or all of these projects sound interesting to you and you would like to
-seem them happen sooner, maybe consider checking out my [job search page](/hire-me/)?
-
-- Unified secrets management abstraction/API for Chef code
-- Integration between Chef and Hashicorp Vault
-- RAM usage analysis for poise-profiler
-- Implement RFC 33 to reduce boilerplate folders in simple cookbooks
-- Implement RFC 36 to allow writing Chef recipes or other code in languages other than Ruby
-- Implement RFC 75 to allow a node to apply more than one policy
-- Improve Test Kitchen concurrent mode for use in CI systems
-- Rewrite kitchen-docker to use `docker exec` for command execution rather than SSH
-- Improve kitchen-docker performance by making the default Dockerfile use fewer layers
-- Replacement supervisord cookbook
-- Resource-based Java cookbook along the same lines as poise-python/ruby/javascript
-- Support more install sources of Python and Ruby including source installs for Python and new package repositories
-- Improve SCL handling on RHEL for Python and Ruby
-- Finish refactoring the Halite unit test helpers in to poise-spec
-- Migrate the Chef documentation to the `chef/chef` repository
-- Rewrite Poise to use newer property APIs
-- Helper library to make it easier to make helper methods in Chef cookbooks
+see them happen sooner, maybe consider checking out my [job search page](/hire-me/)?
 
 ### Finish Porting Foodcritic Rules To Rubocop-Chef
 
 This is in-progress now but still has a ways to go. You can see the current
 status in the [rubocop-chef README](https://github.com/poise/rubocop-chef/).
 The goal is to replace as much of Foodcritic as possible with Rubocop so that
-we can get features like multiple failure levels, autocorrect, and a unified
-configuration file.
+we can get features like multiple message levels, autocorrect, and a unified
+configuration file. It will eventually be integrated with the `cookstyle` project
+as a one-stop-shop for opinions on how to write Chef cookbooks if you want to
+use an existing style guide.
 
 ### Secrets Management Abstraction/API
 
-I've talked about this a bunch and it is very close to the top of my list right
+I've talked about this a bunch and it's very close to the top of my list right
 now. Basically I want to build a modular API for accessing [secrets](/talks/secrets/)
 from Chef code so that cookbooks can be written to use "any" storage system (chef-vault,
-Hashicorp Vault, S3/KMS, etc).
+Hashicorp Vault, S3/KMS, etc). The DSL elements will probably look very similar
+to my [`citadel`](https://github.com/poise/citadel/) cookbook but with an internal
+configuration system integrated with Chef and plugable backends.
 
 ### Deeper Integration Between Chef and HashiVault
 
 I wrote up [a lot of words about this](/chef-and-vault/), but it is still vaporware.
+Would be nice to spend some cycles making at least some parts of this exist.
 
 ### RAM Usage Analysis For `poise-profiler`
 
 This has been sitting half-finished for a while now and needs to get over the
-finish line. `poise-profiler` already provides a lot of timing data for Chef
-performance, I want to add memory usage to that as well to see when a recipe
-or resource is allocating a large amount of stuff (usually search results) and
-then not using it.
+finish line. [`poise-profiler`](https://github.com/poise/poise-profiler/)
+already provides a lot of timing data for Chef performance, I want to add memory
+usage to that as well to see when a recipe or resource is allocating a large
+amount of stuff (usually search results) and then not using it.
 
-### Meta-helper Library
+### Meta-Helper Library
 
 A common stumbling block for new and experienced Chef users alike is adding
 helper methods to Chef. Many of the old patterns in the ecosystem (like `Chef::Recipe.send(:include, ...)`)
@@ -85,7 +79,7 @@ this but any new attempt will have to start over.
 adds support for assigning more than one policy to a node to allow use of the
 Policyfile workflow in some situations where having a single compiled object is
 problematic. I've now tried implementing this twice, only to find the approach
-I used to be fatally flawed, but I still think the feature is important and
+I used was fatally flawed, but I still think the feature is important and
 should exist.
 
 ### Improve Test-Kitchen's Concurrent Mode
@@ -105,12 +99,12 @@ difficult.
 
 ### Use `docker exec` for Kitchen-Docker
 
-Currently the `kitchen-docker` plugin launches SSHd inside the container and
+Currently the `kitchen-docker` plugin launches sshd inside the container and
 then uses the normal Test Kitchen SSH machinery to connect to the new instance.
 This works okay, but it requires a fair bit of complexity around authentication
 and `sudo` access that can sometimes make testing more difficult. In the years
-since the plugin was first written, Docker has added their own internal remote
-execution tool in form of `docker exec`. Switching to this would allow for fewer
+since the plugin was first written, Docker has added their own remote
+execution system in form of `docker exec`. Switching to this would allow for fewer
 moving pieces and simplify the default `Dockerfile`.
 
 ### Improve Kitchen-Docker Build Performance
@@ -123,7 +117,7 @@ but it should be ported back out to the rest of the community.
 
 ### New Cookbook For Supervisord
 
-The current `supervisord` is in need of a major upgrade and retrofit. This can
+The current `supervisord` cookbook is in need of a major upgrade and retrofit. This can
 take advantage of the improved Python resources from `poise-python` and the
 patterns built as part of the new `poise-monit` cookbook. This would also include
 adding `supervisord` support to `poise-service`, allowing it to be used with
@@ -173,16 +167,38 @@ Chef. Some complexity will be needed to figure out how to integrate the Chef
 docs with the rest of the Chef's product documentation so it can all be published
 to `docs.chef.io` but I'm sure we can work through that.
 
+### Integrate YARD and Sphinx
+
+The current Chef docs are written using an excellent framework called Sphinx.
+It has lots of tools and helpers for writing high-quality narrative documentation,
+but most of it's reference documentation tools are aimed at the Python and C
+worlds where Sphinx comes from originally. The gold standard for auto-extracted
+code/reference documentation in the Ruby world is YARD, and we've already begun
+adding more YARD comment markup throughout Chef and the broader ecosystem. The
+missing link between them is a way to integrate YARD data into Sphinx docs
+directly. A related project here is using YARD data to generate cookbook
+READMEs like other Sphinx documents.
+
 ### Rewrite Poise Using New APIs
 
 My [Poise helper library](https://github.com/poise/poise/) has aged reasonably
 but enough has changed in Chef core to make a major upgrade look more and more
-inviting. This will probably not happen until ~April, when it will be more
-reasonable to drop support for Chef <12.5. Notably the new resource property
-APIs will allow major refactoring of Poise's helper methods and a lot fewer
-uses of `define_method`.
+inviting. This will probably not happen until ~April 2017 (i.e. the Chef 13.0
+release), when it will be more reasonable to drop support for Chef <12.5.
+Notably the new resource property APIs will allow major refactoring of Poise's
+helper methods and a lot fewer uses of `define_method`.
+
+### Other Stuff
+
+Outside of the Chef world I've got a few projects kicking around in my brain.
+I'm a strong believer that Kubernetes is going to win the container orchestration
+wars, but it currently has pretty much nothing for testing and static analysis.
+Ditto on Terraform for infrastructure management (though there is a
+`kitchen-terraform` plugin that looks very interesting for the future). Someone bringing
+the same "teaching ops folks how to software" approach I've aimed at the Chef community
+is probably going to be needed in the long run.
 
 ## tl;dr
 
-I've got a big backlog of projects in the Chef world and if you want to help
+I've got a big backlog of projects in the Chef world (and beyond) and if you want to help
 make them happen you should [hire me](/hire-me/).
