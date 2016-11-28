@@ -16,7 +16,7 @@ nor exhaustive.
 If any or all of these projects sound interesting to you and you would like to
 see them happen sooner, maybe consider checking out my [job search page](/hire-me/)?
 
-### Finish Porting Foodcritic Rules To Rubocop-Chef
+### Finish Porting Foodcritic Rules to Rubocop-Chef
 
 This is in-progress now but still has a ways to go. You can see the current
 status in the [rubocop-chef README](https://github.com/poise/rubocop-chef/).
@@ -40,7 +40,7 @@ configuration system integrated with Chef and plugable backends.
 I wrote up [a lot of words about this](/chef-and-vault/), but it is still vaporware.
 Would be nice to spend some cycles making at least some parts of this exist.
 
-### RAM Usage Analysis For `poise-profiler`
+### RAM Usage Analysis for `poise-profiler`
 
 This has been sitting half-finished for a while now and needs to get over the
 finish line. [`poise-profiler`](https://github.com/poise/poise-profiler/)
@@ -115,7 +115,7 @@ layers which could be collapsed together. I've already done a lot of this for
 [my own use](https://github.com/poise/poise-boiler/blob/master/lib/poise_boiler/helpers/kitchen/Dockerfile.erb)
 but it should be ported back out to the rest of the community.
 
-### New Cookbook For Supervisord
+### New Cookbook for Supervisord
 
 The current `supervisord` cookbook is in need of a major upgrade and retrofit. This can
 take advantage of the improved Python resources from `poise-python` and the
@@ -130,7 +130,7 @@ world. I've already got a lot of tools built for managing language runtimes
 with Chef as part of the `poise-python/ruby/javascript` work, though undoubtedly
 Java will bring its own unique complications.
 
-### More Providers For Python and Ruby
+### More Providers for Python and Ruby
 
 The `poise-python` and `poise-ruby` cookbooks support multiple providers for
 how to install their respective language runtimes, but they could both stand
@@ -139,7 +139,7 @@ added (refactored from the existing source install support for Ruby) and some
 common PPAs like Deadsnakes should be included. For Ruby, the Brightbox Ruby
 packages would be a good option for many.
 
-### Improved SCL Handling On RHEL
+### Improved SCL Handling on RHEL
 
 The recent-ish 2.0 release of `poise-langauages` fixed support for Software
 Collections on CentOS, but unfortunately broke many RHEL users. It follows the
@@ -157,7 +157,7 @@ to Halite so I've started splitting them out to a new gem: [`poise-spec`](https:
 These rest of the helpers need to be split out and then Halite's helper module
 should be rewritten to use and extend `poise-spec`.
 
-### Migrate The Chef Documentation
+### Migrate the Chef Documentation
 
 Now that we've started to clean up the Sphinx documentation for Chef, I want to
 move the docs for Chef itself into Chef's code repository. This will make it
