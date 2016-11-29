@@ -1,7 +1,6 @@
 ---
 title: My Todo List
 date: 2016-11-29
-published: false
 ---
 
 With the US Thanksgiving holiday this past week, I decided to take some time and
