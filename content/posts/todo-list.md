@@ -74,7 +74,7 @@ this but any new attempt will have to start over.
 
 ### Implement RFC 75
 
-[Chef RFC 74](https://github.com/chef/chef-rfc/blob/master/rfc075-multi-policy.md)
+[Chef RFC 75](https://github.com/chef/chef-rfc/blob/master/rfc075-multi-policy.md)
 adds support for assigning more than one policy to a node to allow use of the
 Policyfile workflow in some situations where having a single compiled object is
 problematic. I've now tried implementing this twice, only to find the approach
