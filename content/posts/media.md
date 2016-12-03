@@ -35,7 +35,7 @@ and maybe we can team up or whatnot.
 ### [Kingdom of Loathing](https://kingdomofloathing.com/)
 
 Starting with the thing that is probably my highest ratio for unknown-ness to
-enjoyment. A know a lot of people that would say "wait, that thing with the stick
+enjoyment. I know a lot of people that would say "wait, that thing with the stick
 figures? I totally played that in high school". Well, it's still going strong
 after almost 15 years. KoL is a testament to the value of good, systemic game
 design, solid humor, and a dev team that feels they can wait and Do Things
