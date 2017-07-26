@@ -94,11 +94,11 @@ The proposed RFC covers this a bit but I wanted to dive in a bit more on some
 ways other projects have handled this, mostly just to point out that this can
 be done without the world ending (in part to remind myself of this).
 
-Homebrew added similar tracking via Google Analytics last year, and definitely
-had some growing pains with it initially. After the initial flurry of fixes to
-what was being collected, it seems to be going okay, though the Homebrew team
-has been somewhat gruff in dealing with complaints which might indicate that they
-get a lot of flak behind the scenes.
+Both Chrome and Firefox (and probably Safari but who knows with them) gather
+anonymized usages statistics as well as crash reports, and I don't think I've
+ever seen complaints about either. Firefox crash reports in particular, I know
+several people that used to be on the team that managed that system and heard
+from them frequently about how useful it was to the Firefox development team.
 
 Debian's PopCon, Ubuntu's Apport, and Fedora's Retrace projects all gather some
 level of usage information about packages (the latter two only on crashes) and
@@ -107,11 +107,11 @@ apport from Python devs because it does weird stuff to the load path but that's
 neither here nor there). PopCon is mostly just for fun, but the error collection
 has been cited as useful by a bunch of Ubuntu/Fedora projects.
 
-Both Chrome and Firefox (and probably Safari but who knows with them) gather
-anonymized usages statistics as well as crash reports, and I don't think I've
-ever seen complaints about either. Firefox crash reports in particular, I know
-several people that used to be on the team that managed that system and heard
-from them frequently about how useful it was to the Firefox development team.
+Homebrew added similar tracking via Google Analytics last year, and definitely
+had some growing pains with it initially. After the initial flurry of fixes to
+what was being collected, it seems to be going okay, though the Homebrew team
+has been somewhat gruff in dealing with complaints which might indicate that they
+get a lot of flak behind the scenes.
 
 # Next Steps
 
