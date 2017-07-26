@@ -18,7 +18,7 @@ As both a Chef maintainer and a cookbook developer, I have a big interest in thi
 user data. A big problem for Chef, as with almost all open-source projects, has
 been that we know almost nothing about how the things we write actually get used.
 We have some signaling from people asking questions on Slack or filing bug
-reports, but this is both verr coarse-grained and ignores a huge majority of
+reports, but this is both very coarse-grained and ignores a huge majority of
 users. This makes it very hard to know how to allocate time and resources, both
 of which are in short supply (again, same as in any other open-source project,
 none of this is unique to Chef).
