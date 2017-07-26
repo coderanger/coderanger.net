@@ -26,7 +26,9 @@ none of this is unique to Chef).
 Having some kind of automated data collection would give us a huge boost in
 knowing what things are popular and should be given more attention, and which
 were maybe failed experiments or are broken in some way we haven't been made
-aware of.
+aware of. This has happened many times over the years, the maintainers assuming
+something was no longer used, and finding out only after the release that we were
+wrong ([obligatory xkcd](https://xkcd.com/1172/)).
 
 As a concrete example, Test Kitchen supports a lot of driver plugins. There are
 two Docker-based drivers, my `kitchen-docker` and Sean's `kitchen-dokken`. We've
@@ -38,33 +40,23 @@ of things to support in each and (probably) leads to worse software for everyone
 
 # Why not to gather user data?
 
-But all that said, this proposal makes me incredibly nervous. Like many in the
-tech world, I have a nearly-instinctual anti-authority viewpoint and any form
-of data collection feels like an intrusion. I've known and worked with the team
-at Chef Software that would be responsible for this data collection system and
-I trust them a great deal, but that is not a scalable approach to project
-governance.
+The main reason to not gather user data is the risk of said data ending up
+used for nefarious purposes. A simple case might be someone finding a password
+that was incorrectly pasted in the wrong section of a config file, but more subtle
+issues can arise like searching for users with old versions of ChefDK which have
+a known vulnerability in their OpenSSL. To this, we have two main lines of defense:
+first is that all data is stored anonymously with a session identifier reset
+every ten minutes. Second is that we plan to make sure all data is public from
+the start, so we don't have to wait for an inevitable leak to realize there is
+a problem with the data.
 
-The main risk factor to users is the collected data leaking and being used to
-do nefarious things. To keep ahead of that, we're planning to have all collected
-data be public from the start, so at least no one ever has the false mindset that
-it can be considered private (disclaimer: Chef Software is still researching
-how this would interact with EU data protection laws and their privacy policy so
-the specifics are still in flight). This doesn't entirely remove the risk of an
-"oops" event. As pointed out in the pull request comments already, if we had
-tried to gather data about which command line options were used, we could
-accidentally pick up passwords that were mistyped and parsed as options. That
-specific issue has been headed off at the pass, but something similar will likely
-come up in the future. We are planning to hold all data as fully anonymized at
-the point of collection, but de-anonymization techniques are always evolving and
-while I can't point out any specific flaws in the proposed schema it's enough to
-make me nervous. So in the end we will have to accept some level of passive risk
-to users that an attacker could both find some data that we shouldn't expose (or
-just misuse otherwise safe data like being able to see how many users of ChefDK
-have an old version with a known-insecure version of OpenSSL because we all know
-that will keep happening), and then either de-anonymize it or somehow use it as
-part of an attack. This feels like an acceptable risk, but that's a personal and
-subjective judgment so knowing how the community feels would help here.
+Anonymous data is never perfect though, and the rise in public datasets has lead
+to new advances in de-anonymization. We will do our best to keep on top things,
+but there will always be some passive risk. Because of this, any data collection
+must be optional with both per-user and per-project opt outs, but more on that
+below. Also it is worth restating here that only workstation commands are being
+considered for this. `chef-client`, `chef-solo`, and the whole of Chef Server
+do not and will not collect data.
 
 As a secondary thing, there is almost always a PR storm any time an open-source
 project brings up this topic. I am probably contributing to this, though hopefully
@@ -75,14 +67,26 @@ done in the open, which also hopefully helps offset the "sky is falling" crowd.
 
 # Opt In or Out
 
-Any such system will be optional, but the more difficult question is if the
-default should be true or false. A common refrain in these discussions is "just
-make it opt-in", but that means either we need to find a way to explicitly
-prompt for an opt-in, or just assume that almost no one will enable the feature.
-Explicit prompts are difficult in a command-line world, but given the only other
-option is a silent default of "collect data" with the opt-out only being
-mentioned in documentation seems just as bad for users in the end. Either way
-this is not a settled question and community input would be greatly appreciated.
+As mentioned above, all data collection will be 100% optional, but that brings
+up the question of how to control it. We will need to pick a default yes/no, as
+well as how to tell the user about this whole thing.
+
+Being silently disabled by default is effectively a non-option since we would get
+so little data as to not be worth the effort to build the whole system, and
+being silently enabled by default would (I think rightly) be viewed by many users
+as a breach of trust and overstepping our bounds as a project.
+
+I think the best approach is a middle ground, off by default, but the first time
+you run any instrumented command it asks if you want to allow telemetry with a
+default of "yes" if you hammer on the enter key. This will mean we don't get
+data from TTY-less systems like CI servers, but is otherwise a balance between
+user expectations and data quality. The opt-out will always be available afterwards
+via a command like `chef telemetry disable` or something, or you can manually
+touch the `.chef/no_telemetry` file (which can be checked in to source control to
+permanently disable things for a project).
+
+We would love to [hear from you](https://github.com/chef/chef-rfc/pull/269) if
+you have thoughts on this though.
 
 # Prior Art
 
