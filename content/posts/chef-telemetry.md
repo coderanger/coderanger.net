@@ -1,7 +1,6 @@
 ---
 title: Gathering Chef Usage Data
 date: 2017-07-26
-published: false
 ---
 
 A [proposed Chef RFC](https://github.com/chef/chef-rfc/pull/269) currently
