@@ -14,7 +14,7 @@ it might not apply anymore.
 
 # Why gather user data?
 
-As both a Chef maintainer and a cookbook developer, I have a big interest in this
+As both a Chef maintainer and a cookbook developer, I have an interest in this
 user data. A big problem for Chef, as with almost all open-source projects, has
 been that we know almost nothing about how the things we write actually get used.
 We have some signaling from people asking questions on Slack or filing bug
@@ -26,7 +26,7 @@ none of this is unique to Chef).
 Having some kind of automated data collection would give us a huge boost in
 knowing what things are popular and should be given more attention, and which
 were maybe failed experiments or are broken in some way we haven't been made
-aware of. This has happened many times over the years, the maintainers assuming
+aware of. This has happened many times over the years, we maintainers assuming
 something was no longer used, and finding out only after the release that we were
 wrong ([obligatory xkcd](https://xkcd.com/1172/)).
 
@@ -44,19 +44,19 @@ The main reason to not gather user data is the risk of said data ending up
 used for nefarious purposes. A simple case might be someone finding a password
 that was incorrectly pasted in the wrong section of a config file, but more subtle
 issues can arise like searching for users with old versions of ChefDK which have
-a known vulnerability in their OpenSSL. To this, we have two main lines of defense:
+a known vulnerability in their OpenSSL. To counter this we have two main lines of defense:
 first is that all data is stored anonymously with a session identifier reset
 every ten minutes. Second is that we plan to make sure all data is public from
 the start, so we don't have to wait for an inevitable leak to realize there is
 a problem with the data.
 
-Anonymous data is never perfect though, and the rise in public datasets has lead
+Anonymous data is never perfect though, and the rise in public data sets has lead
 to new advances in de-anonymization. We will do our best to keep on top things,
-but there will always be some passive risk. Because of this, any data collection
-must be optional with both per-user and per-project opt outs, but more on that
+but there will always be some passive risk. Therefore any data collection
+must be optional with both per-user and per-project configuration, but more on that
 below. Also it is worth restating here that only workstation commands are being
 considered for this. `chef-client`, `chef-solo`, and the whole of Chef Server
-do not and will not collect data.
+do not and will not collect data of any kind.
 
 As a secondary thing, there is almost always a PR storm any time an open-source
 project brings up this topic. I am probably contributing to this, though hopefully
@@ -118,8 +118,8 @@ little fanfare, especially desktop applications (like ChefDK).
 
 # Next Steps
 
-Hopefully by now I've encouraged you to go drop us a line on [the pull request](https://github.com/chef/chef-rfc/pull/269),
-we really do want to make sure we only move forward with this if it is in the
+Hopefully by now I've encouraged you to go [drop us a line on the pull request](https://github.com/chef/chef-rfc/pull/269).
+We really do want to make sure we only move forward with this if it is in the
 best interests of users and to do that we need to know what your interests are.
 If anyone wants to provide feedback anonymously or has questions not answered here,
 you can always reach me at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#110;&#111;&#x61;&#104;&#x40;&#x63;&#x6f;&#x64;&#101;&#114;&#x61;&#110;&#103;&#101;&#x72;&#46;&#110;&#x65;&#x74;">&#110;&#x6f;&#97;&#x68;&#x40;&#x63;&#111;&#100;&#101;&#x72;&#x61;&#x6e;&#x67;&#x65;&#114;&#46;&#110;&#x65;&#x74;</a>.
