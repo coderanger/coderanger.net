@@ -1,7 +1,7 @@
 ---
 title: Behind Closed Doors
 subtitle: Managing Passwords in a Dangerous World
-venue: ChefConf 2016
+venue: LISA 2016
 date: 2016-04-26
 youtube_id: YmNyoXr5rgA
 youtube_ratio: 1.777777778
