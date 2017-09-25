@@ -16,7 +16,7 @@ best of my ability. But first:
 I am not a lawyer and nothing in this post should be considered legal advice.
 If you have any specific questions about any of this, please talk to a licensed
 intellectual property attorney in your local jurisdiction. This is for
-entertainment purposes only. This is also just my opinions/knowledge, not those
+entertainment purposes only. This is just my opinions/knowledge, not those
 of my employer, Facebook, the Apache Software Foundation, or anyone else.
 
 Okay, with the disclaimer out of the way, let's rewind, where did all this start?
