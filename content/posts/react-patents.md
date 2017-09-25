@@ -53,7 +53,7 @@ out of these few months:
 
 To get it out of the way, code is in general owned by whomever writes it. If you
 write code as a part of your job, it is owned by your employer, give or take what
-is in your employment contract. Facebook does require a contributor license agreement
+is in your employment contract. Facebook does require a contributor license agreement (CLA)
 for their projects, and the CLA grants Facebook some strongly worded rights for
 copyright use and patent access, but in the end each contributor remains the
 owner of the copyright in their contribution. This means that while React is
