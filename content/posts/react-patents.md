@@ -1,7 +1,7 @@
 ---
 title: React and Patents
 date: 2017-09-25
-published: false
+hire_me: Thanks to Peter Kropf and others for their help with this post.
 ---
 
 Over the past several weeks there has been an evolving discussion about the
