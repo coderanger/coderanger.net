@@ -259,6 +259,14 @@ includes specific provisions covering both copyright rights and patent rights
 (and more). This means that patent rights around RocksDB might actually be more
 restrictive than React, but they are far more explicit and well understood.
 
+Specifically the Apache-2.0 license uses a fairly standard termination clause,
+where the lawsuit must claim "the Work or a Contribution incorporated within the
+Work" is what is infringing. As mentioned earlier, this simplifies lawsuits over
+the project itself while not totally disarming patent litigation about unrelated
+things. Beyond just the patent licensing, the Apache-2.0 license also makes a
+much more specific declaration of which copyright-related rights are being shared,
+covers trademark licensing, and makes the rules for redistribution clearer.
+
 The fact that Facebook chose the MIT license for React instead of Apache-2.0
 sends a signal that they may be trying to hedge their bets here in a way the
 RocksDB team did not.
