@@ -51,7 +51,7 @@ out of these few months:
 
 ## Who Owns React (and RocksDB)?
 
-To get it out of the way, code is in general owned by whoever writes it. If you
+To get it out of the way, code is in general owned by whomever writes it. If you
 write code as a part of your job, it is owned by your employer, give or take what
 is in your employment contract. Facebook does require a contributor license agreement
 for their projects, and the CLA grants Facebook some strongly worded rights for
