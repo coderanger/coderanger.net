@@ -55,9 +55,9 @@ To get it out of the way, code is in general owned by whomever writes it. If you
 write code as a part of your job, it is owned by your employer, give or take what
 is in your employment contract. Facebook does require a contributor license agreement
 for their projects, and the CLA grants Facebook some strongly worded rights for
-copyright use and patent rights, but in the end each contributor remains the
+copyright use and patent access, but in the end each contributor remains the
 owner of the copyright in their contribution. This means that while React is
-managed by Facebook, and they down own a lot of the copyright over their projects,
+managed by Facebook, and they do own a lot of the copyright over their projects,
 in the end they are actually owned by the collective community of developers that
 works on them. In the case of RocksDB specifically there is also a large chunk
 of the code which is owned by Google, as it is an outgrowth of an earlier Google
