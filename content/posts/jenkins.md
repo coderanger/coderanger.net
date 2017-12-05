@@ -1072,7 +1072,7 @@ file upload system.
 
 ## Build Environment Image
 
-While most people doing Chef cookbook testing should probably use the [`chef/chef-dk`](...)
+While most people doing Chef cookbook testing should probably use the [`chef/chef-dk`](https://hub.docker.com/r/chef/chefdk/)
 image, as mentioned before we are not using ChefDK for our environment management.
 The short version of "why" is that we're still on Chef 12 but wanted newer versions
 of a lot of tools, as well as including a lot of our own utility gems. We may
@@ -1083,11 +1083,11 @@ by now that we use Artifactory), but unfortunately build-time secrets are still
 a notable problem with `docker build`. There are a few options, short-lived tokens
 that do get baked in to the image but are already expired by the time anyone
 could get them, localhost proxies that handle authentication, use of alternative
-image build systems like [Habitat](https://habitat.sh/)/[buildah](...), but we
+image build systems like [Habitat](https://habitat.sh/)/[buildah](https://github.com/projectatomic/buildah), but we
 decided to try and keep it simple and use the new "squash build" feature in Docker.
 
 We decided to use `alpine` as the base image (shoutout to the great folks at
-[Glider Labs](...)) to minimize the file size. Kubernetes does cache images
+[Glider Labs](https://gliderlabs.github.io/devlog/)) to minimize the file size. Kubernetes does cache images
 aggressively, but every little bit helps in improving build performance. The
 final `Dockerfile` looks like this:
 
