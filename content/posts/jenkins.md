@@ -43,7 +43,7 @@ off the old Jenkins server.
 
 ## The Shape
 
-After a bunch of research, the overall shape of the goal took shape fairly
+After a bunch of research, the overall shape of the goal came together fairly
 quickly. We'll go through each of these in excruciating detail later on, but to
 start let's break it down into bullet points:
 
