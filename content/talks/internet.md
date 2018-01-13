@@ -1,6 +1,6 @@
 ---
 title: How The Internet Works
-venue: OSB 2015
+venue: 2015
 date: 2015-06-24
 youtube_id: XrjeonFuyeo
 youtube_ratio: 1.677108434
