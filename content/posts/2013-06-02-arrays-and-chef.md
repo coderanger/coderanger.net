@@ -1,6 +1,6 @@
 ---
 title: Arrays and Chef Attributes
-hire_me: Like this Chef tip? Hiring Chef engineers or tool developers? I'm looking for a new team! Check out my <a href="/looking-for-group/">Looking for Group</a> post for details.
+hire_me: Looking for an engineer? I'm <a href="/hire-me/">looking for a new opportunity</a>!
 ---
 
 A conversation with a friend today reminded me how easy it is to find unexpected behavior with Chef attributes when using array values. Arrays are good for many things, and are often a seemingly natural fit to describe server values. The example my friend was having issues with was:

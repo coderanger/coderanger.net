@@ -1,7 +1,7 @@
 ---
 title: Heroku and CFFI
 date: 2014-07-22
-hire_me: Looking for help with Python development or operations? Check out my <a href="/training/">training</a> and <a href="/consulting/">consulting</a> services.
+hire_me: Looking for an engineer? I'm <a href="/hire-me/">looking for a new opportunity</a>!
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 title: Accepted Chef RFCs for Oct 15
 date: 2014-10-15
-hire_me: Looking for help getting the most out of Chef? Check out my <a href="/training/">training</a> and <a href="/consulting/">consulting</a> services.
+hire_me: Looking for an engineer? I'm <a href="/hire-me/">looking for a new opportunity</a>!
 ---
 
 This week five RFCs have been accepted, planned for inclusion in Chef 12:

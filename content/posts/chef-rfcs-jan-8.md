@@ -1,7 +1,7 @@
 ---
 title: Accepted Chef RFCs for Jan 8
 date: 2015-01-08
-hire_me: Looking for help getting the most out of Chef? Check out my <a href="/training/">training</a> and <a href="/consulting/">consulting</a> services.
+hire_me: Looking for an engineer? I'm <a href="/hire-me/">looking for a new opportunity</a>!
 ---
 
 # Accepted RFCs

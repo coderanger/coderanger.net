@@ -1,7 +1,7 @@
 ---
 title: The Poise Family of Cookbooks
 date: 2015-10-02
-hire_me: Like these cookbooks? Hiring Chef engineers or tool developers? I'm looking for a new team! Check out my <a href="/looking-for-group/">Looking for Group</a> post for details.
+hire_me: Looking for an engineer? I'm <a href="/hire-me/">looking for a new opportunity</a>!
 ---
 
 As part of the continuing development of my Kickstarter work, I've written a
