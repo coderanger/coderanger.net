@@ -11,6 +11,13 @@ Passionate programmer perpetually pursuing pragmatic perfection.
 Experience
 ==========
 
+Expert DevOps, SAP Labs; Palo Alti, CA - 2017-2018
+--------------------------------------------------------------
+Internal expert on Chef and DevOps tooling for the SAP Cloud Big Data Services
+team. Advised broader SAP community on open-source software and other fields of
+active development. Continued my role as a core developer on Chef and many Chef
+ecosystem tools.
+
 
 Chef Consultant, Bloomberg L.P.; San Francisco, CA - 2015-2016
 --------------------------------------------------------------
@@ -65,7 +72,7 @@ BS of Computer Science, May 2008
 
 Expertise
 =========
-Apache, Bash, C, Chef, Django, Git, JavaScript, Linux, Postgres, Python, Ruby
+Apache, Bash, C, Chef, Django, Git, JavaScript, Kubernetes, Linux, Postgres, Python, Ruby
 
 Skills
 ======
