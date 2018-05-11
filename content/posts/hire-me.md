@@ -33,7 +33,7 @@ any of my [Poise family of cookbooks](https://github.com/poise/). On the Kuberne
 side you can check out my guide to using [K8s and Jenkins](/jenkins/) or my guide
 to [Kubernetes community resources](/so-you-want-to-k8s/).
 
-Before my days fighting in the "is DevOps even a thing?" wars, I was mostly a
+Before my days fighting in the "What is DevOps?" wars, I was mostly a
 Python web developer. Originally on Trac, and then later with Django. I also had
 a brief sojourn as one of the security team at OLPC, we had containers before it
 was cool. You can find more details [in my resume](/resume/).
