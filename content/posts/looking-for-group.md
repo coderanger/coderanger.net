@@ -1,6 +1,7 @@
 ---
 title: Lvl29 DevOp Looking For Group
 date: 2015-09-18
+published: false
 ---
 
 Way back in December of last year I ran a [Kickstarter](https://www.kickstarter.com/projects/coderanger/delightful-application-deployment-with-chef) to fund a few weeks of

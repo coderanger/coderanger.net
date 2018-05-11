@@ -1,79 +1,74 @@
 ---
 title: Hire Me
-date: 2016-10-20
+date: 2018-05-11
 ---
 
-As my (mostly) 2016 contract draws to a close, I'm back on the hunt for a new
-professional home.
+Are you a medium-sized company that has been eyeballing the container world,
+planning to upgrade your infrastructure around Kubernetes but not entirely
+certain how to get from a quick proof-of-concept to a production-grade deployment?
+You should <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#110;&#111;&#x61;&#104;&#x40;&#x63;&#x6f;&#x64;&#101;&#114;&#x61;&#110;&#103;&#101;&#x72;&#46;&#110;&#x65;&#x74;">hire me</a>!
 
-## Who I Am ([Resume](/resume/))
+Hi there! I'm Noah, also known as Coderanger in some corners of the Internet.
+While I've been enjoying my funemployment break, I'm starting to get that
+"crawling up the walls" feeling that tells me it's time to look for a new team
+to be a part of. You can never know what you don't know so I want to learn about
+opportunities and teams from far and wide.
 
-* Toolsmith, teacher, troublemaker.
-* Long-time Chef contributor and developer.
-* Passionate about open-source, communities, ecosystems, quality.
-* Full-stack, from kernel hacking to CSS.
+## What I've Done Before
 
-Many of you probably know me as Coderanger. I've been involved in Chef and the
-wider operations community for around six years now. I'm also part of the
-Python Software Foundation operations team, and some of you may know me through
-my role helping with PyCon US. I've been a developer for 9+ years now, across
-fields as varied as MMORPG server architecture, mobile security engineering,
-front-end design, and operations tooling. I've led teams both for companies and
-as a volunteer, coordinating both a front-end development team to build the
-new Chef web interface and the volunteer PSF operations group to keep
-PyPI, Python.org and other community resources online.
+I've been a software engineer for somewhere around 12 years now, and if you
+want my employment history you can find it in [my resume](/resume/), but a few
+things I think are special:
 
-For the last several years my focus has been on building Chef cookbooks that
-can truly claim to be reusable, extensible, and usable by many organizations.
-To this end I've built the [Poise](https://github.com/poise/poise) helpers,
-the [Halite](https://github.com/poise/halite) workflow tools, and numerous other
-libraries to make Chef a little bit more pleasant to work with.
+* Former chair of the [Python Software Foundation Infrastructure team](https://python.org/)
+* [PSF Fellow](https://www.python.org/psf/) and [PyCon US](https://us.pycon.org/) staff-emeritus
+* Core maintainer on [Chef](https://github.com/chef/chef) as well as most of [the](https://github.com/chefspec/chefspec) [related](http://www.foodcritic.io/) [ecosystem](https://kitchen.ci/)
+* Chef [CBGB oversight board](https://github.com/chef/chef-rfc/blob/master/rfc029-governance-policy.md), elected individual representative
+* Awesome Chef 2015 award winner
+* [Public speaker](/talks/) across three continents
 
-I've also spent a lot of time helping grow the Chef and Python communities. I
-provide fairly regular support hours on the #chef Slack and IRC channels, as well as
-guiding new users on StackOverflow and the Chef mailing list. I also mentor
-new developers in the San Francisco Python scene through SFPython and the local
-PyLadies chapter. I enjoy [speaking at conferences](/talks/) with a particular
-focus on making broad and mildly bespoke topics more accessible to the average
-engineer.
+These days my attention is roughly split between the Kubernetes and Chef worlds.
+My Chef work is overwhelmingly public so you can take a look at Chef itself or
+any of my [Poise family of cookbooks](https://github.com/poise/). On the Kubernetes
+side you can check out my guide to using [K8s and Jenkins](/jenkins/) or my guide
+to [Kubernetes community resources](/so-you-want-to-k8s/).
 
-## What I'm Looking For
+Before my days fighting in the "is DevOps even a thing?" wars, I was mostly a
+Python web developer. Originally on Trac, and then later with Django. I also had
+a brief sojourn as one of the security team at OLPC, we had containers before it
+was cool. You can find more details [in my resume](/resume/).
 
-* San Francisco area or remote-friendly (or both).
-* Committed to open-source ideals and communities.
-* Sustainable work/life balance and professional development.
+## What I Like Doing
 
-I'm currently located in San Francisco's East Bay with easy BART access to
-both San Francisco proper as well as Oakland and the rest of the BART network.
-I've been working either partly or fully remote for much of the last 5 years,
-and so am very open to remote positions beyond the Bay Area as well.
+* Building deployment platforms
+* Automating processes
+* Reducing technical debt
+* Working remotely
+* Creating the best possible solutions
+* Teaching and mentorship
+* Public speaking and conference evangelism
+* Collaborating with open-source communities
 
-## What I'm Interested In
+Overall I tend to sell myself as halfway between an internal consultant and an
+evangelist. I usually find myself happiest working on internal tools and platforms,
+acting as force-multiplier for the productivity of other teams. I find this also
+applies in my open-source work, I function best when I can be face-to-face (or
+rather keyboard-to-keyboard) with my users, working with them directly to know what
+solutions will work best for them.
 
-A few of the topics I've been fascinated with lately:
+I'm much more interested in what kind of things I do rather than the kinds of
+subjects I work on, but things I am interested in and would love to hear about
+opportunities with:
 
-* Secrets management – This one is no secret (_:rimshot:_), I've been giving a
-  [talk about the difficulties of infrastructure secrets management](/talks/secrets/)
-  at conferences around the world this year. It's a hard problem, but one we
-  as a community must embrace if we want to build better systems.
-* Interactive agents (aka chatbots) – I've not been as public about this but I
-  think a lot of the future of consumer technology is going to be in the evolutionary
-  progeny of Siri, Echo, and all the rest. Chatops, home automation, virtual
-  assistants, it's all converging on conversational AIs.
-* Chef and DevOps tooling – I've been a (very) active member of the Chef community
-  for years now, acting as a core maintainer for Chef itself as well as several
-  major ecosystem tools, a member of the CBGB Board, and a major community
-  cookbook author.
-* Python web development – My developer roots are with the Python web world and
-  it will always feel like home to me. Despite my recent stint in the world of
-  DevOps, I've always said that I'm just a web developer that got lost on his
-  way to the deploy script.
+* [Infrastructure automation](https://kubernetes.io/) and [configuration management](https://github.com/chef/chef)
+* Open source software and [intellectual property law](/talks/ip/)
+* Information security (especially [security automation](/talks/secrets/))
+* [Python](https://python.org/) and [Ruby](https://ruby-lang.org/) (I am fluent
+  in [many](https://en.wikipedia.org/wiki/C_(programming_language)) [languages](https://nodejs.org/en/)
+  and [functional](https://java.com/) [in](https://en.wikipedia.org/wiki/Lisp_(programming_language))
+  [more](http://groovy-lang.org/), but Ruby and Python will always be home)
+* Home automation and [conversational AIs](/agents/)
 
-I'm open to many things beyond those, but that's the shortlist of the topics
-that have been kicking around in my brain for the last 6 months or so.
-
-# Contact Me
-
-Do I sound like I would be a great fit for your organization? Awesome, I
-would love to hear from you! You can reach me via email at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#110;&#111;&#x61;&#104;&#x40;&#x63;&#x6f;&#x64;&#101;&#114;&#x61;&#110;&#103;&#101;&#x72;&#46;&#110;&#x65;&#x74;">&#110;&#x6f;&#97;&#x68;&#x40;&#x63;&#111;&#100;&#101;&#x72;&#x61;&#x6e;&#x67;&#x65;&#114;&#46;&#110;&#x65;&#x74;</a>,
+If this sounds like you, or just you want to get in touch, you can reach me by
+email at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#110;&#111;&#x61;&#104;&#x40;&#x63;&#x6f;&#x64;&#101;&#114;&#x61;&#110;&#103;&#101;&#x72;&#46;&#110;&#x65;&#x74;">&#110;&#x6f;&#97;&#x68;&#x40;&#x63;&#111;&#100;&#101;&#x72;&#x61;&#x6e;&#x67;&#x65;&#114;&#46;&#110;&#x65;&#x74;</a>
 or any of the other methods on my [contact page](/contact/).
