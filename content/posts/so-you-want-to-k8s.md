@@ -31,7 +31,7 @@ is the one to follow. It provides a solid overview (almost) every week of things
 to read, new ecosystem tools, and upcoming community events. You can subscribe
 via either email or RSS.
 
-## [LWDK](http://lwkd.info/)
+## [LWKD](http://lwkd.info/)
 
 KubeWeekly is a great overview of user-level things, but for those that want to
 peer a little deeper, [Last Week in Kubernetes Development](http://lwkd.info/)
