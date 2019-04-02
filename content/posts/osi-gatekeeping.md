@@ -1,6 +1,7 @@
 ---
 title: Why I Don't Support The OSI But Am Now A Member Anyway
 date: 2019-03-12
+list_font_size: 16px
 ---
 The Open Source Initiative was founded two decades ago to defend and evangelize Open Source software. At the time, open source was a young upstart, pushing back against a nearly insurmountable tide of software vendors who were looking to maintain their (very profitable) status quo. Fast forward 21 years and open source has, by any metric, won. Sure there is plenty of non-open software out there, but I would challenge anyone to find a company that doesn't use at least some open source, or any large company that doesn't accept open source is as good or better than non-open options for many tasks. With this transition, the role of the OSI has slowly shifted too. Rather than having to defend the very concept of open source as viable, they now describe themselves as "the stewards of the Open Source Definition (OSD) and the community-recognized body for reviewing and approving licenses as OSD-conformant". They are still definitely also respected as evangelists for the open source community as a whole. but a large part of their role has become, to put it plainly, gatekeepers.
 
