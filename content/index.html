@@ -12,7 +12,7 @@ body_class: home
   <li>
     <a href="<%= item.rep_named(:default).path %>">
       <span class="biglist-pull"><%= item[:date] %></span>
-      <span class="biglist-label"><%= item[:title] ||= item.identifier %></span>
+      <span class="biglist-label" <% if item[:list_font_size] %>style="font-size: <%= item[:list_font_size] %>;"<% end %>><%= item[:title] ||= item.identifier %></span>
     </a>
   </li>
   <%- end -%>
