@@ -5,4 +5,6 @@ venue: 2019
 date: 2019-08-02
 speakerdeck_id: b49e8c4b00414d7eb07a762c10a9a437
 speakerdeck_ratio: 0.888888888888889
+youtube_id: 7HQUInkb7Fo
+youtube_ratio: 1.777777778
 ---
