@@ -1,8 +1,11 @@
-# What To Do About StackOverflow
+---
+title:  What To Do About StackOverflow
+date: 2019-09-28
+---
 
 StackOverflow is a question-and-answer website for engineers. Users post questions, other users (hopefully) answer those questions, everyone benefits from shared knowledge. While the StackExchange site incubator has resulted in an explosion of related sites, there are two main companions to StackOverflow itself: ServerFault and SuperUser.
 
-When the sites were founded, there was supposed to be a clear separation of duties between them. StackOverflow was for programming, ServerFault is for professional operations, SuperUser is for amateur operations. I think the functional difference between ServerFault and SuperUser was fuzzy even back then, which was soon magnified by their partnership with Canonical and the creation of the Ask Ubuntu sub-site but fine, it was what it was and most questions could be easily split between programming and operations. This is no longer true, and it has not been true in a long time.  
+When the sites were founded, there was supposed to be a clear separation of duties between them. StackOverflow was for programming, ServerFault is for professional operations, SuperUser is for amateur operations. I think the functional difference between ServerFault and SuperUser was fuzzy even back then, which was soon magnified by their partnership with Canonical and the creation of the Ask Ubuntu sub-site but fine, it was what it was and most questions could be easily split between programming and operations. This is no longer true, and it has not been true in a long time.
 
 Even putting aside the increasingly fuzzy line between programming and operations, StackOverflow has gone on to be the clearly most popular of the three by a substantial margin. When asking a question, you want to get it in front of as many eyeballs as possible so the natural choice is basically always StackOverflow. This is often met with comments and close votes requesting the question be re-asked on one of the other sites, which more or less ensures it will be seen by far fewer people. StackOverflow (the company) could presumably make it easier to view questions across multiple sites (there is a cross site search system at https://stackexchange.com/search but it is very simple and doesn't show all the question metadata that normal question list pages show) but so far they seem very insistent on siloing each community. I find this yet more confusing given the heavy reliance of the StackOverflow community on tags, allowing simple and effective self-filtering to see only the questions you are interested in answering based on more narrow topics rather than site-level general categories.
 
