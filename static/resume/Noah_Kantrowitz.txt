@@ -11,13 +11,21 @@ Passionate programmer perpetually pursuing pragmatic perfection.
 Experience
 ==========
 
-Expert DevOps, SAP Labs; Palo Alti, CA - 2017-2018
+Principal Site Reliability Engineer, Ridecell; San Francisco, CA - 2018-2020
+--------------------------------------------------------------
+Lead and managed a global Infrastructure team, as well as performing both a
+complete migration to Kubernetes and cloud provider swap. Managed all shared
+platform tools such as CI, log management, metrics and alerting, server
+security management, and database management. Built and maintained a full-stack
+Kubernetes GitOps system using both ecosystem tools and custom operators.
+Guided backend system architecture, especially around optimizing services for Kubernetes.
+
+Expert DevOps, SAP Labs; Palo Alto, CA - 2017-2018
 --------------------------------------------------------------
 Internal expert on Chef and DevOps tooling for the SAP Cloud Big Data Services
 team. Advised broader SAP community on open-source software and other fields of
 active development. Continued my role as a core developer on Chef and many Chef
 ecosystem tools.
-
 
 Chef Consultant, Bloomberg L.P.; San Francisco, CA - 2015-2016
 --------------------------------------------------------------
@@ -61,9 +69,9 @@ development tools.
 
 Open Source Developer; The Internet - 2006-Present
 --------------------------------------------------------
-Operations team member for the Python Software Foundation, supporting all PSF
-services and running the Infrastructure Staff team. Also active in the Chef and
-Python communities.
+Operations staff for the Python Software Foundation, supporting all PSF
+services as well as a PSF Fellow. Active in the Kubernetes and Python
+open source communities.
 
 Education
 =========
