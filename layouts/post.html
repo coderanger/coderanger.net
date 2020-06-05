@@ -1,5 +1,5 @@
 <h1>
-  <%= @item[:title] %>
+  <span class="title" <% if item[:title_font_size] %>style="font-size: <%= item[:title_font_size] %>;"<% end %>><%= @item[:title] %></span>
   <span class="date"><%= @item[:date] %></span>
 </h1>
 
