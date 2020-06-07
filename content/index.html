@@ -5,8 +5,8 @@ body_class: home
 <ul class="biglist">
   <li>
     <a class="biglist-label home-speaking" href="/talks/">Speaking
-    </a><a class="biglist-label home-consulting" href="/consulting/">Consulting
-    </a><a class="biglist-label home-training" href="/training/">Training</a>
+    </a><a class="biglist-label home-consulting" href="/projects/">Projects
+    </a><a class="biglist-label home-training" href="/contact/">Contact</a>
   </li>
   <%- items.select{|item| item[:kind] == 'post'}.sort_by!{|item| item[:date]}.reverse!.each do |item| -%>
   <li>
